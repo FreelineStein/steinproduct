@@ -24,8 +24,8 @@ export function Hero() {
           {/* Headline + subhead are LCP candidates — render them fully static
               (no opacity animation) so LCP isn't deferred behind hydration. */}
           <h1 className="mt-6 font-sans text-4xl font-semibold leading-[1.07] tracking-[-0.03em] text-balance sm:text-5xl md:text-6xl">
-            The workflows you&apos;ve been meaning to fix or update? Let&apos;s
-            fix them with modern AI tools
+            The workflows you&apos;ve been meaning to update? Let&apos;s fix them
+            with modern AI tools
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             I&apos;m Jacob Stein, a Principal-level product manager who helps
