@@ -35,8 +35,13 @@ export const CALENDLY = {
    * (calendly.com/steinproduct) — the profile exposes the paid Strategy Session.
    */
   introCall: "https://calendly.com/steinproduct/30min" as string | null, // TODO: paste Intro Call event URL
-  /** Paid 60-min Strategy Session (Stripe collected at booking) */
-  strategySession: "https://calendly.com/steinproduct/paid-strategy-session" as string | null, // TODO: paste Strategy Session event URL
+  /**
+   * Paid 60-min Strategy Session (Stripe collected at booking).
+   * PARKED: the Strategy Session tier is not shown on the site right now. The
+   * URL is kept here so re-adding the service is just restoring its cards in
+   * src/content/services.ts and a PRODUCTS entry below.
+   */
+  strategySession: "https://calendly.com/steinproduct/paid-strategy-session" as string | null,
 } as const;
 
 /**
@@ -53,11 +58,6 @@ export const PRODUCTS: Record<string, ProductLink> = {
   retainer: {
     id: "retainer",
     href: CALENDLY.introCall, // routes to the free intro call
-    kind: "calendly",
-  },
-  strategySession: {
-    id: "strategy-session",
-    href: CALENDLY.strategySession, // the paid Strategy Session event
     kind: "calendly",
   },
 } as const;

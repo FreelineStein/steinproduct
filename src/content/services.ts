@@ -60,17 +60,4 @@ export const services: Service[] = [
     ctaLabel: "Talk about a retainer",
     productKey: "retainer",
   },
-  {
-    id: "strategy-session",
-    name: "Paid Strategy Session",
-    price: "$200–$400",
-    outcome:
-      "60 minutes to pressure-test where AI actually helps your business.",
-    details: [
-      "No build, just sharp direction",
-      "Book and pay in one step",
-    ],
-    ctaLabel: "Book a strategy session",
-    productKey: "strategySession",
-  },
 ];
