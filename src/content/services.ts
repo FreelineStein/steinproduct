@@ -32,8 +32,7 @@ export const services: Service[] = [
   {
     id: "quick-win",
     name: "AI Quick-Win Session",
-    price: "$1,000",
-    priceNote: "$750 for the first few",
+    price: "$750",
     outcome:
       "One repetitive workflow, turned into a working tool — live, in ~90 minutes.",
     details: [
