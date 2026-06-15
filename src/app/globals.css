@@ -1,0 +1,225 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  SteinProduct — "Warm Technical" design tokens.
+  One accent (deep teal), warm off-white surfaces, charcoal text, hairline
+  borders. These are the ONLY brand colors — see handoff. shadcn primitives
+  read from the semantic tokens below, so nothing looks like stock shadcn.
+*/
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* next/font self-hosts Geist under a hashed family name, exposed via these
+     runtime CSS variables set on <html>. Reference them (do NOT use literal
+     "Geist" — that would miss the hashed family and fall back to system). */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-geist-sans);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.35);
+  --radius-2xl: calc(var(--radius) * 1.7);
+  --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: #faf8f5; /* warm off-white */
+  --foreground: #1a1a1a; /* charcoal */
+
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+
+  --primary: #0e6b6b; /* deep teal — the one accent */
+  --primary-foreground: #faf8f5;
+  --primary-hover: #0a5757; /* darker teal for hover */
+
+  --secondary: #f1ece4; /* warm neutral */
+  --secondary-foreground: #1a1a1a;
+  --muted: #f1ece4;
+  --muted-foreground: #6b6560; /* muted text */
+  --accent: #ece5da; /* warm hover tint */
+  --accent-foreground: #1a1a1a;
+
+  --destructive: #b23b2e;
+
+  --border: #e4ded5; /* hairline */
+  --input: #e4ded5;
+  --ring: #0e6b6b; /* teal focus ring */
+
+  /* Teal-leaning neutral scale — reserved, unused in v1 */
+  --chart-1: #0e6b6b;
+  --chart-2: #3a8f8f;
+  --chart-3: #6b6560;
+  --chart-4: #9a948c;
+  --chart-5: #c7c0b6;
+}
+
+.dark {
+  --background: #161513; /* warm near-black */
+  --foreground: #f2eee8;
+
+  --card: #1e1c19;
+  --card-foreground: #f2eee8;
+  --popover: #1e1c19;
+  --popover-foreground: #f2eee8;
+
+  --primary: #2fa3a0; /* brighter teal for contrast on dark */
+  --primary-foreground: #0b0b0a;
+  --primary-hover: #38b4b0;
+
+  --secondary: #262320;
+  --secondary-foreground: #f2eee8;
+  --muted: #262320;
+  --muted-foreground: #a8a199;
+  --accent: #2c2925;
+  --accent-foreground: #f2eee8;
+
+  --destructive: #e0654f;
+
+  --border: #322e29;
+  --input: #3a352f;
+  --ring: #2fa3a0;
+
+  --chart-1: #2fa3a0;
+  --chart-2: #4fb6b3;
+  --chart-3: #a8a199;
+  --chart-4: #7a746c;
+  --chart-5: #4a453f;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* slightly tighter tracking for the humanist-sans body */
+    text-rendering: optimizeLegibility;
+  }
+  /* Respect reduced-motion globally. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /*
+    Faint dotted texture — used in ONE or two sections only (e.g. behind the
+    hero / CTA band), never site-wide. Built from the hairline-border color so
+    it stays whisper-quiet.
+  */
+  .texture-dots {
+    background-image: radial-gradient(
+      color-mix(in oklch, var(--foreground) 9%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+    background-position: -1px -1px;
+  }
+
+  /*
+    Scroll-in reveal. Visible by default so no-JS visitors always see content;
+    only when JS is present (<html class="js">) is it hidden then animated in.
+  */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+    will-change: opacity, transform;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /*
+    One-time intro for above-the-fold (hero) content. Pure CSS, runs on load —
+    NOT gated on JS/hydration — so it never delays the LCP element the way a
+    scroll observer would.
+  */
+  @keyframes intro-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .intro {
+    animation: intro-up 0.7s ease-out both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .intro {
+      animation: none;
+    }
+  }
+
+  /* Mono eyebrow/label: the accent that signals "I build things." */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+}
