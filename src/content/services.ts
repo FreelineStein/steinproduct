@@ -46,20 +46,6 @@ export const services: Service[] = [
     featured: true,
   },
   {
-    id: "workflow-sprint",
-    name: "AI Workflow Sprint",
-    price: "$3,000–$6,000",
-    priceNote: "over two weeks",
-    outcome: "A bigger workflow rebuilt end-to-end, tested and handed off.",
-    details: [
-      "Scoped to one meaningful process",
-      "Built, documented, and shipped",
-      "Async-friendly",
-    ],
-    ctaLabel: "Start a sprint",
-    productKey: "workflowSprint",
-  },
-  {
     id: "retainer",
     name: "Enablement Retainer",
     price: "$1,500/mo",

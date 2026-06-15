@@ -34,9 +34,9 @@ export const CALENDLY = {
    * IMPORTANT: use the specific Intro Call EVENT link, NOT the base profile
    * (calendly.com/steinproduct) — the profile exposes the paid Strategy Session.
    */
-  introCall: null as string | null, // TODO: paste Intro Call event URL
+  introCall: "https://calendly.com/steinproduct/30min" as string | null, // TODO: paste Intro Call event URL
   /** Paid 60-min Strategy Session (Stripe collected at booking) */
-  strategySession: null as string | null, // TODO: paste Strategy Session event URL
+  strategySession: "https://calendly.com/steinproduct/paid-strategy-session" as string | null, // TODO: paste Strategy Session event URL
 } as const;
 
 /**
@@ -47,23 +47,17 @@ export const CALENDLY = {
 export const PRODUCTS: Record<string, ProductLink> = {
   quickWin: {
     id: "quick-win",
-    href: null, // TODO: Stripe Payment Link — AI Quick-Win Session ($1,000 / $750 intro)
+    href: "https://buy.stripe.com/9B67sN1B32kV9k5aCJ8ww00", // TODO: Stripe Payment Link — AI Quick-Win Session ($1,000 / $750 intro)
     kind: "stripe-payment-link",
-  },
-  workflowSprint: {
-    id: "workflow-sprint",
-    // Sprint is scoped per-engagement, so route to a conversation, not a fixed charge.
-    href: null, // TODO: set to CALENDLY.introCall once that's live, or a contact link
-    kind: "calendly",
   },
   retainer: {
     id: "retainer",
-    href: null, // TODO: set to CALENDLY.introCall once that's live
+    href: CALENDLY.introCall, // routes to the free intro call
     kind: "calendly",
   },
   strategySession: {
     id: "strategy-session",
-    href: null, // TODO: set to CALENDLY.strategySession once that's live
+    href: CALENDLY.strategySession, // the paid Strategy Session event
     kind: "calendly",
   },
 } as const;
