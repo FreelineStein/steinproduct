@@ -19,9 +19,9 @@ export function Services() {
     <section id="services" className="scroll-mt-20 py-20 sm:py-28">
       <Container>
         <SectionHeader
-          eyebrow="WHAT YOU CAN BUY"
+          eyebrow="WAYS TO WORK TOGETHER"
           title="A clear ladder, from a first session to an ongoing partner."
-          intro="Start small with a single working tool, or go deeper. Every tier ends with something that actually runs — not a deck."
+          intro="Start small with a single fix, or go deeper. Every tier ends with something that actually runs, not a deck."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">

@@ -19,17 +19,19 @@ export function Hero() {
       <Container className="relative py-24 sm:py-32">
         <div className="max-w-3xl">
           <Eyebrow className="intro">
-            PRODUCT CONSULTING · AI AUTOMATION
+            PRODUCT · AI AUTOMATION · OPERATIONS
           </Eyebrow>
           {/* Headline + subhead are LCP candidates — render them fully static
               (no opacity animation) so LCP isn't deferred behind hydration. */}
           <h1 className="mt-6 font-sans text-4xl font-semibold leading-[1.07] tracking-[-0.03em] text-balance sm:text-5xl md:text-6xl">
-            I build the AI tools your business keeps meaning to.
+            The workflows you&apos;ve been meaning to fix or update? Let&apos;s
+            fix them with modern AI tools
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I&apos;m Jacob Stein — a Principal-level product manager who now ships
-            AI agents and automations for small teams. In one session, we turn a
-            repetitive, time-sucking workflow into a working tool you own.
+            I&apos;m Jacob Stein, a Principal-level product manager who helps
+            businesses get organized and adopt modern AI solutions. We start with
+            the workflow that&apos;s costing you the most, then turn it into
+            something that actually runs, often in a single session.
           </p>
           <div
             className="intro mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"

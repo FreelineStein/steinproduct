@@ -2,12 +2,12 @@ import { Container, Eyebrow } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 
 const PARAGRAPHS = [
-  "I spent my career as a product manager shipping software at companies where the stakes were high — aerospace and defense at Boeing and Maxar, real-money sports betting at Tipico. I led product as a Principal IC: figuring out what to build, why it matters, and how to ship it without breaking things that can't break.",
-  "Now I do that for small businesses, with AI. Most teams have three or four workflows they've been meaning to automate for a year — the report nobody wants to assemble, the data that gets copied between tools by hand, the follow-up that slips. I find the one with the highest payoff and build it with you, fast. You don't get a slide deck. You get a working tool.",
-  'I build with modern AI tooling and ship real software — Next.js, TypeScript, AI agents — so "automation" means something that actually runs, not a fragile prototype.',
+  "I spent my career as a product manager shipping software where the stakes were high: aerospace and defense at Boeing and Maxar, and real-money sports betting at Tipico and LeoVegas. I led product as a Principal IC, figuring out what to build, why it matters, and how to ship it without breaking the things that can't break.",
+  "Now I do that for businesses of every size, with AI. Most teams have three or four things they've been meaning to fix for a year: the report nobody wants to assemble, the data that gets copied between tools by hand, the process that lives in one person's head. I help you get organized, find the fix with the highest payoff, and build it with you, fast. You don't get a slide deck. You get something that works.",
+  'I build with modern AI tooling and ship real software, so "automation" means something that actually runs, not a fragile prototype.',
 ] as const;
 
-const TRACK_RECORD = ["Boeing", "Maxar", "Tipico"] as const;
+const TRACK_RECORD = ["Boeing", "Maxar", "Tipico", "LeoVegas"] as const;
 
 export function About() {
   return (

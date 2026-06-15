@@ -17,7 +17,7 @@ export function CtaBand() {
             />
             <div className="relative mx-auto max-w-xl">
               <h2 className="font-sans text-3xl font-semibold tracking-[-0.02em] text-balance sm:text-4xl">
-                Got a workflow you&apos;ve been meaning to automate?
+                Got something you&apos;ve been meaning to fix or automate?
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 Book a free intro call. We&apos;ll find the one with the highest

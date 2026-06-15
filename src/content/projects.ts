@@ -23,26 +23,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "client-reporting-dashboard",
+    title: "Client Reporting Dashboard",
+    description:
+      "Dashboards that cleanly surface and visualize all of your most important company data.",
+    tags: ["Dashboards", "Data Viz", "Automation"],
+    kind: "personal",
+    comingSoon: true,
+  },
+  {
     id: "pick-receipts",
     title: "Pick Receipts",
     description: "A sports-betting transparency platform.",
-    tags: ["Personal", "Sports betting", "Next.js"],
+    tags: ["Sports Betting", "Web App", "Next.js"],
     kind: "personal",
     comingSoon: true,
   },
   {
-    id: "mlb-draft-tracker",
-    title: "MLB Draft Tracker",
-    description: "Live draft data, tracked and surfaced.",
-    tags: ["Personal", "Data"],
-    kind: "personal",
-    comingSoon: true,
-  },
-  {
-    id: "client-reporting-dashboard",
-    title: "Client Reporting Dashboard",
-    description: "Automated reporting that used to be assembled by hand.",
-    tags: ["Personal", "Automation"],
+    id: "custom-fantasy-sport-games",
+    title: "Custom Fantasy Sport Games",
+    description: "Automated sports data tracking to make custom games easy.",
+    tags: ["Sports Data", "Automation"],
     kind: "personal",
     comingSoon: true,
   },

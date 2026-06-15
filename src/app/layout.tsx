@@ -18,12 +18,12 @@ const geistMono = Geist_Mono({
 });
 
 const description =
-  "Jacob Stein is a Principal-level product manager who builds AI agents and automations for small teams. In one session, turn a repetitive workflow into a working tool you own.";
+  "Jacob Stein is a Principal-level product manager who helps businesses get organized and adopt modern AI solutions. We start with the workflow that's costing you the most and turn it into something that actually runs, often in a single session.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Stein Product — Principal PM who builds with AI agents",
+    default: "Stein Product — Principal PM who helps businesses get organized and adopt modern AI tools",
     template: "%s · Stein Product",
   },
   description,
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE.url,
     siteName: SITE.name,
-    title: "Stein Product — Principal PM who builds with AI agents",
+    title: "Stein Product — Principal PM who helps businesses get organized and adopt modern AI tools",
     description,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stein Product — Principal PM who builds with AI agents",
+    title: "Stein Product — Principal PM who helps businesses get organized and adopt modern AI tools",
     description,
   },
 };
