@@ -20,7 +20,7 @@ export const SITE = {
   url: "https://steinproduct.com",
   tagline: "Principal PM who builds with AI agents.",
   location: "Denver, CO",
-  email: "hello@steinproduct.com", // Cloudflare Email Routing -> Gmail
+  email: "jacob@steinproduct.com", // Cloudflare Email Routing -> jacob.stein.22@gmail.com
 } as const;
 
 export const SOCIAL = {
