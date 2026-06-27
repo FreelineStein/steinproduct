@@ -34,7 +34,7 @@ export const CALENDLY = {
    * IMPORTANT: use the specific Intro Call EVENT link, NOT the base profile
    * (calendly.com/steinproduct) — the profile exposes the paid Strategy Session.
    */
-  introCall: "https://calendly.com/steinproduct/30min" as string | null, // TODO: paste Intro Call event URL
+  introCall: "https://calendly.com/steinproduct/intro" as string | null, // TODO: paste Intro Call event URL
   /**
    * Paid 60-min Strategy Session (Stripe collected at booking).
    * PARKED: the Strategy Session tier is not shown on the site right now. The
