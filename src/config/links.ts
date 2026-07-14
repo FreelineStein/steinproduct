@@ -18,7 +18,7 @@ export const SITE = {
   wordmark: "SteinProduct",
   domain: "steinproduct.com",
   url: "https://steinproduct.com",
-  tagline: "Principal PM who builds with AI agents.",
+  tagline: "Principal PM who builds with modern AI.",
   location: "Denver, CO",
   email: "jacob@steinproduct.com", // Cloudflare Email Routing -> jacob.stein.22@gmail.com
 } as const;
@@ -50,10 +50,23 @@ export const CALENDLY = {
  * Stripe dashboard (Payment Links) and paste the URL.
  */
 export const PRODUCTS: Record<string, ProductLink> = {
+  // Bucket 1 entry offer — the only bucket with a checkout link.
   quickWin: {
     id: "quick-win",
-    href: "https://buy.stripe.com/9B67sN1B32kV9k5aCJ8ww00", // TODO: Stripe Payment Link — AI Quick-Win Session ($1,000 / $750 intro)
+    href: "https://buy.stripe.com/9B67sN1B32kV9k5aCJ8ww00", // Stripe Payment Link — AI Quick-Win Session ($1,000 / $750 intro)
     kind: "stripe-payment-link",
+  },
+  // Bucket 2 (custom AI assistant) — bespoke, no public price; routes to a scoping call.
+  aiAssistant: {
+    id: "ai-assistant",
+    href: CALENDLY.introCall, // routes to the free intro call to scope the build
+    kind: "calendly",
+  },
+  // Bucket 3 (product & AI advisory) — priced on request; routes to an intro call.
+  advisory: {
+    id: "advisory",
+    href: CALENDLY.introCall, // routes to the free intro call
+    kind: "calendly",
   },
   retainer: {
     id: "retainer",

@@ -1,4 +1,3 @@
-import { Check } from "lucide-react";
 import { Container, SectionHeader } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { CTAButton } from "@/components/cta-button";
@@ -10,79 +9,73 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { services } from "@/content/services";
+import {
+  serviceBuckets,
+  retainer,
+  pricingNote,
+} from "@/content/services";
 import { PRODUCTS } from "@/config/links";
 
 export function Services() {
+  const retainerLink = PRODUCTS[retainer.productKey];
+
   return (
     <section id="services" className="scroll-mt-20 py-20 sm:py-28">
       <Container>
         <SectionHeader
-          eyebrow="WAYS TO WORK TOGETHER"
-          title="A clear ladder, from a first session to an ongoing partner."
-          intro="Start small with a single fix, or go deeper. Every tier ends with something that actually runs, not a deck."
+          eyebrow="WHAT I CAN BUILD FOR YOU"
+          title="Three ways I turn your backlog into working software."
+          intro="Each is an outcome, not a block of hours. Start with a working session, a fixed-scope build, or an advisory call — whichever fits the problem."
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {services.map((service, i) => {
-            const link = PRODUCTS[service.productKey];
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {serviceBuckets.map((bucket, i) => {
+            const link = PRODUCTS[bucket.productKey];
             return (
-              <Reveal as="article" key={service.id} delay={(i % 2) * 80}>
-                <Card
-                  className={cn(
-                    "h-full rounded-2xl border border-border bg-card shadow-sm ring-0 [--card-spacing:--spacing(6)] transition-shadow hover:shadow-md",
-                    service.featured && "border-primary/30 ring-1 ring-primary/20",
-                  )}
-                >
+              <Reveal as="article" key={bucket.id} delay={(i % 3) * 80}>
+                <Card className="h-full rounded-2xl border border-border bg-card shadow-sm ring-0 [--card-spacing:--spacing(6)] transition-shadow hover:shadow-md">
                   <CardHeader>
-                    <div className="flex items-center justify-between gap-3">
-                      <CardTitle className="text-lg">{service.name}</CardTitle>
-                      {service.featured ? (
-                        <span className="rounded-full bg-primary/10 px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-wider text-primary">
-                          Start here
-                        </span>
-                      ) : null}
-                    </div>
-                    <div className="mt-1 flex items-baseline gap-2">
-                      <span className="text-2xl font-semibold tracking-[-0.02em] text-foreground">
-                        {service.price}
-                      </span>
-                      {service.priceNote ? (
-                        <span className="font-mono text-xs text-muted-foreground">
-                          {service.priceNote}
-                        </span>
-                      ) : null}
-                    </div>
-                    <CardDescription className="mt-3 text-[0.95rem] leading-relaxed text-foreground/80">
-                      {service.outcome}
+                    <CardTitle className="text-lg leading-snug">
+                      {bucket.headline}
+                    </CardTitle>
+                    <CardDescription className="mt-2 text-[0.95rem] font-medium leading-relaxed text-foreground/80">
+                      {bucket.pitch}
                     </CardDescription>
                   </CardHeader>
 
-                  <CardContent className="flex-1">
-                    <ul className="space-y-2.5">
-                      {service.details.map((detail) => (
-                        <li
-                          key={detail}
-                          className="flex items-start gap-2.5 text-sm text-muted-foreground"
-                        >
-                          <Check
-                            aria-hidden="true"
-                            className="mt-0.5 size-4 shrink-0 text-primary"
-                          />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <CardContent className="flex-1 space-y-4">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {bucket.description}
+                    </p>
+
+                    {bucket.entryOffer ? (
+                      <div className="rounded-xl border border-border bg-secondary/60 p-4">
+                        <p className="text-sm font-medium text-foreground">
+                          {bucket.entryOffer.name}
+                        </p>
+                        <p className="mt-1 text-lg font-semibold tracking-[-0.02em] text-foreground">
+                          {bucket.entryOffer.price}
+                        </p>
+                        <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                          {bucket.entryOffer.detail}
+                        </p>
+                      </div>
+                    ) : null}
+
+                    {bucket.priceAnchor ? (
+                      <p className="font-mono text-xs leading-relaxed text-muted-foreground">
+                        {bucket.priceAnchor}
+                      </p>
+                    ) : null}
                   </CardContent>
 
                   <CardFooter className="bg-transparent">
                     <CTAButton
-                      label={service.ctaLabel}
+                      label={bucket.ctaLabel}
                       href={link.href}
                       kind={link.kind}
-                      variant={service.featured ? "default" : "outline"}
-                      className="h-10 w-full px-5 sm:w-auto"
+                      variant={bucket.entryOffer ? "default" : "outline"}
+                      className="h-10 w-full px-5"
                     />
                   </CardFooter>
                 </Card>
@@ -90,6 +83,33 @@ export function Services() {
             );
           })}
         </div>
+
+        {/* The "keep going" layer — visually distinct from the buckets above. */}
+        <Reveal delay={80}>
+          <div className="mt-6 rounded-2xl border border-border bg-secondary/50 p-6 sm:p-8">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="max-w-2xl">
+                <h3 className="font-sans text-lg font-semibold tracking-[-0.01em] text-foreground">
+                  {retainer.headline}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {retainer.description}
+                </p>
+              </div>
+              <CTAButton
+                label={retainer.ctaLabel}
+                href={retainerLink.href}
+                kind={retainerLink.kind}
+                variant="outline"
+                className="h-10 w-full shrink-0 px-5 sm:w-auto"
+              />
+            </div>
+          </div>
+        </Reveal>
+
+        <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground/80">
+          {pricingNote}
+        </p>
       </Container>
     </section>
   );
