@@ -19,13 +19,12 @@ export function Hero() {
       <Container className="relative py-24 sm:py-32">
         <div className="max-w-3xl">
           <Eyebrow className="intro">
-            PRODUCT · AI AUTOMATION · OPERATIONS
+            AI PRODUCT BUILDS · AUTOMATION · CONSULTING
           </Eyebrow>
           {/* Headline + subhead are LCP candidates — render them fully static
               (no opacity animation) so LCP isn't deferred behind hydration. */}
           <h1 className="mt-6 font-sans text-4xl font-semibold leading-[1.07] tracking-[-0.03em] text-balance sm:text-5xl md:text-6xl">
-            Stop doing it by hand. I automate the workflow costing you the most
-            — live within a week.
+            Your busy work, automated — live within a week.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             I&apos;m Jacob Stein. I get businesses organized and put AI to work
