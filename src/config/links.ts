@@ -51,9 +51,13 @@ export const CALENDLY = {
  */
 export const PRODUCTS: Record<string, ProductLink> = {
   // Bucket 1 entry offer — the only bucket with a checkout link.
+  // DISABLED (2026-07-16): the old Payment Link sells the retired $1,000/$750
+  // session, but the site now sells the AI Quick-Win at $1,500 flat. A disabled
+  // CTA beats a checkout at the wrong price. TODO(Jacob): create the $1,500
+  // Payment Link in Stripe, paste it here, and archive the old one.
   quickWin: {
     id: "quick-win",
-    href: "https://buy.stripe.com/9B67sN1B32kV9k5aCJ8ww00", // Stripe Payment Link — AI Quick-Win Session ($1,000 / $750 intro)
+    href: null,
     kind: "stripe-payment-link",
   },
   // Bucket 2 (custom AI assistant) — bespoke, no public price; routes to a scoping call.

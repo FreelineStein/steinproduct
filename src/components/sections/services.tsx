@@ -19,7 +19,7 @@ export function Services() {
         <SectionHeader
           eyebrow="WHAT I CAN BUILD FOR YOU"
           title="Three ways to get things off your plate."
-          intro="Each is an outcome, not a block of hours. Start with a working session, a fixed-scope build, or an advisory call — whichever fits the problem."
+          intro="Each is an outcome, not a block of hours. Start with a Quick-Win, a fixed-scope build, or an advisory call — whichever fits the problem."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">

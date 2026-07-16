@@ -25,7 +25,7 @@ export function Hero() {
               (no opacity animation) so LCP isn't deferred behind hydration. */}
           <h1 className="mt-6 font-sans text-4xl font-semibold leading-[1.07] tracking-[-0.03em] text-balance sm:text-5xl md:text-6xl">
             Stop doing it by hand. I automate the workflow costing you the most
-            — often in one 90-minute session.
+            — live within a week.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             I&apos;m Jacob Stein. I get businesses organized and put AI to work

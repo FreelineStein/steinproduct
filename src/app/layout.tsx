@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 const description =
-  "I'm Jacob Stein, a Principal-level product manager. I help small businesses get organized and put AI to work on the workflows that actually run — starting with the one costing you the most, often in a single session.";
+  "I'm Jacob Stein, a Principal-level product manager. I help small businesses get organized and put AI to work on the workflows that actually run — starting with the one costing you the most, live within a week.";
 
 const title =
   "Stein Product — AI automation for small businesses, built by a Principal PM";

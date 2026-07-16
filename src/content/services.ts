@@ -16,7 +16,7 @@ import type { PRODUCTS } from "@/config/links";
 export interface EntryOffer {
   /** Offer name, e.g. "AI Quick-Win Session" */
   name: string;
-  /** Price label, e.g. "$750 for my first three clients (then $1,000)" */
+  /** Price label, e.g. "$1,500 flat" */
   price: string;
   /** One line on what you get */
   detail: string;
@@ -47,7 +47,7 @@ export interface ServiceBucket {
 /** The ongoing partnership layer, rendered as a distinct band below the buckets. */
 export interface Retainer {
   id: string;
-  /** Includes the price inline, e.g. "Enablement Retainer — $1,500/mo" */
+  /** Includes the price inline, e.g. "Enablement Retainer — $2,000/mo" */
   headline: string;
   description: string;
   /** Small framing line above the band — where the retainer sits in the motion. */
@@ -64,14 +64,15 @@ export const serviceBuckets: ServiceBucket[] = [
     description:
       "You have a repetitive workflow — data entry, document generation, copy-paste between tools. I assess it, recommend the most cost-effective approach using tools you already pay for, and build something that works the way you work.",
     entryOffer: {
-      name: "AI Quick-Win Session",
-      price: "$750 for my first three clients (then $1,000)",
-      detail: "One 90-minute working session; you leave with one automation live.",
+      name: "AI Quick-Win",
+      price: "$1,500 flat",
+      detail:
+        "A 90-minute kickoff to pick the workflow and lock the scope. I build it, then hand it over live: a working automation, a recorded walkthrough, and written docs — within a week.",
       guarantee:
-        "If we don't get your first automation live in the session, the follow-up session is free.",
+        "If it isn't live and documented within a week of kickoff, the follow-up session is free.",
     },
     priceAnchor: "Larger builds are fixed-scope, from $2,500.",
-    ctaLabel: "Book a Quick-Win",
+    ctaLabel: "Start a Quick-Win",
     productKey: "quickWin",
   },
   {
@@ -79,7 +80,7 @@ export const serviceBuckets: ServiceBucket[] = [
     headline: "A custom AI assistant for your business",
     pitch: "An AI teammate that handles a job around the clock.",
     description:
-      "Triaging inbound requests, drafting the weekly report, answering questions from your documents — built to do one job well. Everything runs in your accounts, on your keys: your data stays yours. I build and operate AI assistants for my own work every day; now I build them for businesses.",
+      "Triaging inbound requests, drafting the weekly report, answering questions from your documents — built to do one job well. Everything you end up with runs in your accounts, on your keys — your data stays yours. I build and operate AI assistants for my own work every day; now I build them for businesses.",
     priceAnchor: "Scoped per engagement.",
     ctaLabel: "Let's scope it",
     productKey: "aiAssistant",
@@ -98,10 +99,10 @@ export const serviceBuckets: ServiceBucket[] = [
 
 export const retainer: Retainer = {
   id: "retainer",
-  headline: "Enablement Retainer — $1,500/mo",
+  headline: "Enablement Retainer — $2,000/mo",
   kicker: "The usual path: start with a Quick-Win, then keep going.",
   description:
-    "For teams that want this every month: one new working tool or automation, shipped each month. A shared list of what's next so you always know what's coming, same-day weekday responses, and a monthly what's-new briefing. Month-to-month, cancel anytime.",
+    "For teams that want this every month: one automation of Quick-Win scope shipped each month, plus upkeep of everything I've built for you. A shared list of what's next so you always know what's coming, same-day weekday responses, and a monthly what's-new briefing. Month-to-month, cancel anytime.",
   ctaLabel: "Start a retainer",
   productKey: "retainer",
 };

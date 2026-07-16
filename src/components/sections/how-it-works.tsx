@@ -4,7 +4,7 @@ import { processSteps } from "@/content/process";
 
 /**
  * "How it works" — a small three-step strip between the hero and the services.
- * It answers the hero's implicit how-question ("often in one session"). The
+ * It answers the hero's implicit how-question ("live within a week"). The
  * hero's "See how it works" anchor targets this section (#how-it-works).
  */
 export function HowItWorks() {

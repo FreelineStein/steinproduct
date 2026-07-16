@@ -22,7 +22,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "What about our data?",
     answer:
-      "Everything runs in your accounts, on your keys. I don't take custody of your data — it stays yours.",
+      "The finished automation runs in your accounts, on your keys — your data stays yours. During the build we work wherever you're comfortable: directly in your systems, or in a sandbox I hand over at the end.",
   },
   {
     question: "What happens after you build it?",
@@ -35,8 +35,8 @@ export const faqItems: FaqItem[] = [
       "Fixed scope, priced on the outcome, never hourly. Projects start with a 50% deposit. If budget is tight, I narrow the scope — not the quality.",
   },
   {
-    question: "What if my workflow can't be automated in one session?",
+    question: "What if it takes longer than a week?",
     answer:
-      "Then the follow-up session is free — you don't pay twice to get your first automation live. Either way, you'll leave knowing exactly what it takes, scoped and priced, and the session fee counts toward the build.",
+      "Most Quick-Wins ship inside a week. If your workflow needs more than that, you'll know at kickoff — before I build — and we either narrow the scope to fit, or I quote a fixed-scope build instead. No surprise invoices.",
   },
 ];
