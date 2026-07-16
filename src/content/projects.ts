@@ -32,9 +32,7 @@ export const projects: Project[] = [
     title: "Pick Receipts",
     description:
       "A sports-betting transparency platform I designed, built, and shipped solo.",
-    // TODO(Jacob): paste the live Pick Receipts URL to make this card clickable.
-    // Left null-safe for now — the card renders without a link until the URL lands.
-    href: null,
+    href: "https://pickreceipts.com/",
     tags: ["Sports Betting", "Web App", "Next.js"],
     label: "Own product",
   },
