@@ -25,7 +25,7 @@ export const SITE = {
 
 export const SOCIAL = {
   linkedin: "https://www.linkedin.com/in/jacobstein22/",
-  substack: null as string | null, // TODO: paste Substack URL when ready
+  substack: "https://substack.com/@jacobstein626773" as string | null,
 } as const;
 
 export const CALENDLY = {

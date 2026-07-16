@@ -5,9 +5,10 @@ import { Container } from "@/components/section";
 import { PRIMARY_CTA, CALENDLY } from "@/config/links";
 
 const NAV_LINKS = [
+  { label: "How it works", href: "/#how-it-works" },
   { label: "Services", href: "/#services" },
-  { label: "About", href: "/#about" },
-  { label: "Work", href: "/#work" },
+  { label: "Proof", href: "/#proof" },
+  { label: "FAQ", href: "/#faq" },
 ] as const;
 
 /** Sticky, minimal top nav. Logo left, anchor links + primary CTA right. */

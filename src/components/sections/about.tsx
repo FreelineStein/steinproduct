@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container, Eyebrow } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 
@@ -9,21 +10,40 @@ const PARAGRAPHS = [
 
 const TRACK_RECORD = ["Boeing", "Maxar", "Tipico", "LeoVegas"] as const;
 
+/**
+ * Headshot path (in /public). Set to `null` to fall back to the faceless
+ * layout — same null-safe philosophy as the ProductLink pattern.
+ */
+const HEADSHOT: string | null = "/jacob-headshot.jpg";
+
 export function About() {
   return (
     <section id="about" className="scroll-mt-20 border-t border-border/70 py-20 sm:py-28">
       <Container className="grid gap-10 md:grid-cols-3 md:gap-14">
         <div className="md:col-span-1">
           <Reveal>
+            {HEADSHOT ? (
+              <Image
+                src={HEADSHOT}
+                alt="Jacob Stein"
+                width={280}
+                height={350}
+                className="mb-8 aspect-[4/5] w-40 rounded-2xl border border-border object-cover object-top shadow-sm sm:w-48"
+                priority={false}
+              />
+            ) : null}
             <Eyebrow>WHO YOU&apos;RE WORKING WITH</Eyebrow>
             <h2 className="mt-4 font-sans text-3xl font-semibold tracking-[-0.02em] text-balance sm:text-4xl">
               A Principal PM who ships, now pointed at your backlog.
             </h2>
-            <ul className="mt-8 flex flex-wrap gap-x-3 gap-y-2">
+            <p className="mt-8 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+              Shipped product at
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
               {TRACK_RECORD.map((company) => (
                 <li
                   key={company}
-                  className="rounded-md border border-border bg-secondary px-2.5 py-1 font-mono text-xs text-muted-foreground"
+                  className="rounded-md border border-border bg-secondary px-3 py-1.5 font-mono text-sm font-medium text-foreground/80"
                 >
                   {company}
                 </li>

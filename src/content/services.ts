@@ -16,10 +16,12 @@ import type { PRODUCTS } from "@/config/links";
 export interface EntryOffer {
   /** Offer name, e.g. "AI Quick-Win Session" */
   name: string;
-  /** Price label, e.g. "$750 introductory (regularly $1,000)" */
+  /** Price label, e.g. "$750 for my first three clients (then $1,000)" */
   price: string;
   /** One line on what you get */
   detail: string;
+  /** Risk-reversal / guarantee line, shown under the price. Must match FAQ Q6. */
+  guarantee?: string;
 }
 
 /** An outcome-based service bucket — the sentence a referrer can repeat. */
@@ -48,6 +50,8 @@ export interface Retainer {
   /** Includes the price inline, e.g. "Enablement Retainer — $1,500/mo" */
   headline: string;
   description: string;
+  /** Small framing line above the band — where the retainer sits in the motion. */
+  kicker: string;
   ctaLabel: string;
   productKey: keyof typeof PRODUCTS;
 }
@@ -61,8 +65,10 @@ export const serviceBuckets: ServiceBucket[] = [
       "You have a repetitive workflow — data entry, document generation, copy-paste between tools. I assess it, recommend the most cost-effective approach using tools you already pay for, and build something that works the way you work.",
     entryOffer: {
       name: "AI Quick-Win Session",
-      price: "$750 introductory (regularly $1,000)",
+      price: "$750 for my first three clients (then $1,000)",
       detail: "One 90-minute working session; you leave with one automation live.",
+      guarantee:
+        "If we don't get your first automation live in the session, the follow-up session is free.",
     },
     priceAnchor: "Larger builds are fixed-scope, from $2,500.",
     ctaLabel: "Book a Quick-Win",
@@ -83,7 +89,7 @@ export const serviceBuckets: ServiceBucket[] = [
     headline: "Product & AI advisory",
     pitch: "Build, buy, or configure — decided with someone who's shipped all three.",
     description:
-      "Principal-level product guidance for teams navigating AI adoption or product decisions — grounded in operator experience across regulated industries (aerospace & defense, sports betting). The core framework: adopt an existing tool, configure a no-code workflow, or build custom.",
+      "Principal-level product guidance for teams navigating AI adoption or product decisions — grounded in operator experience across regulated industries (aerospace & defense, sports betting).",
     priceAnchor: "Pricing on request.",
     ctaLabel: "Book an intro call",
     productKey: "advisory",
@@ -93,12 +99,13 @@ export const serviceBuckets: ServiceBucket[] = [
 export const retainer: Retainer = {
   id: "retainer",
   headline: "Enablement Retainer — $1,500/mo",
+  kicker: "The usual path: start with a Quick-Win, then keep going.",
   description:
-    "One new working tool or automation, shipped every month. Shared backlog you watch fill, same-day weekday async response, monthly what's-new briefing. Month-to-month, cancel anytime.",
+    "For teams that want this every month: one new working tool or automation, shipped each month. A shared list of what's next so you always know what's coming, same-day weekday responses, and a monthly what's-new briefing. Month-to-month, cancel anytime.",
   ctaLabel: "Start a retainer",
   productKey: "retainer",
 };
 
 /** Small print under the section — how every engagement is priced. */
 export const pricingNote =
-  "Every engagement is fixed-scope and priced on the outcome, not the hour. Projects start with a 50% deposit. If budget is tight, we narrow the scope — not the quality.";
+  "Every engagement is fixed-scope and priced on the outcome, not the hour. Projects start with a 50% deposit. If budget is tight, I narrow the scope — not the quality.";

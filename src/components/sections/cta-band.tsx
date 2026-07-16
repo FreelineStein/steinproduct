@@ -20,8 +20,8 @@ export function CtaBand() {
                 Got something you&apos;ve been meaning to fix or automate?
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Book a free intro call. We&apos;ll find the one with the highest
-                payoff and scope a first session — no deck, no obligation.
+                Book a free intro call. I&apos;ll find the one with the highest
+                payoff and scope a first session — 30 minutes, no obligation.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <CTAButton

@@ -171,10 +171,10 @@
   */
   .js .reveal {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(8px);
     transition:
-      opacity 0.7s ease-out,
-      transform 0.7s ease-out;
+      opacity 0.45s ease-out,
+      transform 0.45s ease-out;
     will-change: opacity, transform;
   }
   .js .reveal.is-visible {

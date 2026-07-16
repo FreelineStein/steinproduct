@@ -24,14 +24,13 @@ export function Hero() {
           {/* Headline + subhead are LCP candidates — render them fully static
               (no opacity animation) so LCP isn't deferred behind hydration. */}
           <h1 className="mt-6 font-sans text-4xl font-semibold leading-[1.07] tracking-[-0.03em] text-balance sm:text-5xl md:text-6xl">
-            The workflows you&apos;ve been meaning to update? Let&apos;s fix them
-            with modern AI tools
+            Stop doing it by hand. I automate the workflow costing you the most
+            — often in one 90-minute session.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I&apos;m Jacob Stein, a Principal-level product manager who helps
-            businesses get organized and adopt modern AI solutions. We start with
-            the workflow that&apos;s costing you the most, then turn it into
-            something that actually runs, often in a single session.
+            I&apos;m Jacob Stein — I&apos;ve shipped software at Boeing, Maxar,
+            and Tipico as a Principal product manager. Now I help businesses get
+            organized and put AI to work on the workflows that actually run.
           </p>
           <div
             className="intro mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
@@ -44,7 +43,7 @@ export function Hero() {
               className={ctaLg}
             />
             <Button asChild variant="ghost" size="default" className={ctaLg}>
-              <a href="#services">See how it works</a>
+              <a href="#how-it-works">See how it works</a>
             </Button>
           </div>
         </div>

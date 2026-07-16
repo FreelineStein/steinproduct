@@ -20,6 +20,20 @@ export function SiteFooter() {
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             {SITE.tagline}
           </p>
+          {SOCIAL.substack ? (
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              I write about AI and product on{" "}
+              <a
+                href={SOCIAL.substack}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-primary hover:decoration-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                Substack
+              </a>
+              .
+            </p>
+          ) : null}
           <p className="mt-6 font-mono text-xs text-muted-foreground">
             Built and run by Jacob Stein. {SITE.location}.
           </p>
@@ -43,17 +57,6 @@ export function SiteFooter() {
           >
             LinkedIn
           </a>
-          {/* TODO: Substack — set SOCIAL.substack in src/config/links.ts to show this */}
-          {SOCIAL.substack ? (
-            <a
-              href={SOCIAL.substack}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-sm text-foreground transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-            >
-              Substack
-            </a>
-          ) : null}
         </nav>
       </Container>
 

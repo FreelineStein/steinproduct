@@ -9,22 +9,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  serviceBuckets,
-  retainer,
-  pricingNote,
-} from "@/content/services";
+import { serviceBuckets, pricingNote } from "@/content/services";
 import { PRODUCTS } from "@/config/links";
 
 export function Services() {
-  const retainerLink = PRODUCTS[retainer.productKey];
-
   return (
-    <section id="services" className="scroll-mt-20 py-20 sm:py-28">
+    <section id="services" className="scroll-mt-20 border-t border-border/70 py-20 sm:py-28">
       <Container>
         <SectionHeader
           eyebrow="WHAT I CAN BUILD FOR YOU"
-          title="Three ways I turn your backlog into working software."
+          title="Three ways to get things off your plate."
           intro="Each is an outcome, not a block of hours. Start with a working session, a fixed-scope build, or an advisory call — whichever fits the problem."
         />
 
@@ -59,6 +53,11 @@ export function Services() {
                         <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                           {bucket.entryOffer.detail}
                         </p>
+                        {bucket.entryOffer.guarantee ? (
+                          <p className="mt-3 border-t border-border/70 pt-3 text-sm font-medium leading-relaxed text-primary">
+                            {bucket.entryOffer.guarantee}
+                          </p>
+                        ) : null}
                       </div>
                     ) : null}
 
@@ -84,30 +83,7 @@ export function Services() {
           })}
         </div>
 
-        {/* The "keep going" layer — visually distinct from the buckets above. */}
-        <Reveal delay={80}>
-          <div className="mt-6 rounded-2xl border border-border bg-secondary/50 p-6 sm:p-8">
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-              <div className="max-w-2xl">
-                <h3 className="font-sans text-lg font-semibold tracking-[-0.01em] text-foreground">
-                  {retainer.headline}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {retainer.description}
-                </p>
-              </div>
-              <CTAButton
-                label={retainer.ctaLabel}
-                href={retainerLink.href}
-                kind={retainerLink.kind}
-                variant="outline"
-                className="h-10 w-full shrink-0 px-5 sm:w-auto"
-              />
-            </div>
-          </div>
-        </Reveal>
-
-        <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground/80">
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
           {pricingNote}
         </p>
       </Container>
