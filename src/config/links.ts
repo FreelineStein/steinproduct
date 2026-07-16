@@ -50,15 +50,20 @@ export const CALENDLY = {
  * Stripe dashboard (Payment Links) and paste the URL.
  */
 export const PRODUCTS: Record<string, ProductLink> = {
-  // Bucket 1 entry offer — the only bucket with a checkout link.
-  // DISABLED (2026-07-16): the old Payment Link sells the retired $1,000/$750
-  // session, but the site now sells the AI Quick-Win at $1,500 flat. A disabled
-  // CTA beats a checkout at the wrong price. TODO(Jacob): create the $1,500
-  // Payment Link in Stripe, paste it here, and archive the old one.
+  // Bucket 1 entry offer.
+  // PARKED CHECKOUT (2026-07-16): the old Payment Link
+  // (buy.stripe.com/9B67sN1B32kV9k5aCJ8ww00) sells the retired $1,000/$750
+  // session, so it can't stay live against $1,500 flat copy. Rather than
+  // disable the CTA and leave bucket 1 with no conversion path, it routes to
+  // the free intro call — a working path at no wrong price. The Quick-Win now
+  // opens with a kickoff anyway, so booking one is a truer first step than
+  // paying up front. TODO(Jacob): once the $1,500 Payment Link exists in
+  // Stripe, decide whether to restore direct checkout here or keep the
+  // call-first funnel; archive the old link either way.
   quickWin: {
     id: "quick-win",
-    href: null,
-    kind: "stripe-payment-link",
+    href: CALENDLY.introCall,
+    kind: "calendly",
   },
   // Bucket 2 (custom AI assistant) — bespoke, no public price; routes to a scoping call.
   aiAssistant: {
