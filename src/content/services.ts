@@ -89,7 +89,7 @@ export const serviceBuckets: ServiceBucket[] = [
     headline: "Product & AI advisory",
     pitch: "Build, buy, or configure — decided with someone who's shipped all three.",
     description:
-      "Principal-level product guidance for teams navigating AI adoption or product decisions — grounded in operator experience across regulated industries (aerospace & defense, sports betting).",
+      "Principal-level product guidance for teams navigating AI adoption or product decisions — grounded in operator experience across regulated industries (aerospace & defense, consumer sports betting).",
     priceAnchor: "Pricing on request.",
     ctaLabel: "Book an intro call",
     productKey: "advisory",

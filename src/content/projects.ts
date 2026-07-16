@@ -46,7 +46,7 @@ export const projects: Project[] = [
   },
   {
     id: "nonprofit-doc-automation",
-    title: "Document automation for a Denver nonprofit affiliate",
+    title: "Document automation for a Temecula nonprofit affiliate",
     description:
       "A repetitive document-generation workflow, done by hand, turned into a working automation.",
     tags: ["Automation", "Document generation"],

@@ -28,9 +28,10 @@ export function Hero() {
             — often in one 90-minute session.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I&apos;m Jacob Stein — I&apos;ve shipped software at Boeing, Maxar,
-            and Tipico as a Principal product manager. Now I help businesses get
-            organized and put AI to work on the workflows that actually run.
+            I&apos;m Jacob Stein. I get businesses organized and put AI to work
+            on the workflows costing them the most. Before this, I shipped
+            software as a Principal PM at Boeing, Maxar, and real-money consumer
+            sports-betting apps used by millions of players.
           </p>
           <div
             className="intro mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
