@@ -28,15 +28,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "pick-receipts",
-    title: "Pick Receipts",
-    description:
-      "A sports-betting transparency platform I designed, built, and shipped solo.",
-    href: "https://pickreceipts.com/",
-    tags: ["Sports Betting", "Web App", "Next.js"],
-    label: "Own product",
-  },
-  {
     id: "this-site",
     title: "steinproduct.com — this site",
     description:
