@@ -36,19 +36,19 @@ export const projects: Project[] = [
     label: "Own build",
   },
   {
-    id: "nonprofit-doc-automation",
-    title: "Document automation for a Temecula nonprofit affiliate",
+    id: "habitat-doc-automation",
+    title: "Document automation for Habitat for Humanity Inland Valley",
     description:
-      "A repetitive document-generation workflow, done by hand, turned into a working automation.",
-    tags: ["Automation", "Document generation"],
+      "Thirteen hand-filled documents per homeowner, turned into a one-click generator.",
+    tags: ["Automation", "Apps Script", "Google Workspace"],
     label: "Client work",
     caseStudy: {
       problem:
-        "A repetitive document-generation workflow was being done by hand, week after week.",
+        "Every approved homeowner in their home repair program needed 13 legal and program documents — each one filled in by hand, retyping the same applicant details.",
       built:
-        "I assessed the workflow and built an automation using tools they already paid for — no new software to buy.",
+        "A one-click generator inside the Google Sheet they already worked from — it fills every template and files finished Word and PDF copies in a folder named for the homeowner. No new software, no per-use fees.",
       outcome:
-        "Hours of manual work removed every week, and the engagement earned a referral.",
+        "Hours of document work removed per applicant, the team maintains it themselves, and the engagement earned a referral.",
     },
   },
 ];
