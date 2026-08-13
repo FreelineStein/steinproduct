@@ -21,13 +21,13 @@ export const processSteps: ProcessStep[] = [
       "30 minutes. We list what you do by hand and pick the workflow with the highest payoff.",
   },
   {
-    title: "I build, then hand you the keys",
+    title: "Built for you, then handed over",
     detail:
-      "I do the building, working through the messy parts so you don't have to. You get a live demo, a recorded walkthrough, and written docs your team can run without me.",
+      "Stein Product does the building, working through the messy parts so you don't have to. You get a live demo, a recorded walkthrough, and written docs your team can run on its own.",
   },
   {
     title: "You own everything",
     detail:
-      "The finished automation lives in your accounts, on your keys — your data stays yours, and nothing breaks if you stop working with me.",
+      "The finished automation lives in your accounts, on your keys — your data stays yours, and nothing breaks if the engagement ends.",
   },
 ];

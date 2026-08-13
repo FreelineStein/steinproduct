@@ -17,7 +17,7 @@ export function Services() {
     <section id="services" className="scroll-mt-20 border-t border-border/70 py-20 sm:py-28">
       <Container>
         <SectionHeader
-          eyebrow="WHAT I CAN BUILD FOR YOU"
+          eyebrow="WHERE TO START"
           title="Three ways to get things off your plate."
           intro="Each is an outcome, not a block of hours. Start with a Quick-Win, a fixed-scope build, or an advisory call — whichever fits the problem."
         />

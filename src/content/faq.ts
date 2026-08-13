@@ -12,17 +12,17 @@ export const faqItems: FaqItem[] = [
   {
     question: "What tools do I need?",
     answer:
-      "Whatever you already have. I build with the tools you pay for today — the assessment includes recommending the cheapest path, not selling you new software.",
+      "Whatever you already have. Stein Product builds with the tools you pay for today — the assessment includes recommending the cheapest path, not selling you new software.",
   },
   {
     question: "We're not technical. Is that a problem?",
     answer:
-      "No. You bring the workflow knowledge; I bring the build. You'll be able to run everything without me.",
+      "No. You bring the workflow knowledge; Stein Product brings the build. You'll be able to run everything yourself.",
   },
   {
     question: "What about our data?",
     answer:
-      "The finished automation runs in your accounts, on your keys — your data stays yours. During the build we work wherever you're comfortable: directly in your systems, or in a sandbox I hand over at the end.",
+      "The finished automation runs in your accounts, on your keys — your data stays yours. During the build we work wherever you're comfortable: directly in your systems, or in a sandbox handed over at the end.",
   },
   {
     question: "What happens after you build it?",
@@ -32,11 +32,11 @@ export const faqItems: FaqItem[] = [
   {
     question: "How does pricing work?",
     answer:
-      "Fixed scope, priced on the outcome, never hourly. Projects start with a 50% deposit. If budget is tight, I narrow the scope — not the quality.",
+      "Fixed scope, priced on the outcome, never hourly. Projects start with a 50% deposit. If budget is tight, you get a narrower scope — never lower quality.",
   },
   {
     question: "What if it takes longer than a week?",
     answer:
-      "Most Quick-Wins ship inside a week. If your workflow needs more than that, you'll know at kickoff — before I build — and we either narrow the scope to fit, or I quote a fixed-scope build instead. No surprise invoices.",
+      "Most Quick-Wins ship inside a week. If your workflow needs more than that, you'll know at kickoff — before the build starts — and we either narrow the scope to fit, or you get a quote for a fixed-scope build instead. No surprise invoices.",
   },
 ];

@@ -31,7 +31,7 @@ export const projects: Project[] = [
     id: "this-site",
     title: "steinproduct.com — this site",
     description:
-      "A statically-exported Next.js build, designed and shipped solo with the same AI-augmented workflow I sell.",
+      "A statically-exported Next.js build, designed and shipped with the same AI-augmented workflow behind every engagement.",
     tags: ["Next.js", "Static export", "Design"],
     label: "Own build",
   },

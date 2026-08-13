@@ -2,8 +2,11 @@ import Image from "next/image";
 import { Container, Eyebrow } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 
+// Stein Product speaks as a practice everywhere else on the page; this bio
+// stays first-person on purpose (2026-08-13) — the credentials are personal and
+// read false in third person. The lead-in names the practice, then Jacob speaks.
 const PARAGRAPHS = [
-  "I spent my career shipping software where the stakes were high: aerospace and defense at Boeing and Maxar, and consumer sports betting — real-money products where millions of players and their money move through the app. I led product as a Principal IC, figuring out what to build, why it matters, and how to ship it without breaking the things that can't break.",
+  "Stein Product is led by Jacob Stein. I spent my career shipping software where the stakes were high: aerospace and defense at Boeing and Maxar, and consumer sports betting — real-money products where millions of players and their money move through the app. I led product as a Principal IC, figuring out what to build, why it matters, and how to ship it without breaking the things that can't break.",
   "Now I do that for businesses of every size, with AI. Most teams have three or four things they've been meaning to fix for a year: the report nobody wants to assemble, the data that gets copied between tools by hand, the process that lives in one person's head. I help you get organized, find the fix with the highest payoff, and build it for you, fast. You don't get a slide deck. You get something that works.",
   'I build with modern AI tooling and ship real software, so "automation" means something that actually runs, not a fragile prototype. That includes consumer products at scale.',
 ] as const;

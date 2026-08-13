@@ -18,10 +18,10 @@ const geistMono = Geist_Mono({
 });
 
 const description =
-  "I'm Jacob Stein, a Principal-level product manager. I help small businesses get organized and put AI to work on the workflows that actually run — starting with the one costing you the most, live within a week.";
+  "Stein Product is a consulting practice led by Jacob Stein, a Principal-level product manager. It gets small businesses organized and puts AI to work on the workflows that actually run — starting with the one costing you the most, live within a week.";
 
 const title =
-  "Stein Product — AI automation for small businesses, built by a Principal PM";
+  "Stein Product — AI automation consulting for small businesses";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   keywords: [
     "AI automation",
     "product consulting",
-    "AI agents",
+    "AI assistants",
     "small business automation",
     "fractional product manager",
     "workflow automation",

@@ -18,7 +18,7 @@ export const SITE = {
   wordmark: "SteinProduct",
   domain: "steinproduct.com",
   url: "https://steinproduct.com",
-  tagline: "Principal PM who builds with modern AI.",
+  tagline: "Modern AI, shipped as working software.",
   location: "Denver, CO",
   email: "jacob@steinproduct.com", // Cloudflare Email Routing -> jacob.stein.22@gmail.com
 } as const;

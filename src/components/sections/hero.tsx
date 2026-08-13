@@ -27,10 +27,11 @@ export function Hero() {
             Your busy work, automated — live within a week.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I&apos;m Jacob Stein. I get businesses organized and put AI to work
-            on the workflows costing them the most. Before this, I shipped
-            software as a Principal PM at Boeing, Maxar, and real-money consumer
-            sports-betting apps used by millions of players.
+            Stein Product is a consulting practice that gets businesses
+            organized and puts AI to work on the workflows costing them the
+            most. It&apos;s led by Jacob Stein, a Principal product manager who
+            shipped software at Boeing, Maxar, and real-money sports-betting
+            apps used by millions of players.
           </p>
           <div
             className="intro mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"

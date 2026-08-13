@@ -22,7 +22,7 @@ export function SiteFooter() {
           </p>
           {SOCIAL.substack ? (
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              I write about AI and product on{" "}
+              Jacob writes about AI and product on{" "}
               <a
                 href={SOCIAL.substack}
                 target="_blank"

@@ -62,12 +62,12 @@ export const serviceBuckets: ServiceBucket[] = [
     headline: "Custom automation for your business",
     pitch: "Stop doing it by hand.",
     description:
-      "You have a repetitive workflow — data entry, document generation, copy-paste between tools. I assess it, recommend the most cost-effective approach using tools you already pay for, and build something that works the way you work.",
+      "You have a repetitive workflow — data entry, document generation, copy-paste between tools. Stein Product assesses it, recommends the most cost-effective approach using tools you already pay for, and builds something that works the way you work.",
     entryOffer: {
       name: "AI Quick-Win",
       price: "$1,500 flat",
       detail:
-        "A 90-minute kickoff to pick the workflow and lock the scope. I build it, then hand it over live: a working automation, a recorded walkthrough, and written docs — within a week.",
+        "A 90-minute kickoff to pick the workflow and lock the scope. You get it built and handed over live: a working automation, a recorded walkthrough, and written docs — within a week.",
       guarantee:
         "If it isn't live and documented within a week of kickoff, the follow-up session is free.",
     },
@@ -80,7 +80,7 @@ export const serviceBuckets: ServiceBucket[] = [
     headline: "A custom AI assistant for your business",
     pitch: "An AI teammate that handles a job around the clock.",
     description:
-      "Triaging inbound requests, drafting the weekly report, answering questions from your documents — built to do one job well. Everything you end up with runs in your accounts, on your keys — your data stays yours. I build and operate AI assistants for my own work every day; now I build them for businesses.",
+      "Triaging inbound requests, drafting the weekly report, answering questions from your documents — built to do one job well. Everything you end up with runs in your accounts, on your keys — your data stays yours. Stein Product runs on these assistants every day; now it builds them for businesses.",
     priceAnchor: "Scoped per engagement.",
     ctaLabel: "Let's scope it",
     productKey: "aiAssistant",
@@ -102,11 +102,11 @@ export const retainer: Retainer = {
   headline: "Enablement Retainer — $2,000/mo",
   kicker: "The usual path: start with a Quick-Win, then keep going.",
   description:
-    "For teams that want this every month: one automation of Quick-Win scope shipped each month, plus upkeep of everything I've built for you. A shared list of what's next so you always know what's coming, same-day weekday responses, and a monthly what's-new briefing. Month-to-month, cancel anytime.",
+    "For teams that want this every month: one automation of Quick-Win scope shipped each month, plus upkeep of everything already built for you. A shared list of what's next so you always know what's coming, same-day weekday responses, and a monthly what's-new briefing. Month-to-month, cancel anytime.",
   ctaLabel: "Start a retainer",
   productKey: "retainer",
 };
 
 /** Small print under the section — how every engagement is priced. */
 export const pricingNote =
-  "Every engagement is fixed-scope and priced on the outcome, not the hour. Projects start with a 50% deposit. If budget is tight, I narrow the scope — not the quality.";
+  "Every engagement is fixed-scope and priced on the outcome, not the hour. Projects start with a 50% deposit. If budget is tight, you get a narrower scope — never lower quality.";

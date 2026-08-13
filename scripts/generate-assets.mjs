@@ -62,7 +62,7 @@ const ogSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}
   </g>
   <!-- wordmark + tagline -->
   <text x="200" y="320" font-family="'Geist','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="84" font-weight="600" letter-spacing="-2" fill="${INK}">Stein Product</text>
-  <text x="200" y="385" font-family="'Geist','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="400" fill="${MUTED}">Principal PM who builds with AI agents.</text>
+  <text x="200" y="385" font-family="'Geist','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="400" fill="${MUTED}">Modern AI, shipped as working software.</text>
   <text x="96" y="560" font-family="'Geist Mono','SFMono-Regular',Menlo,monospace" font-size="24" letter-spacing="1" fill="${TEAL}">steinproduct.com</text>
 </svg>`;
 
