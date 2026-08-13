@@ -27,6 +27,9 @@
 # source assets (the served copy lives in /public)
 /Jacob_Headshot.JPG
 
+# handoff docs — local working notes, never committed
+/handoffs/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
