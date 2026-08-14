@@ -33,10 +33,13 @@ export const metadata: Metadata = {
   applicationName: SITE.name,
   authors: [{ name: "Jacob Stein" }],
   creator: "Jacob Stein",
+  // SEO metadata, not rendered copy: "AI agents" stays here for search reach
+  // even though "AI assistant" is the only term allowed in user-facing copy.
   keywords: [
     "AI automation",
     "product consulting",
     "AI assistants",
+    "AI agents",
     "small business automation",
     "fractional product manager",
     "workflow automation",
