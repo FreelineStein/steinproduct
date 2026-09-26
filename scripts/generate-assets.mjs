@@ -13,7 +13,7 @@
 // LinkedIn, Slack and iMessage link preview.
 //
 // Icons render from brand/favicon.svg (the First Light tile). The OG card
-// embeds the night lockup as outlined paths (no font needed) and sets the
+// embeds the signature logo as outlined paths (no font needed) and sets the
 // tagline in Instrument Sans from scripts/fonts/ through a private fontconfig
 // file, so the card renders the same on any machine.
 
@@ -77,22 +77,22 @@ await pngFromSvg(faviconSvg, 512, join(root, "public", "icon-512.png"));
 const W = 1200;
 const H = 630;
 
-// The night lockup as outlined paths, embedded as a nested <svg>. Strip the
-// C2PA metadata and the outer element; keep its defs and paths verbatim.
-const lockupFile = readFileSync(
-  join(root, "brand", "first-light", "logos", "stein-lockup-night.svg"),
+// The signature logo as outlined paths, embedded as a nested <svg>. Strip any
+// metadata and the outer element; keep its defs, masks and paths verbatim.
+const signatureFile = readFileSync(
+  join(root, "brand", "first-light", "logos", "stein-signature-night.svg"),
   "utf8",
 );
-const lockupViewBox = lockupFile.match(/viewBox="([^"]+)"/)[1];
-const [, , vbW, vbH] = lockupViewBox.split(" ").map(Number);
-const lockupInner = lockupFile
+const signatureViewBox = signatureFile.match(/viewBox="([^"]+)"/)[1];
+const [, , vbW, vbH] = signatureViewBox.split(/\s+/).map(Number);
+const signatureInner = signatureFile
   .replace(/<metadata>[\s\S]*?<\/metadata>/, "")
   .replace(/^[\s\S]*?<svg[^>]*>/, "")
   .replace(/<\/svg>\s*$/, "");
-const LOCKUP_W = 560;
-const LOCKUP_H = Math.round((LOCKUP_W * vbH) / vbW);
-const LOCKUP_X = 96;
-const LOCKUP_Y = 196;
+const SIG_W = 640;
+const SIG_H = Math.round((SIG_W * vbH) / vbW);
+const SIG_X = (W - SIG_W) / 2;
+const SIG_Y = 132;
 
 // The planet limb: a huge circle whose top edge crosses the lower third,
 // filled with void below and glowing aurora along the rim.
@@ -134,14 +134,14 @@ const ogSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}
   <circle cx="600" cy="${LIMB_CY}" r="${LIMB_R}" fill="${VOID}"/>
   <circle cx="600" cy="${LIMB_CY}" r="${LIMB_R}" fill="none" stroke="${AURORA}" stroke-opacity="0.9" stroke-width="3"/>
 
-  <!-- the night lockup, outlined paths from brand/first-light/logos -->
-  <svg x="${LOCKUP_X}" y="${LOCKUP_Y}" width="${LOCKUP_W}" height="${LOCKUP_H}" viewBox="${lockupViewBox}" overflow="visible">
-    ${lockupInner}
+  <!-- the signature logo, outlined paths from brand/first-light/logos -->
+  <svg x="${SIG_X}" y="${SIG_Y}" width="${SIG_W}" height="${SIG_H}" viewBox="${signatureViewBox}" overflow="visible">
+    ${signatureInner}
   </svg>
 
-  <!-- tagline and domain -->
-  <text x="${LOCKUP_X}" y="${LOCKUP_Y + LOCKUP_H + 64}" font-family="Instrument Sans" font-size="36" font-weight="400" fill="${INK_MUTED}">${TAGLINE}</text>
-  <text x="${LOCKUP_X}" y="${LOCKUP_Y + LOCKUP_H + 124}" font-family="Instrument Sans" font-size="22" font-weight="500" letter-spacing="3" fill="${AURORA}">steinproduct.com</text>
+  <!-- tagline and domain, centered under the signature -->
+  <text x="${W / 2}" y="${SIG_Y + SIG_H + 56}" text-anchor="middle" font-family="Instrument Sans" font-size="34" font-weight="400" fill="${INK_MUTED}">${TAGLINE}</text>
+  <text x="${W / 2}" y="${SIG_Y + SIG_H + 104}" text-anchor="middle" font-family="Instrument Sans" font-size="21" font-weight="500" letter-spacing="3" fill="${AURORA}">steinproduct.com</text>
 </svg>`;
 
 await sharp(Buffer.from(ogSvg), { density: 144 })

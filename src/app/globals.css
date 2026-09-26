@@ -21,11 +21,11 @@
 
   /* next/font self-hosts each face under a hashed family name, exposed via
      these runtime CSS variables set on <html>. Reference them (do NOT use a
-     literal "Unbounded" or "Instrument Sans" — that would miss the hashed
+     literal "Anybody" or "Instrument Sans" — that would miss the hashed
      family and fall back to system). */
   --font-sans: var(--font-instrument), system-ui, -apple-system, sans-serif;
-  --font-heading: var(--font-unbounded), "Arial Black", system-ui, sans-serif;
-  --font-display: var(--font-unbounded), "Arial Black", system-ui, sans-serif;
+  --font-heading: var(--font-anybody), "Arial Narrow", system-ui, sans-serif;
+  --font-display: var(--font-anybody), "Arial Narrow", system-ui, sans-serif;
   --font-signal: var(--font-archivo-x), ui-sans-serif, system-ui, sans-serif;
   /* No monospace face in First Light; anything still asking for mono gets
      the signal face rather than silently falling back to a system mono. */
@@ -230,11 +230,15 @@
   }
   /* Headlines default to the display face; sentence case, tight tracking. */
   h1,
-  h2,
+  h2 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
   h3 {
     font-family: var(--font-heading);
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.005em;
   }
   /* Focus is the sol ring, on every interactive element. */
   :focus-visible {
@@ -323,14 +327,6 @@
     opacity: 0;
   }
 }
-@keyframes sp-sunrise {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 /*
   Component styles ported from brand/first-light/reference/bundle.css. Tailwind
@@ -340,41 +336,41 @@
   /* ---------- Type roles ---------- */
   .display-xl {
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 48px;
+    font-weight: 800;
+    font-size: 44px;
     line-height: 1;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.02em;
   }
   .display-l {
     font-family: var(--font-display);
-    font-weight: 700;
+    font-weight: 800;
     font-size: 36px;
-    line-height: 1.04;
-    letter-spacing: -0.03em;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
   }
   .headline {
     font-family: var(--font-display);
-    font-weight: 700;
+    font-weight: 800;
     font-size: 28px;
-    line-height: 1.12;
-    letter-spacing: -0.02em;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
   }
   .title {
     font-family: var(--font-display);
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
   }
   @media (min-width: 640px) {
     .display-xl {
-      font-size: 88px;
+      font-size: 76px;
     }
     .display-l {
-      font-size: 60px;
+      font-size: 56px;
     }
     .headline {
-      font-size: 36px;
+      font-size: 38px;
     }
   }
   .lead {
@@ -862,18 +858,12 @@
     display: block;
     overflow: visible;
   }
-  /* The sun: the only sanctioned animation is it brightening once on load. */
-  .sp-logo-sun {
-    fill: #fff4d6;
-    filter: drop-shadow(0 0 4px var(--sol));
-    animation: sp-sunrise 1.2s var(--sp-ease-out) both;
-  }
 
   /* ---------- Glass nav bar ---------- */
   .sp-glass-bar {
     background:
       linear-gradient(var(--glass), var(--glass)),
-      color-mix(in srgb, var(--void) 86%, transparent);
+      color-mix(in srgb, var(--void) 92%, transparent);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(var(--blur-glass));
     -webkit-backdrop-filter: blur(var(--blur-glass));
@@ -883,8 +873,7 @@
     .sp-panel-featured::after,
     .sp-aurora-orb,
     .sp-steps-beam,
-    .sp-tag-live .sp-tag-dot,
-    .sp-logo-sun {
+    .sp-tag-live .sp-tag-dot {
       animation: none !important;
     }
     .sp-btn,

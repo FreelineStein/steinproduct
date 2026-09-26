@@ -3,7 +3,7 @@ import { Logo } from "@/components/logo";
 import { Container } from "@/components/section";
 import { SITE, SOCIAL, MAILTO } from "@/config/links";
 
-/** Atmosphere ground, the night lockup at 24px, contact links. */
+/** Atmosphere ground, the wordmark at 24px, contact links. */
 export function SiteFooter() {
   const year = new Date().getFullYear();
 
@@ -16,7 +16,7 @@ export function SiteFooter() {
             aria-label="Stein Product, home"
             className="inline-block rounded-sm"
           >
-            <Logo className="h-6 md:h-6" />
+            <Logo className="h-6" />
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             {SITE.tagline}

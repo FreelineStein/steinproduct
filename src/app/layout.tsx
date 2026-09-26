@@ -7,19 +7,20 @@ import { SITE } from "@/config/links";
 
 /*
   First Light type, self-hosted from the brand pack (brand/first-light/fonts).
-  Unbounded sets headlines, Instrument Sans carries reading text, and Archivo
-  Expanded is the "signal" face for eyebrows, tags, numbers and prices.
-  Anybody Expanded (the logo face) is never loaded: the wordmark is outlined
-  artwork in src/components/logo.tsx.
+  Anybody Semi-Condensed sets headlines (one family with the logo lettering,
+  at two widths), Instrument Sans carries reading text, and Archivo Expanded
+  is the "signal" face for eyebrows, tags, numbers and prices. Anybody
+  Condensed (the logo face) is never loaded: the logo is outlined artwork in
+  src/components/logo.tsx.
 */
-const unbounded = localFont({
+const anybody = localFont({
   src: [
-    { path: "./fonts/unbounded-latin-500-normal.woff2", weight: "500" },
-    { path: "./fonts/unbounded-latin-700-normal.woff2", weight: "700" },
+    { path: "./fonts/anybody-semicondensed-latin-700.woff2", weight: "700" },
+    { path: "./fonts/anybody-semicondensed-latin-800.woff2", weight: "800" },
   ],
-  variable: "--font-unbounded",
+  variable: "--font-anybody",
   display: "swap",
-  fallback: ["Arial Black", "system-ui", "sans-serif"],
+  fallback: ["Arial Narrow", "system-ui", "sans-serif"],
 });
 
 const instrument = localFont({
@@ -103,7 +104,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${unbounded.variable} ${instrument.variable} ${archivoExpanded.variable} h-full antialiased`}
+      className={`${anybody.variable} ${instrument.variable} ${archivoExpanded.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         {/* Mark JS as available before paint so scroll-in reveals can hide

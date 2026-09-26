@@ -25,15 +25,21 @@ record: `brand/first-light/BRAND-BOOK.md`; tokens and ported components in
 `src/app/globals.css`; `/styleguide` renders the system. Day values exist in the tokens for
 documents and a later light mode; there is no toggle.
 
-- **Type roles.** Unbounded Bold (700; `title` at 500) for headlines, Instrument Sans for
+- **Type roles (final, 2026-09-25).** Anybody Semi-Condensed for headlines (ExtraBold 800
+  for `display-xl`, `display-l`, `headline`; Bold 700 for `title`), Instrument Sans for
   body, Archivo Expanded SemiBold caps as the "signal" face (eyebrows, tags, step numbers,
   prices, times). All three self-hosted from `brand/first-light/fonts` via `next/font/local`.
-  Anybody Expanded ExtraBold is the logo face only and is never loaded as a font.
-- **The wordmark is outlined artwork.** "Stein Product" is Anybody Expanded ExtraBold as
-  paths (`src/components/logo-paths.ts`, generated from `brand/first-light/logos`); the i is
-  dotless and the First Light mark (planet limb, sun, lens streak) is its dot. Never set it
-  in live text, recolor the gradient, rotate the limb or move the sun off the i. The mark
-  alone is the icon; `stein-tile.svg` is the favicon and app icon.
+  Unbounded was tried first and rejected (too soft and wide beside the condensed logo); do
+  not restore it. Anybody Condensed (the logo lettering) is never loaded as a font.
+- **The logo is outlined artwork on an orbital sunrise.** Three variants, all "Stein
+  Product" in Anybody Condensed ExtraBold as paths (`src/components/logo-paths.ts`,
+  generated from `brand/first-light/logos`, ids prefixed per instance): the **signature**
+  (horizon arcs over the whole name, sun at center; closing CTA band and the OG card), the
+  everyday **wordmark** (dotless i, horizon spans "ein", sun over the i; nav and footer), and
+  the **tile** or **porthole** icon (favicon, app icon, mobile nav; avatars). Dark first,
+  no flat or one-color version. Never retype, recolor the horizon, move the sun or stretch
+  the arc.
+- **Content column is 1180px** (`Container` in `section.tsx`), the brand's max content width. It was widened from 1024px so the 76px hero line breaks on two lines at 1440px; do not narrow it back.
 - **Glow is rationed.** One primary button per view, one `featured` panel per group, one sol
   moment per view, at most two Aurora grounds per page (hero and closing CTA). No purple or
   blue-violet gradients. All motion is CSS and stops under `prefers-reduced-motion`.

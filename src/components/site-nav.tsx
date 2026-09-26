@@ -21,9 +21,9 @@ export function SiteNav() {
           aria-label="Stein Product, home"
           className="rounded-sm"
         >
-          {/* Under 640px the name plus the CTA do not fit, so the mark stands in. */}
-          <Logo showWordmark={false} className="sm:hidden" />
-          <Logo className="hidden sm:inline-flex" />
+          {/* Under 640px the name plus the CTA do not fit, so the tile stands in. */}
+          <Logo variant="tile" className="size-8 sm:hidden" />
+          <Logo className="hidden h-7 sm:inline-flex md:h-8" />
         </Link>
 
         <nav aria-label="Primary" className="flex items-center gap-1 sm:gap-2">

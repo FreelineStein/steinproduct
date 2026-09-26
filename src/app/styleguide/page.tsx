@@ -36,15 +36,12 @@ const SAMPLE_STEPS = [
 ];
 
 const LOGO_FILES = [
-  "stein-lockup-night.svg",
-  "stein-lockup-day.svg",
-  "stein-lockup-ink-light.svg",
-  "stein-lockup-ink-dark.svg",
-  "stein-mark-night.svg",
-  "stein-mark-day.svg",
-  "stein-mark-ink-light.svg",
-  "stein-mark-ink-dark.svg",
+  "stein-signature-night.svg",
+  "stein-signature-day.svg",
+  "stein-wordmark-night.svg",
+  "stein-wordmark-day.svg",
   "stein-tile.svg",
+  "stein-porthole.svg",
 ];
 
 function Swatch({
@@ -148,6 +145,9 @@ export default function StyleguidePage() {
               signal · 30 min · $1,500 flat · 01 02 03
             </p>
           </div>
+          <p className="signal text-ink-faint">
+            Anybody Semi-Condensed ExtraBold for display-xl, display-l and headline; Bold for title.
+          </p>
           <h1 className="display-xl text-balance">
             Busy work, <span className="highlight">automated.</span>
           </h1>
@@ -272,21 +272,34 @@ export default function StyleguidePage() {
       <section className="mt-16">
         <Eyebrow>LOGO</Eyebrow>
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-          Anybody Expanded ExtraBold, outlined. The i is dotless; First Light is
-          its dot, with the sun directly above the stem. Never redraw, recolor,
-          rotate or set in live text.
+          Outlined Anybody Condensed ExtraBold on an orbital sunrise: a thin
+          symmetric limb brightest at its crest, a soft atmosphere inside it,
+          and the sun half risen with a lens flare. Dark first; there is no
+          flat or one-color version. Never retype, recolor, move the sun or
+          stretch the arc.
         </p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <div className="flex flex-col items-start justify-center gap-8 overflow-hidden rounded-lg border border-line bg-surface-1 p-6 sm:p-10">
-            <Logo className="h-6 sm:h-10 md:h-10" />
-            <Logo className="h-5 sm:h-7 md:h-7" />
-            <Logo className="h-4 sm:h-5 md:h-5" />
+          <div className="flex flex-col items-start gap-3 overflow-hidden rounded-lg border border-line bg-surface-1 p-6 sm:p-10">
+            <p className="signal text-ink-faint">Signature: the main event</p>
+            <Logo variant="signature" className="h-16 sm:h-24" />
+            <p className="signal text-ink-faint">Signature at the 48px minimum</p>
+            <Logo variant="signature" className="h-12" />
+          </div>
+          <div className="flex flex-col items-start gap-3 overflow-hidden rounded-lg border border-line bg-surface-1 p-6 sm:p-10">
+            <p className="signal text-ink-faint">Wordmark: the everyday logo</p>
+            <Logo className="h-8" />
+            <Logo className="h-6" />
+            <p className="signal text-ink-faint">Wordmark at the 20px minimum</p>
+            <Logo className="h-5" />
           </div>
           <div className="flex items-center justify-center gap-6 rounded-lg border border-line bg-surface-1 p-6 sm:gap-10 sm:p-10">
-            <Logo showWordmark={false} className="size-16" />
-            {/* The tile: favicons, avatars, app icons. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/favicon.svg" alt="Stein Product app tile" width={64} height={64} />
+            <Logo variant="tile" className="size-16" />
+            <Logo variant="tile" className="size-8" />
+            <Logo variant="porthole" className="size-16" />
+            <Logo variant="porthole" className="size-8" />
+          </div>
+          <div className="sp-atmosphere flex items-center justify-center rounded-lg border border-line p-6 sm:p-10">
+            <Logo variant="signature" className="h-16" />
           </div>
         </div>
         <ul className="mt-6 grid gap-1 sm:grid-cols-3">

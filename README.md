@@ -13,7 +13,7 @@ buttons that link out. No backend, no database, no CMS.
 
 - **Next.js (App Router) + TypeScript** — static export (`output: "export"`)
 - **Tailwind CSS v4** + **shadcn/ui** (restyled to the brand tokens)
-- **Unbounded / Instrument Sans / Archivo Expanded**, self-hosted via `next/font/local` from `brand/first-light/fonts`
+- **Anybody Semi-Condensed / Instrument Sans / Archivo Expanded**, self-hosted via `next/font/local` from `brand/first-light/fonts`
 - `lucide-react` for the few icons
 - Deploy target: **Vercel** (Cloudflare Pages works too — see below)
 
@@ -47,7 +47,7 @@ src/
 ├── components/
 │   ├── sections/           # hero, services, about, testimonials, projects, cta-band
 │   ├── ui/                 # shadcn primitives (button, card, badge, separator)
-│   ├── logo.tsx            # <Logo>: the outlined wordmark with First Light as the dot of the i
+│   ├── logo.tsx            # <Logo variant>: signature, wordmark, tile, porthole (outlined artwork)
 │   ├── cta-button.tsx      # CTA that disables itself until its link is wired
 │   ├── reveal.tsx          # subtle scroll-in animation (degrades gracefully)
 │   ├── section.tsx         # Container / Eyebrow / SectionHeader primitives
@@ -97,19 +97,22 @@ Content is typed data — no JSX edits needed.
 
 The brand is **First Light** (2026-09-25): the rules live in
 `brand/first-light/BRAND-BOOK.md`, the final logo files in `brand/first-light/logos/`,
-and every earlier logo round in `brand/logo-iterations/`. `brand/favicon.svg` is
-the app tile and `brand/logo-wordmark.svg` is the night lockup. The nav/footer
-logo is the `<Logo>` React component, which inlines the outlined paths from
-`src/components/logo-paths.ts` (never live text; Anybody Expanded is not loaded
-as a font). The PNG exports (apple-touch icon, 512px icon, and the 1200×630 OG
-card) are generated from the SVGs:
+and every earlier logo round in `brand/logo-iterations/`. The logo system is the
+**signature** (horizon over the whole name; closing band and OG card), the everyday
+**wordmark** (nav and footer), and the **tile** / **porthole** icon (favicon, app
+icon, avatars), all outlined Anybody Condensed ExtraBold on an orbital sunrise.
+`brand/favicon.svg` is the tile and `brand/logo-wordmark.svg` is the night wordmark.
+The `<Logo variant>` React component inlines the markup from
+`src/components/logo-paths.ts` (never live text; Anybody Condensed is not loaded as
+a font). The PNG exports (apple-touch icon, 512px icon, and the 1200×630 OG card)
+are generated from the SVGs:
 
 ```bash
 npm run gen:assets      # regenerate icons + OG image after changing the logo or tagline
 ```
 
 This writes `src/app/apple-icon.png`, `public/favicon-32.png`, `public/icon-512.png`,
-and `src/app/opengraph-image.png`. The OG card embeds the lockup paths and sets the
+and `src/app/opengraph-image.png`. The OG card embeds the signature and sets the
 tagline from `src/config/links.ts` in Instrument Sans (`scripts/fonts/`), so
 regenerate it whenever the logo or the tagline changes. (Requires `sharp`, already
 a dev dependency.)

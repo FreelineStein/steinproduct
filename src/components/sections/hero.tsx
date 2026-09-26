@@ -16,7 +16,7 @@ export function Hero() {
       <Aurora flat>
         {/* Extra bottom padding keeps the lower fifth clear for the limb glow. */}
         <Container className="pt-24 pb-36 sm:pt-32 sm:pb-44">
-          <div className="max-w-4xl">
+          <div>
             <Eyebrow className="intro">
               AI PRODUCT BUILDS · AUTOMATION · CONSULTING
             </Eyebrow>

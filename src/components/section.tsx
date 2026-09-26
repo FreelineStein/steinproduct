@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/** Centered content column, the consistent max width across the site. */
+/** Centered content column: the brand's 1180px content max width, consistent across the site. */
 export function Container({
   className,
   children,
@@ -9,7 +9,7 @@ export function Container({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("mx-auto w-full max-w-5xl px-6", className)}>
+    <div className={cn("mx-auto w-full max-w-[1180px] px-6", className)}>
       {children}
     </div>
   );
