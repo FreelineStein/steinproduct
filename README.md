@@ -98,7 +98,7 @@ Content is typed data — no JSX edits needed.
 The brand is **First Light** (2026-09-25): the rules live in
 `brand/first-light/BRAND-BOOK.md`, the final logo files in `brand/first-light/logos/`,
 and every earlier logo round in `brand/logo-iterations/`. The logo system is the
-**signature** (horizon over the whole name; closing band and OG card), the everyday
+**signature** (horizon over the whole name; the OG card and link previews), the everyday
 **wordmark** (nav and footer), and the **tile** / **porthole** icon (favicon, app
 icon, avatars), all outlined Anybody Condensed ExtraBold on an orbital sunrise.
 `brand/favicon.svg` is the tile and `brand/logo-wordmark.svg` is the night wordmark.

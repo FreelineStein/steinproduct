@@ -1,12 +1,11 @@
 import { Container } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { Aurora } from "@/components/first-light";
-import { Logo } from "@/components/logo";
 import { CTAButton, ctaLg } from "@/components/cta-button";
 import { Button } from "@/components/ui/button";
 import { CALENDLY, PRIMARY_CTA, MAILTO, SITE } from "@/config/links";
 
-/** The closing call to action: the page's second and last Aurora, centered, with the signature logo. */
+/** The closing call to action: the page's second and last Aurora, centered. */
 export function CtaBand() {
   return (
     <section className="pb-4">
@@ -17,11 +16,6 @@ export function CtaBand() {
             contentClassName="px-6 pt-16 pb-24 text-center sm:px-12 sm:pt-20 sm:pb-28"
           >
             <div className="mx-auto max-w-xl">
-              {/* The signature: the logo as the main event, once per page. */}
-              <Logo
-                variant="signature"
-                className="mx-auto mb-8 flex h-16 w-fit sm:mb-10 sm:h-24"
-              />
               <h2 className="headline text-balance">
                 Got something you&apos;ve been meaning to fix or automate?
               </h2>

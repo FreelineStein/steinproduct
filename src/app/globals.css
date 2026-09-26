@@ -675,6 +675,16 @@
   .sp-aurora-flat {
     border-radius: 0;
   }
+  /* Blooms lower in the frame, clear of the headline. */
+  .sp-aurora-deep .sp-aurora-orb.a {
+    bottom: -42%;
+  }
+  .sp-aurora-deep .sp-aurora-orb.b {
+    bottom: -38%;
+  }
+  .sp-aurora-deep .sp-aurora-orb.c {
+    bottom: -24%;
+  }
   /* Faint star grid, fading out toward the edges. */
   .sp-aurora-stars {
     position: absolute;

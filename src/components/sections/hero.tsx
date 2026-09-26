@@ -13,19 +13,18 @@ import { CALENDLY, PRIMARY_CTA } from "@/config/links";
 export function Hero() {
   return (
     <section className="border-b border-line">
-      <Aurora flat>
+      <Aurora flat deep>
         {/* Extra bottom padding keeps the lower fifth clear for the limb glow. */}
         <Container className="pt-24 pb-36 sm:pt-32 sm:pb-44">
           <div>
             <Eyebrow className="intro">
               AI PRODUCT BUILDS · AUTOMATION · CONSULTING
             </Eyebrow>
-            <h1 className="display-xl mt-6 text-balance">
-              Your busy work,{" "}
-              <span className="whitespace-nowrap">
-                <span className="highlight">automated</span> —
-              </span>{" "}
-              live within a week.
+            <h1 className="display-xl mt-6">
+              <span className="block">
+                Your busy work, <span className="highlight">automated.</span>
+              </span>
+              <span className="block">Live within a week.</span>
             </h1>
             <p className="lead mt-8 max-w-2xl">
               Stein Product is a consulting practice that gets businesses

@@ -34,7 +34,7 @@ documents and a later light mode; there is no toggle.
 - **The logo is outlined artwork on an orbital sunrise.** Three variants, all "Stein
   Product" in Anybody Condensed ExtraBold as paths (`src/components/logo-paths.ts`,
   generated from `brand/first-light/logos`, ids prefixed per instance): the **signature**
-  (horizon arcs over the whole name, sun at center; closing CTA band and the OG card), the
+  (horizon arcs over the whole name, sun at center; the OG card and link previews, not on the page itself as of 2026-09-25), the
   everyday **wordmark** (dotless i, horizon spans "ein", sun over the i; nav and footer), and
   the **tile** or **porthole** icon (favicon, app icon, mobile nav; avatars). Dark first,
   no flat or one-color version. Never retype, recolor the horizon, move the sun or stretch

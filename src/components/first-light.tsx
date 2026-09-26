@@ -17,17 +17,20 @@ import { cn } from "@/lib/utils";
 export function Aurora({
   children,
   flat = false,
+  deep = false,
   className,
   contentClassName,
 }: {
   children: React.ReactNode;
   /** Square corners for full-bleed use (the hero). */
   flat?: boolean;
+  /** Push the blooms lower so they sit under the copy, not beside the headline. */
+  deep?: boolean;
   className?: string;
   contentClassName?: string;
 }) {
   return (
-    <div className={cn("sp-aurora", flat && "sp-aurora-flat", className)}>
+    <div className={cn("sp-aurora", flat && "sp-aurora-flat", deep && "sp-aurora-deep", className)}>
       <div aria-hidden="true" className="sp-aurora-stars" />
       <div aria-hidden="true" className="sp-aurora-orb a" />
       <div aria-hidden="true" className="sp-aurora-orb b" />
