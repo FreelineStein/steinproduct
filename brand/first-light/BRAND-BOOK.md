@@ -9,7 +9,7 @@ Three words to design by: **luminous, calm, exact.**
 ## Voice and content
 
 - Write like a senior product person talking to a busy owner: plain, specific, warm. Short sentences. Numbers over adjectives ("live within a week", "from $2,500").
-- Use "you" for the client and "I" or "Stein Product" for the practice. Never "we leverage", "synergy", "revolutionize", or "unlock".
+- Use "you" for the client and "Stein Product" for the practice; name Jacob where the claim is personal (credentials, bio). "We" only where it plainly means client plus consultant. Never "our team", and never "we leverage", "synergy", "revolutionize" or "unlock".
 - Sentence case everywhere, including buttons and headings. Uppercase appears only in `eyebrow`, `data` and Tag labels, set in the signal face (Archivo Expanded).
 - Punctuation: never use em dashes or en dashes as separators. Use a period, comma, colon or parentheses instead. Headline example: "Your busy work, automated. Live within a week."
 - No emoji, no exclamation marks, no stock "AI sparkle" glyphs.
@@ -35,12 +35,12 @@ Three words to design by: **luminous, calm, exact.**
 
 ## Type
 
-- **Unbounded Bold** (display) sets every headline: `display-xl`, `display-l` and `headline` at 700 with tight negative tracking, `title` at 500. It is wide, rounded and heavy: confident without shouting. Display type is always sentence case.
-- **Instrument Sans** (sans) carries all reading text: `lead` for intros in `ink-muted`, `body` for running copy, `small` for captions. Keep lines to 60 to 72 characters.
-- **Archivo Expanded** (signal) is the instrument panel: `eyebrow` labels in SemiBold caps at 0.14em tracking (`aurora` on Night, `stein-teal` on Day), and `data` for step numbers, prices and times with tabular figures. Never use it for sentences.
-- **Anybody Expanded ExtraBold** appears only inside the logo, as outlined letterforms. Do not set text in it; the wordmark is always the supplied artwork or the `Logo` component.
+- **Anybody Semi-Condensed** (display, width 90) sets every headline: `display-xl`, `display-l` and `headline` in ExtraBold 800 with slight negative tracking, `title` in Bold 700. Squared curves and sharp joints give it an engineered, retro-aerospace character, and it shares its bones with the logo lettering. Display type is always sentence case.
+- **Instrument Sans** (sans) carries all reading text: `lead` for intros in `ink-muted`, `body` for running copy, `small` for captions. Keep lines to 60 to 72 characters. Never set body copy in the display face.
+- **Archivo Expanded** (signal) is the instrument panel: `eyebrow` labels in SemiBold caps at 0.14em tracking (`aurora` on Night, `stein-teal` on Day), and `data` for step numbers, prices and times with tabular figures. Tiny wide caps under tall headlines is the intended contrast. Never use it for sentences.
+- The logo lettering is **Anybody Condensed ExtraBold** (width 75), outlined inside the artwork. Do not set live text in it; use the supplied files or the `Logo` component.
 - Pair them in this order on a hero: eyebrow → display line with one `Highlight` → lead → buttons.
-- On screens under 640px: `display-xl` 48px, `display-l` 36px, `headline` 28px.
+- On screens under 640px: `display-xl` 44px, `display-l` 36px, `headline` 28px.
 
 ## Space, shape and layout
 
@@ -62,12 +62,13 @@ Motion should feel like light moving, not objects bouncing.
 
 ## Logo
 
-- The mark is **First Light**: a curved planet limb in the Horizon gradient with the sun cresting to the right of its peak and a thin lens streak along the horizon. It nods to orbital sunrise imagery and to work that suddenly becomes easy.
-- In the wordmark, the mark is the dot of the i: "Stein Product" is set in Anybody Expanded ExtraBold, the i is dotless, and First Light sits above "ein", starting just after the t and ending over the n, with the sun directly above the i stem.
-- The mark also stands alone as the icon, with no letter underneath. Use the lockup wherever the name fits; use the mark or `stein-tile.svg` for favicons, avatars, app icons and social profiles.
-- Files live in the Logos group: `stein-lockup-night.svg` on dark grounds, `stein-lockup-day.svg` on light ones, the `ink` versions for one-color use. In React, use the `Logo` component.
-- Clear space is one sun diameter on every side of the lockup. Minimum lockup height 20px; minimum mark width 24px, below that use the tile.
-- Do not recolor, rotate, outline, re-space, add glow to, or animate the lockup files, and never move the sun off the i. The only sanctioned animation is the sun brightening once on page load.
+- The logo is built on **First Light**: a planet's horizon at sunrise, seen from orbit. A thin, symmetric limb glows brightest at its crest, a soft atmosphere sits just inside it, and the sun is half risen on the crest with a lens flare. It nods to orbital imagery and to work that suddenly becomes easy.
+- The lettering is "Stein Product" in Anybody Condensed ExtraBold, outlined, sentence case, one line.
+- **Signature** (`stein-signature-*.svg`, `Logo variant="signature"`): the horizon arcs over the whole name with the sun rising at center. Use it where the logo is the main event: the hero or closing sign-off, link previews, slide covers, merch. Minimum height 48px.
+- **Wordmark** (`stein-wordmark-*.svg`, `Logo variant="wordmark"`): the everyday logo. The i is dotless and the horizon spans "ein", so its crest and the sun sit directly over the i. Use it in the site nav (28 to 32px tall), email signatures, documents and invoices. Minimum height 20px.
+- **Icon** (`stein-tile.svg`, `stein-porthole.svg`, `Logo variant="tile" | "porthole"`): the orbital sunrise alone. Tile for favicons and app icons, porthole for avatars and social profiles.
+- **Dark first.** The logo is made of light and belongs on `void`, `surface-1` or an atmosphere ground. Use the day files on white only when it is unavoidable, and there prefer carrying the night logo in its own dark panel, or the tile. There is no flat or one-color version.
+- Clear space is the sun's glow diameter on every side. Never retype the name, recolor or stretch the horizon, move the sun off center, or add effects.
 
 ## Iconography and imagery
 

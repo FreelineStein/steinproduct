@@ -1,9 +1,8 @@
-The Stein Product wordmark (Anybody Expanded ExtraBold, outlined, with First Light as the dot of the i) and the First Light mark. Use the files as supplied; never redraw or retype.
+First Light logo artwork: outlined Anybody Condensed ExtraBold lettering with the orbital-sunrise horizon. Use the files as supplied; never redraw or retype. Dark first: use the night files wherever possible.
 
-- `stein-lockup-night.svg`: full-color lockup for Night grounds (`void`, `surface-1`, atmosphere). Wordmark ink #E8FBF6.
-- `stein-lockup-day.svg`: full-color lockup for Day grounds. Wordmark ink #061A1A; the horizon runs teal to amber for contrast.
-- `stein-lockup-ink-light.svg`: one-color #E8FBF6, for dark photography and single-ink use.
-- `stein-lockup-ink-dark.svg`: one-color #061012, for light single-ink use (print, stamps, embossing).
-- `stein-mark-night.svg` / `stein-mark-day.svg`: First Light alone in full color: the icon for social headers, slides and tight spaces.
-- `stein-mark-ink-light.svg` / `stein-mark-ink-dark.svg`: the mark in one color (#E8FBF6 / #061012).
-- `stein-tile.svg`: the mark on a rim-lit `surface-1` tile. Use for favicons, avatars, app icons and anywhere below 24px mark width.
+- `stein-signature-night.svg`: the signature lockup (horizon over the whole name) for dark grounds. Hero, link previews, slide covers.
+- `stein-signature-day.svg`: the signature lockup for white, only when a dark ground is impossible. Lettering #061A1A, horizon teal to amber.
+- `stein-wordmark-night.svg`: the everyday wordmark (horizon over "ein", sun over the i) for dark grounds. Nav, email signature, documents.
+- `stein-wordmark-day.svg`: the everyday wordmark for white, only when unavoidable.
+- `stein-tile.svg`: the icon on a dark rounded tile. Favicons, app icons, and the preferred mark on white.
+- `stein-porthole.svg`: the icon in a round porthole. Avatars and social profiles.

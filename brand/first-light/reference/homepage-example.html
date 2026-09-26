@@ -1,0 +1,47 @@
+<!-- @dsCard group="Patterns" height=1560 page subtitle="How the pieces compose on steinproduct.com" -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Homepage example</title>
+<style>
+html,body{margin:0}
+body{background:var(--void);color:var(--ink);font-family:var(--font-sans);padding:24px}
+.site{border:1px solid var(--line);border-radius:var(--radius-xl);overflow:hidden;background:var(--void)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;border-bottom:1px solid var(--line);background:var(--glass);backdrop-filter:blur(var(--blur-glass))}
+.links{display:flex;gap:20px;font:500 14px/20px var(--font-sans);color:var(--ink-muted)}
+.site .sp-aurora{border-radius:0}
+.site .sp-aurora-content{padding:56px 40px 130px}
+.display{margin:18px 0 16px;max-width:780px;font:800 62px/1.0 var(--font-display);letter-spacing:-0.02em;color:var(--ink)}
+.lead{margin:0 0 26px;max-width:540px;font:400 18px/28px var(--font-sans);color:var(--ink-muted)}
+.sec{margin:0;padding:32px 24px 0;font:800 38px/1.08 var(--font-display);letter-spacing:-0.015em;color:var(--ink)}
+.panels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:24px 24px 36px}
+.close .sp-aurora-content{display:flex;flex-direction:column;align-items:center;gap:22px;padding:48px 24px 120px}
+.close p{margin:0;max-width:460px;font:400 17px/26px var(--font-sans);color:var(--ink-muted)}
+@media (max-width:760px){.panels{grid-template-columns:1fr}.display{font-size:44px}.links{display:none}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+var S = window.Stein, h = React.createElement;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  h("div", { className: "site" },
+    h("div", { className: "nav" }, h(S.Logo, { variant: "wordmark", height: 30 }), h("div", { className: "links" }, h("span", null, "How it works"), h("span", null, "Services"), h("span", null, "Proof")), h(S.Button, null, "Book a free intro call")),
+    h(S.Aurora, { minHeight: "420px" },
+      h("div", { className: "sp-eyebrow" }, "AI product builds  ·  Automation  ·  Consulting"),
+      h("h1", { className: "display" }, "Your busy work, ", h(S.Highlight, null, "automated.")),
+      h("p", { className: "lead" }, "Live within a week. Fixed scope, built on the tools you already use, and yours to keep."),
+      h("div", { style: { display: "flex", gap: "12px", flexWrap: "wrap" } }, h(S.Button, { size: "lg", arrow: true }, "Book a free intro call"), h(S.Button, { variant: "secondary", size: "lg" }, "See how it works"))),
+    h("h2", { className: "sec" }, "Three steps, and you own the result."),
+    h("div", { style: { padding: "24px 24px 8px" } }, h(S.StepTrack, { active: 1, steps: [{ title: "Free intro call", meta: "30 min", detail: "Find the workflow costing you the most." }, { title: "Custom build", meta: "Within a week", detail: "Built on the tools you already use." }, { title: "You own it", meta: "Forever", detail: "Your data, your system, documented." }] })),
+    h("h2", { className: "sec" }, "Where to start."),
+    h("div", { className: "panels" },
+      h(S.GlassPanel, { eyebrow: "Start here", title: "AI Quick-Win", footer: [h("span", { key: 1 }, "$1,500"), h("span", { key: 2 }, "90 min kickoff")] }, "One workflow, automated and handed over within a week."),
+      h(S.GlassPanel, { featured: true, eyebrow: "Most chosen", title: "Custom Automation", footer: [h("span", { key: 1 }, "From $2,500"), h("span", { key: 2 }, "Fixed scope")] }, "A fixed-scope build for the repetitive work eating your team's hours."),
+      h(S.GlassPanel, { eyebrow: "Ongoing", title: "Enablement Retainer", footer: [h("span", { key: 1 }, "$2,000 / mo"), h("span", { key: 2 }, "Cancel anytime")] }, "New automations every month, plus upkeep on what's running.")),
+    h(S.Aurora, { className: "close", minHeight: "360px" },
+      h(S.Logo, { variant: "signature", height: 96 }),
+      h("p", null, "Name the workflow that eats your week. You will leave the call knowing what to automate first."),
+      h(S.Button, { size: "lg", arrow: true }, "Book a free intro call"))));
+</script>
+</body>
+</html>

@@ -20,7 +20,5 @@ export declare function Aurora(props: AuroraProps): JSX.Element;
 export interface Step { title: string; detail?: string; meta?: string; }
 export interface StepTrackProps { steps: Step[]; active?: number; beam?: boolean; className?: string; }
 export declare function StepTrack(props: StepTrackProps): JSX.Element;
-export interface LogoProps { variant?: "lockup" | "mark"; tone?: "auto" | "night" | "day" | "mono"; /** Lockup height in px (default 40). */ height?: number; /** Mark width in px (default 44). */ size?: number; href?: string; className?: string; }
+export interface LogoProps { /** signature: the horizon arcs over the whole name (hero, previews). wordmark: the horizon is the dot of the i (nav, documents). tile / porthole: the icon. */ variant?: "signature" | "wordmark" | "tile" | "porthole"; /** auto follows the page theme. */ tone?: "auto" | "night" | "day"; /** Height in px (defaults: signature 64, wordmark 32, icons 40). */ height?: number; href?: string; className?: string; }
 export declare function Logo(props: LogoProps): JSX.Element;
-export declare function Mark(props: { size?: number; tone?: "night" | "day" | "mono" }): JSX.Element;
-export declare function Wordmark(props: { height?: number; tone?: "night" | "day" | "mono" }): JSX.Element;

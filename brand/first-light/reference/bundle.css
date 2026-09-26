@@ -159,15 +159,13 @@
 @media (max-width: 640px) { .sp-steps { grid-template-columns: 1fr; } .sp-steps::before, .sp-steps-beam { display: none; } }
 
 /* ---------- Logo ---------- */
-.sp-logo { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+.sp-logo { --lg-a: #0e6b6b; --lg-b: #34f5c5; --lg-c: #ffd98a; --lg-sun: #fff4d6; --lg-ink: var(--ink); --lg-body: #0b2224; --lg-tile: #071315; --lg-rim: rgba(160, 255, 235, 0.18);
+  display: inline-flex; align-items: center; line-height: 0; color: var(--ink); text-decoration: none; }
 .sp-logo svg { display: block; overflow: visible; }
-.sp-logo .sp-g-a { stop-color: #0e6b6b; } .sp-logo .sp-g-b { stop-color: #34f5c5; } .sp-logo .sp-g-c { stop-color: #ffd98a; } .sp-logo .sp-g-sun { stop-color: #fff4d6; }
-.sp-logo-sun { fill: #fff4d6; filter: drop-shadow(0 0 4px var(--sol)); }
-[data-theme="day"] .sp-logo:not([data-tone="night"]) .sp-g-b, .sp-logo[data-tone="day"] .sp-g-b { stop-color: #0f9e80; }
-[data-theme="day"] .sp-logo:not([data-tone="night"]) .sp-g-c, .sp-logo[data-tone="day"] .sp-g-c,
-[data-theme="day"] .sp-logo:not([data-tone="night"]) .sp-g-sun, .sp-logo[data-tone="day"] .sp-g-sun { stop-color: #e8892f; }
-[data-theme="day"] .sp-logo:not([data-tone="night"]) .sp-logo-sun, .sp-logo[data-tone="day"] .sp-logo-sun { fill: #e8892f; filter: none; }
-.sp-logo.sp-logo.sp-logo[data-tone="mono"] .sp-logo-sun { fill: currentColor; filter: none; }
+.sp-logo[data-tone="night"] { --lg-b: #34f5c5; --lg-c: #ffd98a; --lg-sun: #fff4d6; --lg-ink: #e8fbf6; --lg-body: #0b2224; --lg-tile: #071315; --lg-rim: rgba(160, 255, 235, 0.18); }
+[data-theme="day"] .sp-logo:not([data-tone="night"]), .sp-logo[data-tone="day"] { --lg-b: #0f9e80; --lg-c: #e8892f; --lg-sun: #e8892f; --lg-ink: #061a1a; --lg-body: #d5eae4; --lg-tile: #ffffff; --lg-rim: rgba(6, 32, 31, 0.14); }
+.sp-logo .g-a { stop-color: var(--lg-a); } .sp-logo .g-b { stop-color: var(--lg-b); } .sp-logo .g-c { stop-color: var(--lg-c); } .sp-logo .g-sun { stop-color: var(--lg-sun); }
+.sp-logo .sun { fill: var(--lg-sun); } .sp-logo .ink { fill: var(--lg-ink); } .sp-logo .body { fill: var(--lg-body); } .sp-logo .tile { fill: var(--lg-tile); } .sp-logo .rim { stroke: var(--lg-rim); }
 
 /* ---------- Reveal ---------- */
 .sp-reveal { animation: sp-rise var(--sp-dur-slow) var(--sp-ease-out) both; animation-delay: calc(var(--sp-i, 0) * 90ms); }
