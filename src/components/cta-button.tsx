@@ -8,7 +8,7 @@ type LinkKind = ProductLink["kind"];
  * A call-to-action that links out to a hosted destination (Calendly, a Stripe
  * Payment Link, email, etc.). When the destination is still `null` (not wired
  * yet in src/config/links.ts), it renders a disabled button so the layout stays
- * complete and it's obvious the link is pending — Jacob just pastes the URL.
+ * complete and it's obvious the link is pending; Jacob just pastes the URL.
  *
  * The site never processes payments; these are outbound links only.
  */
@@ -62,5 +62,5 @@ export function CTAButton({
   );
 }
 
-/** Shared CTA sizing for hero/section primary actions (the base button is compact). */
-export const ctaLg = cn("h-11 px-6 text-[0.95rem]");
+/** Shared CTA sizing for hero and closing-CTA actions (the brand's `lg` button). */
+export const ctaLg = cn("h-12 px-7 text-base");

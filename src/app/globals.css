@@ -5,21 +5,31 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  SteinProduct — "Warm Technical" design tokens.
-  One accent (deep teal), warm off-white surfaces, charcoal text, hairline
-  borders. These are the ONLY brand colors — see handoff. shadcn primitives
-  read from the semantic tokens below, so nothing looks like stock shadcn.
+  Stein Product "First Light" design tokens (2026-09-25).
+
+  Night is the home theme and the only one the site ships: near-black
+  atmosphere grounds, aurora mint as the signature accent, orbit cyan as its
+  cool partner, sol gold for first light, and the original Stein teal kept as
+  the deep root of every gradient. Glow is emitted light, rationed to the
+  objects that matter. Source of truth: brand/first-light/BRAND-BOOK.md and
+  brand/first-light/reference/tokens.css. shadcn primitives read from the
+  semantic tokens below, so every primitive restyles at once.
 */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* next/font self-hosts Geist under a hashed family name, exposed via these
-     runtime CSS variables set on <html>. Reference them (do NOT use literal
-     "Geist" — that would miss the hashed family and fall back to system). */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-geist-sans);
+  /* next/font self-hosts each face under a hashed family name, exposed via
+     these runtime CSS variables set on <html>. Reference them (do NOT use a
+     literal "Unbounded" or "Instrument Sans" — that would miss the hashed
+     family and fall back to system). */
+  --font-sans: var(--font-instrument), system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-unbounded), "Arial Black", system-ui, sans-serif;
+  --font-display: var(--font-unbounded), "Arial Black", system-ui, sans-serif;
+  --font-signal: var(--font-archivo-x), ui-sans-serif, system-ui, sans-serif;
+  /* No monospace face in First Light; anything still asking for mono gets
+     the signal face rather than silently falling back to a system mono. */
+  --font-mono: var(--font-archivo-x), ui-sans-serif, system-ui, sans-serif;
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
@@ -45,86 +55,170 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.35);
-  --radius-2xl: calc(var(--radius) * 1.7);
-  --radius-3xl: calc(var(--radius) * 2.2);
+  /* Brand colors as Tailwind utilities: text-aurora, bg-surface-1, border-line... */
+  --color-void: var(--void);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-glass: var(--glass);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-stein-teal: var(--stein-teal);
+  --color-aurora: var(--aurora);
+  --color-orbit: var(--orbit);
+  --color-sol: var(--sol);
+  --color-dawn: var(--dawn);
+
+  /* Glow as shadow utilities: shadow-glow-sm, shadow-glow-md, shadow-glow-rim. */
+  --shadow-glow-sm: var(--glow-sm);
+  --shadow-glow-md: var(--glow-md);
+  --shadow-glow-rim: var(--glow-rim);
+  --shadow-lift: var(--lift);
+
+  /* Corners are generous and soft. Brand scale: sm 8, md 14, lg 22, xl 32. */
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --radius-2xl: var(--r-xl);
+  --radius-3xl: 40px;
+  --radius-pill: var(--r-pill);
 }
 
 :root {
-  --radius: 0.75rem;
+  color-scheme: dark;
 
-  --background: #faf8f5; /* warm off-white */
-  --foreground: #1a1a1a; /* charcoal */
+  /* ---- First Light, Night ---- */
+  --void: #050c0e;
+  --surface-1: #0a1719;
+  --surface-2: #102426;
+  --glass: rgba(150, 255, 230, 0.05);
+  --line: rgba(160, 255, 235, 0.12);
+  --ink: #e8fbf6;
+  --ink-muted: #9cb9b4;
+  --ink-faint: #7c9894;
+  --stein-teal: #0e6b6b;
+  --aurora: #34f5c5;
+  --orbit: #5cd6ff;
+  --sol: #ffd98a;
+  --dawn: #ff9e6b;
+  --on-action: #03201a;
+  --danger: #ff7a70;
 
-  --card: #ffffff;
-  --card-foreground: #1a1a1a;
-  --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
+  --glow-sm: 0 0 0 1px rgba(52, 245, 197, 0.4), 0 0 18px rgba(52, 245, 197, 0.35);
+  --glow-md:
+    0 0 0 1px rgba(52, 245, 197, 0.55), 0 0 28px rgba(52, 245, 197, 0.45),
+    0 0 64px rgba(92, 214, 255, 0.22);
+  --glow-rim:
+    0 0 0 1px rgba(92, 214, 255, 0.35), 0 0 48px rgba(52, 245, 197, 0.22),
+    0 0 140px rgba(92, 214, 255, 0.16);
+  --lift: 0 24px 64px rgba(0, 0, 0, 0.55);
 
-  --primary: #0e6b6b; /* deep teal — the one accent */
-  --primary-foreground: #faf8f5;
-  --primary-hover: #0a5757; /* darker teal for hover */
+  --grad-horizon: linear-gradient(90deg, #0e6b6b 0%, #34f5c5 62%, #ffd98a 100%);
+  --grad-atmosphere: radial-gradient(
+    120% 70% at 50% 110%,
+    #0e6b6b 0%,
+    #0a1719 48%,
+    #050c0e 78%
+  );
+  --grad-rim: conic-gradient(from 200deg, #34f5c5, #5cd6ff, #0e6b6b, #ffd98a, #34f5c5);
+  --blur-glass: 18px;
+  --blur-bloom: 64px;
 
-  --secondary: #f1ece4; /* warm neutral */
-  --secondary-foreground: #1a1a1a;
-  --muted: #f1ece4;
-  --muted-foreground: #6b6560; /* muted text */
-  --accent: #ece5da; /* warm hover tint */
-  --accent-foreground: #1a1a1a;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+  --space-9: 120px;
+  --space-10: 160px;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --r-pill: 999px;
 
-  --destructive: #b23b2e;
+  /* Motion: light moving, not objects bouncing. */
+  --sp-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --sp-ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --sp-dur-fast: 160ms;
+  --sp-dur-base: 320ms;
+  --sp-dur-slow: 900ms;
+  --sp-dur-ambient: 18s;
 
-  --border: #e4ded5; /* hairline */
-  --input: #e4ded5;
-  --ring: #0e6b6b; /* teal focus ring */
+  /* ---- shadcn semantic names, mapped onto First Light ---- */
+  --background: var(--void);
+  --foreground: var(--ink);
 
-  /* Teal-leaning neutral scale — reserved, unused in v1 */
-  --chart-1: #0e6b6b;
-  --chart-2: #3a8f8f;
-  --chart-3: #6b6560;
-  --chart-4: #9a948c;
-  --chart-5: #c7c0b6;
+  --card: var(--surface-1);
+  --card-foreground: var(--ink);
+  --popover: var(--surface-1);
+  --popover-foreground: var(--ink);
+
+  --primary: var(--aurora); /* action */
+  --primary-foreground: var(--on-action); /* never white on aurora */
+  --primary-hover: #6ff8d6;
+
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--ink);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--ink-muted);
+  --accent: var(--surface-2);
+  --accent-foreground: var(--ink);
+
+  --destructive: var(--danger);
+
+  /* `border` is the hairline that separates; `input` is the 3:1 edge a
+     control needs to be found (the brand pack calls that one "border"). */
+  --border: var(--line);
+  --input: #557f7b;
+  --ring: var(--sol); /* focus is first light */
+
+  --chart-1: var(--aurora);
+  --chart-2: var(--orbit);
+  --chart-3: var(--sol);
+  --chart-4: var(--dawn);
+  --chart-5: var(--stein-teal);
 }
 
-.dark {
-  --background: #161513; /* warm near-black */
-  --foreground: #f2eee8;
-
-  --card: #1e1c19;
-  --card-foreground: #f2eee8;
-  --popover: #1e1c19;
-  --popover-foreground: #f2eee8;
-
-  --primary: #2fa3a0; /* brighter teal for contrast on dark */
-  --primary-foreground: #0b0b0a;
-  --primary-hover: #38b4b0;
-
-  --secondary: #262320;
-  --secondary-foreground: #f2eee8;
-  --muted: #262320;
-  --muted-foreground: #a8a199;
-  --accent: #2c2925;
-  --accent-foreground: #f2eee8;
-
-  --destructive: #e0654f;
-
-  --border: #322e29;
-  --input: #3a352f;
-  --ring: #2fa3a0;
-
-  --chart-1: #2fa3a0;
-  --chart-2: #4fb6b3;
-  --chart-3: #a8a199;
-  --chart-4: #7a746c;
-  --chart-5: #4a453f;
+/*
+  Day values, kept for documents, proposals and a later light mode. Nothing
+  on the site sets data-theme="day" yet; there is no toggle.
+*/
+[data-theme="day"] {
+  color-scheme: light;
+  --void: #f3f8f6;
+  --surface-1: #ffffff;
+  --surface-2: #e6efec;
+  --glass: rgba(255, 255, 255, 0.72);
+  --line: rgba(6, 32, 31, 0.1);
+  --ink: #061a1a;
+  --ink-muted: #46605d;
+  --ink-faint: #566e6a;
+  --aurora: #0a7460;
+  --orbit: #0a6f94;
+  --sol: #8f5410;
+  --dawn: #b64a18;
+  --on-action: #ffffff;
+  --danger: #be3027;
+  --glow-sm: 0 0 0 1px rgba(14, 107, 107, 0.3), 0 6px 16px rgba(14, 107, 107, 0.2);
+  --glow-md: 0 0 0 1px rgba(14, 107, 107, 0.4), 0 10px 28px rgba(14, 107, 107, 0.28);
+  --glow-rim: 0 0 0 1px rgba(14, 107, 107, 0.16), 0 30px 80px rgba(14, 107, 107, 0.18);
+  --lift: 0 18px 44px rgba(6, 32, 31, 0.1);
+  --grad-horizon: linear-gradient(90deg, #0e6b6b 0%, #0f9e80 62%, #e8892f 100%);
+  --grad-atmosphere: radial-gradient(120% 70% at 50% 110%, #bfe9dc 0%, #eaf4f1 50%, #f3f8f6 80%);
+  --primary: var(--stein-teal);
+  --primary-hover: #0a5757;
+  --input: #6e8c88;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   html {
     @apply font-sans;
@@ -132,10 +226,26 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    /* slightly tighter tracking for the humanist-sans body */
     text-rendering: optimizeLegibility;
   }
-  /* Respect reduced-motion globally. */
+  /* Headlines default to the display face; sentence case, tight tracking. */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  /* Focus is the sol ring, on every interactive element. */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--aurora);
+    color: var(--on-action);
+  }
+  /* Respect reduced-motion globally: every loop stops. */
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
@@ -150,32 +260,653 @@
   }
 }
 
-@layer utilities {
-  /*
-    Faint dotted texture — used in ONE or two sections only (e.g. behind the
-    hero / CTA band), never site-wide. Built from the hairline-border color so
-    it stays whisper-quiet.
-  */
-  .texture-dots {
-    background-image: radial-gradient(
-      color-mix(in oklch, var(--foreground) 9%, transparent) 1px,
-      transparent 1px
-    );
-    background-size: 22px 22px;
-    background-position: -1px -1px;
+/* Animatable conic angle for the rotating rim light. */
+@property --sp-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes sp-rim-spin {
+  to {
+    --sp-angle: 360deg;
+  }
+}
+@keyframes sp-drift-a {
+  0%,
+  100% {
+    transform: translate3d(-8%, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(10%, -6%, 0) scale(1.15);
+  }
+}
+@keyframes sp-drift-b {
+  0%,
+  100% {
+    transform: translate3d(6%, 4%, 0) scale(1.1);
+  }
+  50% {
+    transform: translate3d(-12%, -4%, 0) scale(0.95);
+  }
+}
+@keyframes sp-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes sp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, currentColor 55%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+@keyframes sp-travel {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes sp-sunrise {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+  Component styles ported from brand/first-light/reference/bundle.css. Tailwind
+  utilities layer after this, so a `className` can still nudge any of them.
+*/
+@layer components {
+  /* ---------- Type roles ---------- */
+  .display-xl {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+  .display-l {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+  }
+  .headline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+  .title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 640px) {
+    .display-xl {
+      font-size: 88px;
+    }
+    .display-l {
+      font-size: 60px;
+    }
+    .headline {
+      font-size: 36px;
+    }
+  }
+  .lead {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--ink-muted);
+  }
+  /* The instrument panel: step numbers, prices, times. Tabular figures. */
+  .signal {
+    font-family: var(--font-signal);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
   }
 
+  /* ---------- Eyebrow + Highlight ---------- */
+  .eyebrow {
+    font-family: var(--font-signal);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--aurora);
+  }
+  [data-theme="day"] .eyebrow {
+    color: var(--stein-teal);
+  }
+  .highlight {
+    background: var(--grad-horizon);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  [data-theme="day"] .highlight {
+    background: none;
+    color: var(--stein-teal);
+  }
+
+  /* ---------- Button ---------- */
+  .sp-btn {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    border-radius: var(--r-pill);
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+      transform var(--sp-dur-fast) var(--sp-ease-out),
+      box-shadow var(--sp-dur-base) var(--sp-ease-out),
+      background-color var(--sp-dur-base) var(--sp-ease-out),
+      border-color var(--sp-dur-base) var(--sp-ease-out),
+      color var(--sp-dur-base);
+  }
+  .sp-btn:active {
+    transform: translateY(1px) scale(0.99);
+  }
+  .sp-btn:disabled,
+  .sp-btn[aria-disabled="true"] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  .sp-btn-primary {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    box-shadow: var(--glow-sm);
+  }
+  .sp-btn-primary:hover {
+    box-shadow: var(--glow-md);
+    transform: translateY(-1px);
+  }
+  /* Light sweep on hover. */
+  .sp-btn-primary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      100deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 80%
+    );
+    background-size: 250% 100%;
+    background-position: 150% 0;
+    mix-blend-mode: soft-light;
+    transition: background-position var(--sp-dur-slow) var(--sp-ease-out);
+  }
+  .sp-btn-primary:hover::after {
+    background-position: -50% 0;
+  }
+  .sp-btn-secondary {
+    background: var(--glass);
+    color: var(--ink);
+    border-color: var(--input);
+    backdrop-filter: blur(var(--blur-glass));
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+  }
+  .sp-btn-secondary:hover {
+    border-color: var(--aurora);
+    box-shadow: var(--glow-sm);
+  }
+  .sp-btn-ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+  .sp-btn-ghost:hover {
+    color: var(--aurora);
+  }
+  .sp-btn-arrow {
+    display: inline-block;
+    transition: transform var(--sp-dur-base) var(--sp-ease-out);
+  }
+  .sp-btn:hover .sp-btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* ---------- Tag ---------- */
+  .sp-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 6px var(--space-3);
+    border-radius: var(--r-pill);
+    font-family: var(--font-signal);
+    font-weight: 600;
+    font-size: 10.5px;
+    line-height: 16px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 1px solid var(--line);
+    background: var(--glass);
+    color: var(--ink-muted);
+  }
+  .sp-tag-aurora {
+    color: var(--aurora);
+    border-color: color-mix(in srgb, var(--aurora) 35%, transparent);
+  }
+  .sp-tag-sol {
+    color: var(--sol);
+    border-color: color-mix(in srgb, var(--sol) 40%, transparent);
+  }
+  .sp-tag-danger {
+    color: var(--danger);
+    border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+  }
+  .sp-tag-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--r-pill);
+    background: currentColor;
+    color: inherit;
+  }
+  .sp-tag-live .sp-tag-dot {
+    animation: sp-pulse 1.8s var(--sp-ease-out) infinite;
+  }
+
+  /* ---------- GlassPanel ---------- */
+  .sp-panel {
+    position: relative;
+    isolation: isolate;
+    padding: var(--space-6);
+    border-radius: var(--r-lg);
+    background: var(--glass);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(var(--blur-glass));
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+    color: var(--ink);
+    transition:
+      transform var(--sp-dur-base) var(--sp-ease-out),
+      box-shadow var(--sp-dur-base) var(--sp-ease-out),
+      border-color var(--sp-dur-base);
+  }
+  /* Top rim catch-light. */
+  .sp-panel::before {
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    top: -1px;
+    height: 1px;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--aurora) 70%, transparent),
+      transparent
+    );
+  }
+  .sp-panel-interactive:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--aurora) 30%, transparent);
+    box-shadow: var(--glow-rim);
+  }
+  .sp-panel-featured {
+    border-color: transparent;
+    box-shadow: var(--glow-rim);
+  }
+  /* Rotating rim light, one per group. */
+  .sp-panel-featured::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    z-index: -1;
+    pointer-events: none;
+    background: conic-gradient(
+      from var(--sp-angle),
+      var(--aurora),
+      var(--orbit),
+      var(--stein-teal),
+      var(--sol),
+      var(--aurora)
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: sp-rim-spin 8s linear infinite;
+  }
+  /* Quiet panel: surface-1 and a hairline, no glass, no glow. */
+  .sp-panel-solid {
+    background: var(--surface-1);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .sp-panel-solid::before {
+    display: none;
+  }
+  .sp-panel-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .sp-panel-body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--ink-muted);
+  }
+  .sp-panel-footer {
+    margin-top: var(--space-5);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-3);
+    font-family: var(--font-signal);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- Atmosphere ground (any section) ---------- */
+  .sp-atmosphere {
+    background: var(--grad-atmosphere);
+  }
+
+  /* ---------- Aurora (hero and closing CTA ground) ---------- */
+  .sp-aurora {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--grad-atmosphere);
+    color: var(--ink);
+    border-radius: var(--r-xl);
+  }
+  .sp-aurora-flat {
+    border-radius: 0;
+  }
+  /* Faint star grid, fading out toward the edges. */
+  .sp-aurora-stars {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      color-mix(in srgb, var(--ink) 35%, transparent) 1px,
+      transparent 1.5px
+    );
+    background-size: 32px 32px;
+    -webkit-mask: radial-gradient(90% 70% at 50% 30%, #000 20%, transparent 75%);
+    mask: radial-gradient(90% 70% at 50% 30%, #000 20%, transparent 75%);
+  }
+  /* Three blurred, drifting blooms: aurora, orbit, sol. */
+  .sp-aurora-orb {
+    position: absolute;
+    z-index: -1;
+    border-radius: var(--r-pill);
+    filter: blur(var(--blur-bloom));
+    pointer-events: none;
+    will-change: transform;
+  }
+  .sp-aurora-orb.a {
+    width: 55%;
+    aspect-ratio: 1.6;
+    left: 8%;
+    bottom: -30%;
+    background: var(--aurora);
+    opacity: 0.28;
+    animation: sp-drift-a var(--sp-dur-ambient) var(--sp-ease-inout) infinite;
+  }
+  .sp-aurora-orb.b {
+    width: 45%;
+    aspect-ratio: 1.4;
+    right: 4%;
+    bottom: -26%;
+    background: var(--orbit);
+    opacity: 0.22;
+    animation: sp-drift-b calc(var(--sp-dur-ambient) * 1.3) var(--sp-ease-inout) infinite;
+  }
+  .sp-aurora-orb.c {
+    width: 22%;
+    aspect-ratio: 1;
+    right: 24%;
+    bottom: -8%;
+    background: var(--sol);
+    opacity: 0.16;
+    animation: sp-breathe 7s var(--sp-ease-inout) infinite;
+  }
+  /* The planet limb, glowing along the bottom edge. */
+  .sp-aurora-limb {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 84%;
+    width: 190%;
+    aspect-ratio: 1;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(closest-side, var(--void) 97%, transparent 100%);
+    box-shadow:
+      0 -2px 0 0 color-mix(in srgb, var(--aurora) 85%, transparent),
+      0 -10px 40px 0 color-mix(in srgb, var(--aurora) 45%, transparent),
+      0 -40px 120px 0 color-mix(in srgb, var(--orbit) 25%, transparent);
+  }
+  .sp-aurora-content {
+    position: relative;
+  }
+
+  /* ---------- StepTrack ---------- */
+  .sp-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--sp-steps, 3), 1fr);
+    gap: var(--space-5);
+    position: relative;
+  }
+  /* The orbital line. */
+  .sp-steps::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    right: 12px;
+    height: 1px;
+    background: var(--line);
+  }
+  /* A beam of light traveling along it. */
+  .sp-steps-beam {
+    position: absolute;
+    top: 9px;
+    width: 64px;
+    height: 5px;
+    margin-left: -32px;
+    border-radius: var(--r-pill);
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--aurora), transparent);
+    filter: blur(1px);
+    animation: sp-travel 4.5s var(--sp-ease-inout) infinite;
+  }
+  .sp-step {
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: var(--space-2);
+  }
+  .sp-step-node {
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    border-radius: var(--r-pill);
+    border: 1px solid var(--input);
+    background: var(--surface-1);
+    display: grid;
+    place-items: center;
+  }
+  .sp-step-node::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: var(--r-pill);
+    background: var(--ink-faint);
+  }
+  .sp-step-done .sp-step-node {
+    border-color: var(--aurora);
+  }
+  .sp-step-done .sp-step-node::after {
+    background: var(--aurora);
+  }
+  /* The active step holds the sol sun. */
+  .sp-step-active .sp-step-node {
+    border-color: var(--aurora);
+    box-shadow: var(--glow-md);
+  }
+  .sp-step-active .sp-step-node::after {
+    background: var(--sol);
+  }
+  .sp-step-num {
+    margin-top: var(--space-3);
+    font-family: var(--font-signal);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-faint);
+  }
+  .sp-step-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .sp-step-detail {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--ink-muted);
+  }
+  @media (max-width: 640px) {
+    .sp-steps {
+      grid-template-columns: 1fr;
+    }
+    .sp-steps::before,
+    .sp-steps-beam {
+      display: none;
+    }
+  }
+
+  /* ---------- Logo ---------- */
+  .sp-logo {
+    display: inline-flex;
+    align-items: center;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .sp-logo svg {
+    display: block;
+    overflow: visible;
+  }
+  /* The sun: the only sanctioned animation is it brightening once on load. */
+  .sp-logo-sun {
+    fill: #fff4d6;
+    filter: drop-shadow(0 0 4px var(--sol));
+    animation: sp-sunrise 1.2s var(--sp-ease-out) both;
+  }
+
+  /* ---------- Glass nav bar ---------- */
+  .sp-glass-bar {
+    background:
+      linear-gradient(var(--glass), var(--glass)),
+      color-mix(in srgb, var(--void) 86%, transparent);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(var(--blur-glass));
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sp-panel-featured::after,
+    .sp-aurora-orb,
+    .sp-steps-beam,
+    .sp-tag-live .sp-tag-dot,
+    .sp-logo-sun {
+      animation: none !important;
+    }
+    .sp-btn,
+    .sp-panel {
+      transition: none;
+    }
+  }
+}
+
+@layer utilities {
   /*
-    Scroll-in reveal. Visible by default so no-JS visitors always see content;
-    only when JS is present (<html class="js">) is it hidden then animated in.
+    Scroll-in reveal: rise 14px and fade. Visible by default so no-JS visitors
+    always see content; only when JS is present (<html class="js">) is it
+    hidden then animated in. No blur or will-change here: either would turn
+    the wrapper into a backdrop root and blind the glass panels inside it.
   */
   .js .reveal {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(14px);
     transition:
-      opacity 0.45s ease-out,
-      transform 0.45s ease-out;
-    will-change: opacity, transform;
+      opacity var(--sp-dur-slow) var(--sp-ease-out),
+      transform var(--sp-dur-slow) var(--sp-ease-out);
   }
   .js .reveal.is-visible {
     opacity: 1;
@@ -190,14 +921,14 @@
   }
 
   /*
-    One-time intro for above-the-fold (hero) content. Pure CSS, runs on load —
-    NOT gated on JS/hydration — so it never delays the LCP element the way a
-    scroll observer would.
+    One-time intro for above-the-fold (hero) content. Pure CSS, runs on load,
+    NOT gated on JS/hydration, so it never delays the LCP element the way a
+    scroll observer would. Never put it on the headline or subhead.
   */
   @keyframes intro-up {
     from {
       opacity: 0;
-      transform: translateY(12px);
+      transform: translateY(14px);
     }
     to {
       opacity: 1;
@@ -205,21 +936,11 @@
     }
   }
   .intro {
-    animation: intro-up 0.7s ease-out both;
+    animation: intro-up var(--sp-dur-slow) var(--sp-ease-out) both;
   }
   @media (prefers-reduced-motion: reduce) {
     .intro {
       animation: none;
     }
-  }
-
-  /* Mono eyebrow/label: the accent that signals "I build things." */
-  .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted-foreground);
   }
 }

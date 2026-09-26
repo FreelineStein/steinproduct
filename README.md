@@ -13,7 +13,7 @@ buttons that link out. No backend, no database, no CMS.
 
 - **Next.js (App Router) + TypeScript** — static export (`output: "export"`)
 - **Tailwind CSS v4** + **shadcn/ui** (restyled to the brand tokens)
-- **Geist Sans / Geist Mono** via `next/font`
+- **Unbounded / Instrument Sans / Archivo Expanded**, self-hosted via `next/font/local` from `brand/first-light/fonts`
 - `lucide-react` for the few icons
 - Deploy target: **Vercel** (Cloudflare Pages works too — see below)
 
@@ -39,7 +39,7 @@ src/
 ├── app/
 │   ├── layout.tsx          # root layout, metadata, fonts, nav + footer
 │   ├── page.tsx            # home page — composes the sections in order
-│   ├── globals.css         # design tokens (the warm-technical palette) + utilities
+│   ├── globals.css         # First Light tokens (Night) + ported component styles
 │   ├── styleguide/         # /styleguide design reference (noindex)
 │   ├── sitemap.ts robots.ts manifest.ts
 │   ├── icon.svg            # favicon (also apple-icon.png, opengraph-image.png)
@@ -47,7 +47,7 @@ src/
 ├── components/
 │   ├── sections/           # hero, services, about, testimonials, projects, cta-band
 │   ├── ui/                 # shadcn primitives (button, card, badge, separator)
-│   ├── logo.tsx            # <Logo> — teal chevron + live "Stein Product" text
+│   ├── logo.tsx            # <Logo>: the outlined wordmark with First Light as the dot of the i
 │   ├── cta-button.tsx      # CTA that disables itself until its link is wired
 │   ├── reveal.tsx          # subtle scroll-in animation (degrades gracefully)
 │   ├── section.tsx         # Container / Eyebrow / SectionHeader primitives
@@ -58,7 +58,7 @@ src/
 │   └── projects.ts         # portfolio entries (stub / "coming soon" for v1)
 └── config/
     └── links.ts            # ◀ WIRE EXTERNAL URLS HERE (Calendly, Stripe, social)
-brand/                      # source SVGs (favicon, wordmark) — used by gen:assets
+brand/                      # first-light/ brand pack, final logos, source SVGs for gen:assets
 scripts/                    # generate-assets.mjs, preview-server.mjs
 ```
 
@@ -95,25 +95,35 @@ Content is typed data — no JSX edits needed.
 
 ## Brand assets
 
-Source SVGs live in `brand/` (`favicon.svg`, `logo-wordmark.svg`). The nav/footer
-logo is the `<Logo>` React component (live text, not an image). The PNG exports
-(apple-touch icon, 512px icon, and the 1200×630 OG card) are generated from the
-SVGs:
+The brand is **First Light** (2026-09-25): the rules live in
+`brand/first-light/BRAND-BOOK.md`, the final logo files in `brand/first-light/logos/`,
+and every earlier logo round in `brand/logo-iterations/`. `brand/favicon.svg` is
+the app tile and `brand/logo-wordmark.svg` is the night lockup. The nav/footer
+logo is the `<Logo>` React component, which inlines the outlined paths from
+`src/components/logo-paths.ts` (never live text; Anybody Expanded is not loaded
+as a font). The PNG exports (apple-touch icon, 512px icon, and the 1200×630 OG
+card) are generated from the SVGs:
 
 ```bash
-npm run gen:assets      # regenerate icons + OG image after changing brand/*.svg
+npm run gen:assets      # regenerate icons + OG image after changing the logo or tagline
 ```
 
 This writes `src/app/apple-icon.png`, `public/favicon-32.png`, `public/icon-512.png`,
-and `src/app/opengraph-image.png`. (Requires `sharp`, already a dev dependency.)
+and `src/app/opengraph-image.png`. The OG card embeds the lockup paths and sets the
+tagline from `src/config/links.ts` in Instrument Sans (`scripts/fonts/`), so
+regenerate it whenever the logo or the tagline changes. (Requires `sharp`, already
+a dev dependency.)
 
 ## Design system
 
-The "warm-technical" palette is defined once as tokens in `src/app/globals.css`
-and consumed everywhere (shadcn included) — one teal accent, warm off-white
-surfaces, charcoal text, hairline borders, mono eyebrows. Visit **`/styleguide`**
-to see the whole system on one page. Dark-mode tokens exist (light is the
-default); there's no toggle in v1.
+First Light ships in its **Night** theme only: near-black atmosphere grounds,
+aurora mint as the one action color, glass panels with rim light, and ambient CSS
+motion that stops under reduced motion. Tokens are defined once in
+`src/app/globals.css` and consumed everywhere (shadcn included); the brand's
+components (Aurora, GlassPanel, Tag, StepTrack) live in
+`src/components/first-light.tsx`. Visit **`/styleguide`** to see the whole system
+on one page. Day values exist in the tokens for documents and a later light mode;
+there's no toggle.
 
 ## Deploying
 

@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
 import { Container, Eyebrow, SectionHeader } from "@/components/section";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Aurora, GlassPanel, StepTrack, Tag } from "@/components/first-light";
 import { Logo } from "@/components/logo";
 
 export const metadata: Metadata = {
@@ -15,14 +9,68 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const SWATCHES = [
-  { name: "background", value: "#FAF8F5", token: "--background" },
-  { name: "foreground", value: "#1A1A1A", token: "--foreground" },
-  { name: "primary (teal)", value: "#0E6B6B", token: "--primary" },
-  { name: "primary hover", value: "#0A5757", token: "--primary-hover" },
-  { name: "muted text", value: "#6B6560", token: "--muted-foreground" },
-  { name: "border", value: "#E4DED5", token: "--border" },
+const GROUNDS = [
+  { name: "void", value: "#050C0E", token: "--void", note: "page" },
+  { name: "surface-1", value: "#0A1719", token: "--surface-1", note: "cards" },
+  { name: "surface-2", value: "#102426", token: "--surface-2", note: "inputs, nested" },
 ];
+
+const INKS = [
+  { name: "ink", value: "#E8FBF6", token: "--ink" },
+  { name: "ink-muted", value: "#9CB9B4", token: "--ink-muted" },
+  { name: "ink-faint", value: "#7C9894", token: "--ink-faint" },
+];
+
+const ACCENTS = [
+  { name: "aurora", value: "#34F5C5", token: "--aurora", note: "signature accent, action" },
+  { name: "orbit", value: "#5CD6FF", token: "--orbit", note: "cool partner" },
+  { name: "sol", value: "#FFD98A", token: "--sol", note: "first light, focus" },
+  { name: "dawn", value: "#FF9E6B", token: "--dawn", note: "charts only" },
+  { name: "stein-teal", value: "#0E6B6B", token: "--stein-teal", note: "gradient root" },
+];
+
+const SAMPLE_STEPS = [
+  { title: "Free intro call", detail: "Pick the workflow with the highest payoff.", meta: "30 min" },
+  { title: "Built for you", detail: "Async build, live demo, written docs.", meta: "Within a week" },
+  { title: "You own everything", detail: "Your accounts, your keys." },
+];
+
+const LOGO_FILES = [
+  "stein-lockup-night.svg",
+  "stein-lockup-day.svg",
+  "stein-lockup-ink-light.svg",
+  "stein-lockup-ink-dark.svg",
+  "stein-mark-night.svg",
+  "stein-mark-day.svg",
+  "stein-mark-ink-light.svg",
+  "stein-mark-ink-dark.svg",
+  "stein-tile.svg",
+];
+
+function Swatch({
+  name,
+  value,
+  token,
+  note,
+}: {
+  name: string;
+  value: string;
+  token: string;
+  note?: string;
+}) {
+  return (
+    <div className="overflow-hidden rounded-md border border-line bg-surface-1">
+      <div className="h-16 w-full" style={{ background: value }} />
+      <div className="p-3">
+        <p className="text-sm font-medium">{name}</p>
+        <p className="signal text-ink-faint">
+          {value} · {token}
+        </p>
+        {note ? <p className="mt-1 text-xs text-muted-foreground">{note}</p> : null}
+      </div>
+    </div>
+  );
+}
 
 export default function StyleguidePage() {
   return (
@@ -30,52 +78,92 @@ export default function StyleguidePage() {
       <SectionHeader
         eyebrow="DESIGN SYSTEM"
         title="Style guide"
-        intro="The warm-technical token system — one accent, mono accents, consistent spacing. This page is for reference and is not indexed."
+        intro="First Light, the Night theme: atmosphere grounds, glass floating above them, one glowing object in front. Source of truth is brand/first-light/BRAND-BOOK.md. This page is for reference and is not indexed."
       />
 
       {/* Color */}
       <section className="mt-12">
         <Eyebrow>COLOR</Eyebrow>
+        <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+          Grounds step up in light. Text holds 4.5:1 on every ground. Aurora is
+          the action color and labels it with on-action, never white.
+        </p>
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-          {SWATCHES.map((s) => (
-            <div
-              key={s.token}
-              className="overflow-hidden rounded-xl border border-border bg-card"
-            >
-              <div className="h-20 w-full" style={{ background: s.value }} />
-              <div className="p-3">
-                <p className="text-sm font-medium">{s.name}</p>
-                <p className="font-mono text-xs text-muted-foreground">
-                  {s.value}
-                </p>
-              </div>
-            </div>
+          {GROUNDS.map((s) => (
+            <Swatch key={s.token} {...s} />
           ))}
+          {INKS.map((s) => (
+            <Swatch key={s.token} {...s} />
+          ))}
+        </div>
+        <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-5">
+          {ACCENTS.map((s) => (
+            <Swatch key={s.token} {...s} />
+          ))}
+        </div>
+      </section>
+
+      {/* Gradients and glow */}
+      <section className="mt-16">
+        <Eyebrow>GRADIENTS AND GLOW</Eyebrow>
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-md border border-line bg-surface-1 p-4">
+            <div className="h-10 rounded-sm" style={{ background: "var(--grad-horizon)" }} />
+            <p className="signal mt-3 text-ink-faint">grad-horizon</p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Teal to mint to gold, always left to right. Rim strokes and the Highlight word.
+            </p>
+          </div>
+          <div className="rounded-md border border-line bg-surface-1 p-4">
+            <div className="h-10 rounded-sm" style={{ background: "var(--grad-atmosphere)" }} />
+            <p className="signal mt-3 text-ink-faint">grad-atmosphere</p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Planet glow rising from below. Ground for heroes, bands and the footer.
+            </p>
+          </div>
+          <div className="rounded-md border border-line bg-surface-1 p-4">
+            <div className="h-10 rounded-sm" style={{ background: "var(--grad-rim)" }} />
+            <p className="signal mt-3 text-ink-faint">grad-rim</p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              The luminous edge of a featured panel. One rim-lit object per view.
+            </p>
+          </div>
+        </div>
+        <div className="mt-6 flex flex-wrap items-center gap-8 rounded-md border border-line bg-surface-1 p-8">
+          <div className="size-16 rounded-md bg-surface-2 shadow-glow-sm" title="glow-sm" />
+          <div className="size-16 rounded-md bg-surface-2 shadow-glow-md" title="glow-md" />
+          <div className="size-16 rounded-md bg-surface-2 shadow-glow-rim" title="glow-rim" />
+          <div className="size-16 rounded-md bg-surface-2 shadow-lift" title="lift" />
+          <p className="signal text-ink-faint">glow-sm · glow-md · glow-rim · lift</p>
         </div>
       </section>
 
       {/* Type */}
       <section className="mt-16">
         <Eyebrow>TYPOGRAPHY</Eyebrow>
-        <div className="mt-6 space-y-4">
-          <p className="eyebrow">MONO EYEBROW · METADATA</p>
-          <h1 className="font-sans text-5xl font-semibold tracking-[-0.03em]">
-            Display heading
+        <div className="mt-6 space-y-6">
+          <div>
+            <p className="eyebrow">EYEBROW · ARCHIVO EXPANDED SEMIBOLD · 0.14EM</p>
+            <p className="signal mt-2 text-ink-faint">
+              signal · 30 min · $1,500 flat · 01 02 03
+            </p>
+          </div>
+          <h1 className="display-xl text-balance">
+            Busy work, <span className="highlight">automated.</span>
           </h1>
-          <h2 className="font-sans text-3xl font-semibold tracking-[-0.02em]">
-            Section heading
-          </h2>
-          <h3 className="font-sans text-xl font-semibold">Subsection heading</h3>
+          <h2 className="display-l">Live within a week.</h2>
+          <h2 className="headline">Three steps, and you own the result.</h2>
+          <h3 className="title">Custom automation</h3>
+          <p className="lead max-w-2xl">
+            Lead paragraph in Instrument Sans at ink-muted: Stein Product puts AI
+            to work on the workflows costing you the most.
+          </p>
           <p className="max-w-2xl text-base leading-relaxed text-foreground/90">
-            Body copy in the humanist sans. The quick brown fox jumps over the
-            lazy dog — generous line height, comfortable measure, AA contrast on
-            the warm off-white background.
+            Body copy in Instrument Sans. Fixed scope, never hourly. You own the
+            data and the system. Keep lines to 60 to 72 characters.
           </p>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Muted supporting text, used for descriptions and asides.
-          </p>
-          <p className="font-mono text-sm">
-            const mono = &quot;for code, prices, and labels&quot;;
+            Small supporting text, used for descriptions and asides.
           </p>
         </div>
       </section>
@@ -83,46 +171,131 @@ export default function StyleguidePage() {
       {/* Buttons */}
       <section className="mt-16">
         <Eyebrow>BUTTONS</Eyebrow>
-        <div className="mt-6 flex flex-wrap items-center gap-3">
-          <Button className="h-11 px-6 text-[0.95rem]">Primary</Button>
-          <Button variant="outline" className="h-11 px-6 text-[0.95rem]">
-            Outline
+        <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+          One primary per view. Secondary is glass with a findable edge. Ghost
+          is for low-stakes inline links.
+        </p>
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <Button size="lg">Book a free intro call</Button>
+          <Button variant="secondary" size="lg">
+            See how it works
           </Button>
-          <Button variant="secondary" className="h-11 px-6 text-[0.95rem]">
-            Secondary
-          </Button>
-          <Button variant="ghost" className="h-11 px-6 text-[0.95rem]">
+          <Button variant="ghost" size="lg">
             Ghost
           </Button>
-          <Button variant="link">Link</Button>
-          <Button disabled className="h-11 px-6 text-[0.95rem]">
-            Disabled
-          </Button>
+          <Button>Default size</Button>
+          <Button size="sm">Small</Button>
+          <Button disabled>Disabled</Button>
         </div>
       </section>
 
-      {/* Card + Logo */}
+      {/* Tags */}
       <section className="mt-16">
-        <Eyebrow>COMPONENTS</Eyebrow>
+        <Eyebrow>TAGS</Eyebrow>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <Tag tone="aurora" live>
+            Taking clients
+          </Tag>
+          <Tag tone="sol">Live within a week</Tag>
+          <Tag>Fixed scope</Tag>
+          <Tag dot>Client work</Tag>
+          <Tag tone="danger" dot>
+            Link missing
+          </Tag>
+        </div>
+      </section>
+
+      {/* Panels */}
+      <section className="mt-16">
+        <Eyebrow>GLASS PANELS</Eyebrow>
+        <div className="sp-atmosphere mt-6 grid gap-6 rounded-lg border border-line p-6 sm:grid-cols-3 sm:p-8">
+          <GlassPanel className="p-6">
+            <h3 className="sp-panel-title">Glass panel</h3>
+            <p className="sp-panel-body mt-3 text-sm">
+              Glass fill, hairline, top catch-light, backdrop blur.
+            </p>
+            <div className="sp-panel-footer">
+              <span>Scoped per engagement</span>
+            </div>
+          </GlassPanel>
+          <GlassPanel featured className="p-6">
+            <h3 className="sp-panel-title">Featured</h3>
+            <p className="sp-panel-body mt-3 text-sm">
+              The recommended option: a rotating horizon rim. One per group.
+            </p>
+            <div className="sp-panel-footer">
+              <span>$1,500 flat</span>
+              <span>Within a week</span>
+            </div>
+          </GlassPanel>
+          <GlassPanel solid className="p-6">
+            <h3 className="sp-panel-title">Solid</h3>
+            <p className="sp-panel-body mt-3 text-sm">
+              Surface-1 and a hairline, no glow. Proof, about and FAQ.
+            </p>
+          </GlassPanel>
+        </div>
+      </section>
+
+      {/* StepTrack */}
+      <section className="mt-16">
+        <Eyebrow>STEP TRACK</Eyebrow>
+        <div className="mt-6 rounded-lg border border-line bg-surface-1 p-6 sm:p-8">
+          <StepTrack steps={SAMPLE_STEPS} active={1} />
+        </div>
+      </section>
+
+      {/* Aurora */}
+      <section className="mt-16">
+        <Eyebrow>AURORA</Eyebrow>
+        <Aurora className="mt-6 border border-line" contentClassName="px-6 pt-14 pb-24 sm:px-12">
+          <Tag tone="aurora" live>
+            Taking clients
+          </Tag>
+          <h2 className="display-l mt-5 max-w-xl text-balance">
+            Your busy work, <span className="highlight">automated.</span>
+          </h2>
+          <p className="lead mt-4 max-w-lg">
+            Atmosphere gradient, star grid, three drifting blooms and the planet
+            limb. Twice per page at most: the hero and the closing CTA.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button size="lg">Book a free intro call</Button>
+            <Button variant="secondary" size="lg">
+              See how it works
+            </Button>
+          </div>
+        </Aurora>
+      </section>
+
+      {/* Logo */}
+      <section className="mt-16">
+        <Eyebrow>LOGO</Eyebrow>
+        <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+          Anybody Expanded ExtraBold, outlined. The i is dotless; First Light is
+          its dot, with the sun directly above the stem. Never redraw, recolor,
+          rotate or set in live text.
+        </p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <Card className="rounded-2xl border border-border bg-card shadow-sm ring-0 [--card-spacing:--spacing(6)]">
-            <CardHeader>
-              <CardTitle>Card title</CardTitle>
-              <CardDescription>
-                A rounded-2xl card with a hairline border and a very subtle
-                shadow.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">
-                Cards hold the service ladder, testimonials, and project tiles.
-              </p>
-            </CardContent>
-          </Card>
-          <div className="flex items-center justify-center rounded-2xl border border-border bg-card p-10">
-            <Logo className="text-2xl" />
+          <div className="flex flex-col items-start justify-center gap-8 overflow-hidden rounded-lg border border-line bg-surface-1 p-6 sm:p-10">
+            <Logo className="h-6 sm:h-10 md:h-10" />
+            <Logo className="h-5 sm:h-7 md:h-7" />
+            <Logo className="h-4 sm:h-5 md:h-5" />
+          </div>
+          <div className="flex items-center justify-center gap-6 rounded-lg border border-line bg-surface-1 p-6 sm:gap-10 sm:p-10">
+            <Logo showWordmark={false} className="size-16" />
+            {/* The tile: favicons, avatars, app icons. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/favicon.svg" alt="Stein Product app tile" width={64} height={64} />
           </div>
         </div>
+        <ul className="mt-6 grid gap-1 sm:grid-cols-3">
+          {LOGO_FILES.map((file) => (
+            <li key={file} className="signal text-ink-faint">
+              brand/first-light/logos/{file}
+            </li>
+          ))}
+        </ul>
       </section>
     </Container>
   );

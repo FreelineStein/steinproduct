@@ -1,20 +1,46 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { SITE } from "@/config/links";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+/*
+  First Light type, self-hosted from the brand pack (brand/first-light/fonts).
+  Unbounded sets headlines, Instrument Sans carries reading text, and Archivo
+  Expanded is the "signal" face for eyebrows, tags, numbers and prices.
+  Anybody Expanded (the logo face) is never loaded: the wordmark is outlined
+  artwork in src/components/logo.tsx.
+*/
+const unbounded = localFont({
+  src: [
+    { path: "./fonts/unbounded-latin-500-normal.woff2", weight: "500" },
+    { path: "./fonts/unbounded-latin-700-normal.woff2", weight: "700" },
+  ],
+  variable: "--font-unbounded",
   display: "swap",
+  fallback: ["Arial Black", "system-ui", "sans-serif"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const instrument = localFont({
+  src: [
+    { path: "./fonts/instrument-sans-latin-400-normal.woff2", weight: "400" },
+    { path: "./fonts/instrument-sans-latin-500-normal.woff2", weight: "500" },
+    { path: "./fonts/instrument-sans-latin-600-normal.woff2", weight: "600" },
+  ],
+  variable: "--font-instrument",
   display: "swap",
+  fallback: ["system-ui", "-apple-system", "sans-serif"],
+});
+
+const archivoExpanded = localFont({
+  src: [
+    { path: "./fonts/archivo-expanded-latin-500.woff2", weight: "500" },
+    { path: "./fonts/archivo-expanded-latin-600.woff2", weight: "600" },
+  ],
+  variable: "--font-archivo-x",
+  display: "swap",
+  fallback: ["Archivo", "ui-sans-serif", "system-ui", "sans-serif"],
 });
 
 const description =
@@ -59,10 +85,13 @@ export const metadata: Metadata = {
   },
 };
 
+// The site ships in the Night theme only, so the browser chrome matches the
+// void ground under either OS color scheme.
 export const viewport: Viewport = {
+  colorScheme: "dark",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#faf8f5" },
-    { media: "(prefers-color-scheme: dark)", color: "#161513" },
+    { media: "(prefers-color-scheme: light)", color: "#050C0E" },
+    { media: "(prefers-color-scheme: dark)", color: "#050C0E" },
   ],
 };
 
@@ -74,7 +103,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${unbounded.variable} ${instrument.variable} ${archivoExpanded.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         {/* Mark JS as available before paint so scroll-in reveals can hide

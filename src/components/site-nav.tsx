@@ -11,17 +11,19 @@ const NAV_LINKS = [
   { label: "FAQ", href: "/#faq" },
 ] as const;
 
-/** Sticky, minimal top nav. Logo left, anchor links + primary CTA right. */
+/** Sticky glass bar. Logo left, anchor links plus the one glowing CTA right. */
 export function SiteNav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-md">
+    <header className="sp-glass-bar sticky top-0 z-50">
       <Container className="flex h-16 items-center justify-between gap-4">
         <Link
           href="/"
-          aria-label="Stein Product — home"
-          className="rounded-sm text-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+          aria-label="Stein Product, home"
+          className="rounded-sm"
         >
-          <Logo />
+          {/* Under 640px the name plus the CTA do not fit, so the mark stands in. */}
+          <Logo showWordmark={false} className="sm:hidden" />
+          <Logo className="hidden sm:inline-flex" />
         </Link>
 
         <nav aria-label="Primary" className="flex items-center gap-1 sm:gap-2">
@@ -30,7 +32,7 @@ export function SiteNav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                  className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </Link>
@@ -41,6 +43,7 @@ export function SiteNav() {
             label={PRIMARY_CTA.label}
             href={CALENDLY.introCall}
             kind="calendly"
+            size="sm"
           />
         </nav>
       </Container>

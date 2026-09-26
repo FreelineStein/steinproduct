@@ -11,8 +11,9 @@ export default function manifest(): MetadataRoute.Manifest {
     description: SITE.tagline,
     start_url: "/",
     display: "standalone",
-    background_color: "#faf8f5",
-    theme_color: "#faf8f5",
+    // First Light Night: the void ground.
+    background_color: "#050C0E",
+    theme_color: "#050C0E",
     icons: [
       { src: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
       { src: "/icon-512.png", type: "image/png", sizes: "512x512" },

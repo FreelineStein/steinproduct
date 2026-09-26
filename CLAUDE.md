@@ -15,6 +15,31 @@ Two deliberate exceptions, not stragglers to be "fixed":
 - FAQ questions are written in the buyer's voice ("What tools do I need?", "We're not
   technical", "What about our data?"); those pronouns are the client speaking.
 
+## Brand: First Light (as of 2026-09-25)
+The site ships the **First Light** brand in its **Night theme only**: near-black atmosphere
+grounds (`void`, `surface-1`, `surface-2`), aurora mint `#34F5C5` as the one action color,
+orbit cyan and sol gold as partners, and the original Stein teal `#0E6B6B` kept as the root
+of the teal-to-mint-to-gold horizon gradient. This supersedes the Warm Technical palette
+(cream, charcoal, single teal accent, Geist, chevron logo). Do not restore it. Rules of
+record: `brand/first-light/BRAND-BOOK.md`; tokens and ported components in
+`src/app/globals.css`; `/styleguide` renders the system. Day values exist in the tokens for
+documents and a later light mode; there is no toggle.
+
+- **Type roles.** Unbounded Bold (700; `title` at 500) for headlines, Instrument Sans for
+  body, Archivo Expanded SemiBold caps as the "signal" face (eyebrows, tags, step numbers,
+  prices, times). All three self-hosted from `brand/first-light/fonts` via `next/font/local`.
+  Anybody Expanded ExtraBold is the logo face only and is never loaded as a font.
+- **The wordmark is outlined artwork.** "Stein Product" is Anybody Expanded ExtraBold as
+  paths (`src/components/logo-paths.ts`, generated from `brand/first-light/logos`); the i is
+  dotless and the First Light mark (planet limb, sun, lens streak) is its dot. Never set it
+  in live text, recolor the gradient, rotate the limb or move the sun off the i. The mark
+  alone is the icon; `stein-tile.svg` is the favicon and app icon.
+- **Glow is rationed.** One primary button per view, one `featured` panel per group, one sol
+  moment per view, at most two Aurora grounds per page (hero and closing CTA). No purple or
+  blue-violet gradients. All motion is CSS and stops under `prefers-reduced-motion`.
+- **Regenerate the OG card** (`npm run gen:assets`) whenever the logo or the tagline in
+  `src/config/links.ts` changes; it is a generated PNG that no copy or CSS change touches.
+
 ## Client proof
 Habitat for Humanity Inland Valley is named on the site, and Matthew's testimonial runs
 verbatim, as of 2026-08-12 — both cleared by the client in writing (permission on record at

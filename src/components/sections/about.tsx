@@ -13,13 +13,14 @@ const PARAGRAPHS = [
 
 /**
  * Headshot path (in /public). Set to `null` to fall back to the faceless
- * layout — same null-safe philosophy as the ProductLink pattern.
+ * layout, the same null-safe philosophy as the ProductLink pattern.
  */
 const HEADSHOT: string | null = "/jacob-headshot.jpg";
 
+/** Quiet section: void ground, hairlines, no glow. */
 export function About() {
   return (
-    <section id="about" className="scroll-mt-20 border-t border-border/70 py-20 sm:py-28">
+    <section id="about" className="scroll-mt-20 border-t border-line py-20 sm:py-28">
       <Container className="grid gap-10 md:grid-cols-3 md:gap-14">
         <div className="md:col-span-1">
           <Reveal>
@@ -29,12 +30,12 @@ export function About() {
                 alt="Jacob Stein"
                 width={280}
                 height={350}
-                className="mb-8 aspect-[4/5] w-40 rounded-2xl border border-border object-cover object-top shadow-sm sm:w-48"
+                className="mb-8 aspect-[4/5] w-40 rounded-lg border border-line object-cover object-top sm:w-48"
                 priority={false}
               />
             ) : null}
             <Eyebrow>WHO YOU&apos;RE WORKING WITH</Eyebrow>
-            <h2 className="mt-4 font-sans text-3xl font-semibold tracking-[-0.02em] text-balance sm:text-4xl">
+            <h2 className="headline mt-4 text-balance md:text-[28px]">
               A Principal PM who ships, now pointed at your backlog.
             </h2>
           </Reveal>
