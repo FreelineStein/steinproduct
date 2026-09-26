@@ -1,0 +1,1 @@
+Spacing studies for the chosen direction (original stroke weight). gap = space between the horizon and the lowercase tops, in i-stem widths; pad = space after the t. Final uses gap 0.35, pad 0.3 and a 1.25x stroke.

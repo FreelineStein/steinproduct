@@ -1,0 +1,79 @@
+/* Stein Product "First Light" tokens as CSS custom properties. Generated from tokens.json. Night is the default theme. */
+:root, [data-theme="night"] {
+  --void: #050C0E;
+  --surface-1: #0A1719;
+  --surface-2: #102426;
+  --glass: rgba(150, 255, 230, 0.05);
+  --line: rgba(160, 255, 235, 0.12);
+  --border: #557F7B;
+  --ink: #E8FBF6;
+  --ink-muted: #9CB9B4;
+  --ink-faint: #7C9894;
+  --stein-teal: #0E6B6B;
+  --aurora: #34F5C5;
+  --orbit: #5CD6FF;
+  --sol: #FFD98A;
+  --dawn: #FF9E6B;
+  --action: var(--aurora);
+  --on-action: #03201A;
+  --focus: var(--sol);
+  --success: var(--aurora);
+  --warning: var(--sol);
+  --danger: #FF7A70;
+  --glow-sm: 0 0 0 1px rgba(52, 245, 197, 0.40), 0 0 18px rgba(52, 245, 197, 0.35);
+  --glow-md: 0 0 0 1px rgba(52, 245, 197, 0.55), 0 0 28px rgba(52, 245, 197, 0.45), 0 0 64px rgba(92, 214, 255, 0.22);
+  --glow-rim: 0 0 0 1px rgba(92, 214, 255, 0.35), 0 0 48px rgba(52, 245, 197, 0.22), 0 0 140px rgba(92, 214, 255, 0.16);
+  --lift: 0 24px 64px rgba(0, 0, 0, 0.55);
+}
+[data-theme="day"] {
+  --void: #F3F8F6;
+  --surface-1: #FFFFFF;
+  --surface-2: #E6EFEC;
+  --glass: rgba(255, 255, 255, 0.72);
+  --line: rgba(6, 32, 31, 0.10);
+  --border: #6E8C88;
+  --ink: #061A1A;
+  --ink-muted: #46605D;
+  --ink-faint: #566E6A;
+  --stein-teal: #0E6B6B;
+  --aurora: #0A7460;
+  --orbit: #0A6F94;
+  --sol: #8F5410;
+  --dawn: #B64A18;
+  --action: var(--stein-teal);
+  --on-action: #FFFFFF;
+  --focus: #8F5410;
+  --success: #0A7460;
+  --warning: #8F5410;
+  --danger: #BE3027;
+  --glow-sm: 0 0 0 1px rgba(14, 107, 107, 0.30), 0 6px 16px rgba(14, 107, 107, 0.20);
+  --glow-md: 0 0 0 1px rgba(14, 107, 107, 0.40), 0 10px 28px rgba(14, 107, 107, 0.28);
+  --glow-rim: 0 0 0 1px rgba(14, 107, 107, 0.16), 0 30px 80px rgba(14, 107, 107, 0.18);
+  --lift: 0 18px 44px rgba(6, 32, 31, 0.10);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+  --space-9: 120px;
+  --space-10: 160px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+  --grad-horizon: linear-gradient(90deg, #0e6b6b 0%, #34f5c5 62%, #ffd98a 100%);
+  --grad-horizon-day: linear-gradient(90deg, #0e6b6b 0%, #0f9e80 62%, #e8892f 100%);
+  --grad-atmosphere: radial-gradient(120% 70% at 50% 110%, #0e6b6b 0%, #0a1719 48%, #050c0e 78%);
+  --grad-rim: conic-gradient(from 200deg, #34f5c5, #5cd6ff, #0e6b6b, #ffd98a, #34f5c5);
+  --blur-glass: 18px;
+  --blur-bloom: 64px;
+  --font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --font-signal: "Archivo Expanded", "Archivo", ui-sans-serif, system-ui, sans-serif;
+}

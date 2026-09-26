@@ -1,0 +1,26 @@
+import * as React from "react";
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Visual weight. One primary per view. */ variant?: "primary" | "secondary" | "ghost";
+  size?: "md" | "lg";
+  /** Appends a sliding arrow glyph. */ arrow?: boolean;
+  /** Renders an anchor instead of a button. */ href?: string;
+  children: React.ReactNode;
+}
+export declare function Button(props: ButtonProps): JSX.Element;
+export interface TagProps { tone?: "neutral" | "aurora" | "sol" | "danger"; dot?: boolean; live?: boolean; className?: string; children: React.ReactNode; }
+export declare function Tag(props: TagProps): JSX.Element;
+export interface HighlightProps { className?: string; children: React.ReactNode; }
+export declare function Highlight(props: HighlightProps): JSX.Element;
+export interface GlassPanelProps { eyebrow?: React.ReactNode; title?: React.ReactNode; footer?: React.ReactNode; featured?: boolean; interactive?: boolean; as?: keyof JSX.IntrinsicElements; className?: string; style?: React.CSSProperties; children?: React.ReactNode; }
+export declare function GlassPanel(props: GlassPanelProps): JSX.Element;
+export interface FieldProps extends React.InputHTMLAttributes<HTMLInputElement> { label?: string; hint?: string; error?: string; multiline?: boolean; }
+export declare function Field(props: FieldProps): JSX.Element;
+export interface AuroraProps { minHeight?: string; horizon?: boolean; flat?: boolean; className?: string; style?: React.CSSProperties; contentStyle?: React.CSSProperties; children?: React.ReactNode; }
+export declare function Aurora(props: AuroraProps): JSX.Element;
+export interface Step { title: string; detail?: string; meta?: string; }
+export interface StepTrackProps { steps: Step[]; active?: number; beam?: boolean; className?: string; }
+export declare function StepTrack(props: StepTrackProps): JSX.Element;
+export interface LogoProps { variant?: "lockup" | "mark"; tone?: "auto" | "night" | "day" | "mono"; /** Lockup height in px (default 40). */ height?: number; /** Mark width in px (default 44). */ size?: number; href?: string; className?: string; }
+export declare function Logo(props: LogoProps): JSX.Element;
+export declare function Mark(props: { size?: number; tone?: "night" | "day" | "mono" }): JSX.Element;
+export declare function Wordmark(props: { height?: number; tone?: "night" | "day" | "mono" }): JSX.Element;
