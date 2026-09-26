@@ -148,6 +148,7 @@
   --sp-dur-fast: 160ms;
   --sp-dur-base: 320ms;
   --sp-dur-slow: 900ms;
+  --sp-dur-reveal: 550ms; /* scroll-in reveals: quick enough for a brisk scroller */
   --sp-dur-ambient: 18s;
 
   /* ---- shadcn semantic names, mapped onto First Light ---- */
@@ -654,6 +655,13 @@
   .sp-atmosphere {
     background: var(--grad-atmosphere);
   }
+  /* A band in the middle of the page: the glow fades back to void before
+     the next section starts, so there is no hard seam. */
+  .sp-atmosphere-band {
+    background:
+      linear-gradient(to bottom, transparent 55%, var(--void) 100%),
+      var(--grad-atmosphere);
+  }
 
   /* ---------- Aurora (hero and closing CTA ground) ---------- */
   .sp-aurora {
@@ -863,7 +871,7 @@
   .sp-glass-bar {
     background:
       linear-gradient(var(--glass), var(--glass)),
-      color-mix(in srgb, var(--void) 92%, transparent);
+      color-mix(in srgb, var(--void) 97%, transparent);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(var(--blur-glass));
     -webkit-backdrop-filter: blur(var(--blur-glass));
@@ -894,8 +902,8 @@
     opacity: 0;
     transform: translateY(14px);
     transition:
-      opacity var(--sp-dur-slow) var(--sp-ease-out),
-      transform var(--sp-dur-slow) var(--sp-ease-out);
+      opacity var(--sp-dur-reveal) var(--sp-ease-out),
+      transform var(--sp-dur-reveal) var(--sp-ease-out);
   }
   .js .reveal.is-visible {
     opacity: 1;

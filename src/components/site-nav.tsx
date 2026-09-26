@@ -23,7 +23,7 @@ export function SiteNav() {
         >
           {/* Under 640px the name plus the CTA do not fit, so the tile stands in. */}
           <Logo variant="tile" className="size-8 sm:hidden" />
-          <Logo className="hidden h-7 sm:inline-flex md:h-8" />
+          <Logo className="hidden h-8 sm:inline-flex md:h-9" />
         </Link>
 
         <nav aria-label="Primary" className="flex items-center gap-1 sm:gap-2">

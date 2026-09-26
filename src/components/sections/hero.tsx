@@ -22,7 +22,7 @@ export function Hero() {
             </Eyebrow>
             <h1 className="display-xl mt-6 text-balance">
               Your busy work,{" "}
-              <span className="sm:whitespace-nowrap">
+              <span className="whitespace-nowrap">
                 <span className="highlight">automated</span> —
               </span>{" "}
               live within a week.

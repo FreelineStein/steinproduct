@@ -17,7 +17,7 @@ export function Testimonials() {
   const isSolo = liveTestimonials.length === 1;
 
   return (
-    <section className="sp-atmosphere border-t border-line py-20 sm:py-28">
+    <section className="sp-atmosphere-band border-t border-line py-20 sm:py-28">
       <Container>
         <SectionHeader eyebrow="WHAT CLIENTS SAY" title="In their words." />
         <div

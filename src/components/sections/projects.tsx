@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Container, SectionHeader } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { Tag } from "@/components/first-light";
+import { cn } from "@/lib/utils";
 import { projects } from "@/content/projects";
 
 /**
@@ -24,7 +25,13 @@ export function Projects() {
           intro="Live products and shipped client work — click through."
         />
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul
+          className={cn(
+            "mt-12 grid gap-6 sm:grid-cols-2",
+            // A third column only once there are three entries to fill it.
+            projects.length >= 3 && "lg:grid-cols-3",
+          )}
+        >
           {projects.map((project, i) => {
             const isLink = Boolean(project.href);
             const inner = (

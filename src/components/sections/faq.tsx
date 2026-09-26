@@ -17,8 +17,8 @@ export function Faq() {
         <SectionHeader eyebrow="QUESTIONS" title="Answers before you ask." />
 
         <div className="mt-12 divide-y divide-line border-y border-line">
-          {faqItems.map((item, i) => (
-            <Reveal key={item.question} delay={(i % 3) * 60}>
+          {faqItems.map((item) => (
+            <Reveal key={item.question}>
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-sm py-5 text-left text-base font-medium text-foreground transition-colors hover:text-aurora [&::-webkit-details-marker]:hidden">
                   {item.question}

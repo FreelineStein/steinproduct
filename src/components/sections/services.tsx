@@ -15,7 +15,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="sp-atmosphere scroll-mt-20 border-t border-line py-20 sm:py-28"
+      className="sp-atmosphere-band scroll-mt-20 border-t border-line py-20 sm:py-28"
     >
       <Container>
         <SectionHeader
