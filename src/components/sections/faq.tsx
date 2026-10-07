@@ -27,7 +27,7 @@ export function Faq() {
                     className="size-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-45 group-open:text-aurora"
                   />
                 </summary>
-                <p className="max-w-2xl pb-5 text-sm leading-relaxed text-muted-foreground">
+                <p className="max-w-[58ch] pb-5 text-sm leading-relaxed text-muted-foreground">
                   {item.answer}
                 </p>
               </details>

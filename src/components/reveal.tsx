@@ -40,9 +40,9 @@ export function Reveal({
           }
         }
       },
-      // Fire as soon as the element approaches the viewport (before it's fully
-      // in), so content is legible on arrival rather than fading in mid-screen.
-      { threshold: 0, rootMargin: "0px 0px 15% 0px" },
+      // Fire well before the element enters the viewport, so content is
+      // legible on arrival rather than fading in mid-screen on a brisk scroll.
+      { threshold: 0, rootMargin: "0px 0px 30% 0px" },
     );
 
     observer.observe(el);

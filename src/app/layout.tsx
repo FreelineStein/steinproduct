@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { SiteNav } from "@/components/site-nav";
+import { SiteNav, MobileJumpRow } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { SITE } from "@/config/links";
 
@@ -45,9 +45,9 @@ const archivoExpanded = localFont({
 });
 
 const description =
-  "Stein Product is a consulting practice led by Jacob Stein, a Principal-level product manager. It gets businesses organized and puts AI to work on the workflows that actually run — starting with the one costing you the most, live within a week.";
+  "Stein Product is a consulting practice led by Jacob Stein, a Principal-level product manager. It gets businesses organized and puts AI to work on the workflows that actually run, starting with the one costing you the most. Live within a week.";
 
-const title = "Stein Product — AI automation consulting";
+const title = "Stein Product: AI automation consulting";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -104,6 +104,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      // The inline script below adds a `js` class before hydration, so the
+      // server and client class lists differ on purpose.
+      suppressHydrationWarning
       className={`${anybody.variable} ${instrument.variable} ${archivoExpanded.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
@@ -121,6 +124,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <SiteNav />
+        <MobileJumpRow />
         <main id="main" className="flex-1">
           {children}
         </main>

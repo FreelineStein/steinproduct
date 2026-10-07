@@ -15,9 +15,9 @@ export default function Home() {
       <HowItWorks />
       <Services />
       <About />
-      <RetainerBand />
       <Projects />
       <Testimonials />
+      <RetainerBand />
       <Faq />
       <CtaBand />
     </>

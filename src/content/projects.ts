@@ -29,10 +29,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "this-site",
-    title: "steinproduct.com — this site",
+    title: "This site, steinproduct.com",
     description:
-      "A statically-exported Next.js build, designed and shipped with the same AI-augmented workflow behind every engagement.",
-    tags: ["Next.js", "Static export", "Design"],
+      "Designed, written and shipped with the same AI-augmented workflow behind every engagement.",
+    tags: ["Website", "Brand", "Design"],
     label: "Own build",
   },
   {
@@ -40,13 +40,13 @@ export const projects: Project[] = [
     title: "Document automation for Habitat for Humanity Inland Valley",
     description:
       "Thirteen hand-filled documents per homeowner, turned into a one-click generator.",
-    tags: ["Automation", "Apps Script", "Google Workspace"],
+    tags: ["Automation", "Google Sheets", "Documents"],
     label: "Client work",
     caseStudy: {
       problem:
-        "Every approved homeowner in their home repair program needed 13 legal and program documents — each one filled in by hand, retyping the same applicant details.",
+        "Every approved homeowner in their home repair program needed 13 legal and program documents, each one filled in by hand, retyping the same applicant details.",
       built:
-        "A one-click generator inside the Google Sheet they already worked from — it fills every template and files finished Word and PDF copies in a folder named for the homeowner. No new software, no per-use fees.",
+        "A one-click generator inside the Google Sheet they already worked from. It fills every template and files finished Word and PDF copies in a folder named for the homeowner. No new software, no per-use fees.",
       outcome:
         "Hours of document work removed per applicant, the team maintains it themselves, and the engagement earned a referral.",
     },

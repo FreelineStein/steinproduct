@@ -363,7 +363,20 @@
     line-height: 1.2;
     letter-spacing: -0.005em;
   }
+  /* A middle step so the hero does not jump from 44px to 76px at 640px
+     (that wrap pushed the CTA off a 200%-zoom viewport). */
   @media (min-width: 640px) {
+    .display-xl {
+      font-size: 56px;
+    }
+    .display-l {
+      font-size: 48px;
+    }
+    .headline {
+      font-size: 32px;
+    }
+  }
+  @media (min-width: 1024px) {
     .display-xl {
       font-size: 76px;
     }
@@ -512,7 +525,7 @@
     border-radius: var(--r-pill);
     font-family: var(--font-signal);
     font-weight: 600;
-    font-size: 10.5px;
+    font-size: 11px;
     line-height: 16px;
     letter-spacing: 0.14em;
     text-transform: uppercase;

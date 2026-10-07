@@ -28,7 +28,7 @@ export function SiteFooter() {
                 href={SOCIAL.substack}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-sm text-foreground underline decoration-input underline-offset-4 transition-colors hover:text-aurora hover:decoration-aurora"
+                className="inline-block rounded-sm py-1 text-foreground underline decoration-input underline-offset-4 transition-colors hover:text-aurora hover:decoration-aurora"
               >
                 Substack
               </a>
@@ -40,13 +40,13 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <nav aria-label="Footer" className="grid grid-cols-2 gap-x-12 gap-y-3 text-sm">
+        <nav aria-label="Footer" className="grid grid-cols-2 gap-x-12 gap-y-1 text-sm">
           <span className="eyebrow col-span-2 text-ink-faint">
             Get in touch
           </span>
           <a
             href={MAILTO}
-            className="rounded-sm text-foreground transition-colors hover:text-aurora"
+            className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora"
           >
             {SITE.email}
           </a>
@@ -54,7 +54,7 @@ export function SiteFooter() {
             href={SOCIAL.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-sm text-foreground transition-colors hover:text-aurora"
+            className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora"
           >
             LinkedIn
           </a>

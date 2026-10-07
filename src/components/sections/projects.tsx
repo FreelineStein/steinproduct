@@ -20,15 +20,16 @@ export function Projects() {
     <section id="proof" className="scroll-mt-20 border-t border-line py-20 sm:py-28">
       <Container>
         <SectionHeader
-          eyebrow="PROOF, NOT PROMISES"
+          eyebrow="WHAT HAS SHIPPED"
           title="Proof, not promises."
-          intro="Live products and shipped client work — click through."
+          intro="Shipped client work and the practice's own builds."
         />
 
         <ul
           className={cn(
-            "mt-12 grid gap-6 sm:grid-cols-2",
-            // A third column only once there are three entries to fill it.
+            "mt-12 grid gap-6",
+            // Columns only once there are entries to fill them.
+            projects.length >= 2 && "sm:grid-cols-2",
             projects.length >= 3 && "lg:grid-cols-3",
           )}
         >

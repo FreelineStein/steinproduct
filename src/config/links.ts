@@ -90,5 +90,11 @@ export const PRIMARY_CTA = {
   href: CALENDLY.introCall, // resolves to null until the intro link is set
 } as const;
 
+/**
+ * The one line that sits beside every primary CTA, so the visitor knows what
+ * the glowing button opens before they click it (hero and closing band).
+ */
+export const CALL_REASSURANCE = "30 minutes on Calendly. No obligation.";
+
 /** mailto: helper for the contact/footer link. */
 export const MAILTO = `mailto:${SITE.email}`;

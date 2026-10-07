@@ -39,6 +39,7 @@ export function CTAButton({
         className={className}
       >
         {label}
+        <span className="sr-only"> (link coming soon)</span>
       </Button>
     );
   }

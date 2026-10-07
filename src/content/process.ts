@@ -28,6 +28,6 @@ export const processSteps: ProcessStep[] = [
   {
     title: "You own everything",
     detail:
-      "The finished automation lives in your accounts, on your keys — your data stays yours, and nothing breaks if the engagement ends.",
+      "The finished automation lives in your own accounts. Your data stays yours, and nothing breaks if the engagement ends.",
   },
 ];
