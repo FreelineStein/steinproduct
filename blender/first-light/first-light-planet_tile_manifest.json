@@ -1,0 +1,3586 @@
+{
+  "tile_count": 162,
+  "goldberg_cell_count": 162,
+  "goldberg_hexagon_count": 150,
+  "goldberg_pentagon_count": 12,
+  "visible_cap_hexagon_count": 150,
+  "visible_cap_pentagon_count": 12,
+  "tile_mesh_classes": 7,
+  "band": {
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "start": -0.4,
+    "width": 1.4,
+    "front_min": 0.08,
+    "upper_min": 0.14
+  },
+  "tiles": [
+    {
+      "name": "Tile_0000",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        0.0,
+        0.0,
+        -1.739
+      ],
+      "outward_normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0001",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        1.2583531,
+        -0.9142363,
+        -0.7777147
+      ],
+      "outward_normal": [
+        0.7236073,
+        -0.5257253,
+        -0.4472195
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0002",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        -0.4806387,
+        -1.4792789,
+        -0.7777153
+      ],
+      "outward_normal": [
+        -0.276388,
+        -0.8506492,
+        -0.4472198
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0003",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        -1.5554072,
+        0.0,
+        -0.7777079
+      ],
+      "outward_normal": [
+        -0.8944262,
+        0.0,
+        -0.4472156
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0004",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        -0.4806387,
+        1.4792789,
+        -0.7777153
+      ],
+      "outward_normal": [
+        -0.276388,
+        0.8506492,
+        -0.4472198
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0005",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        1.2583531,
+        0.9142363,
+        -0.7777147
+      ],
+      "outward_normal": [
+        0.7236073,
+        0.5257253,
+        -0.4472195
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0006",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        0.4806387,
+        -1.4792789,
+        0.7777153
+      ],
+      "outward_normal": [
+        0.276388,
+        -0.8506492,
+        0.4472198
+      ],
+      "terminator": true,
+      "terminator_t": 0.40825,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.408252,
+      "edge_material_role": "mint",
+      "lifted_patch": true
+    },
+    {
+      "name": "Tile_0007",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        -1.2583531,
+        -0.9142363,
+        0.7777147
+      ],
+      "outward_normal": [
+        -0.7236073,
+        -0.5257253,
+        0.4472195
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0008",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        -1.2583531,
+        0.9142363,
+        0.7777147
+      ],
+      "outward_normal": [
+        -0.7236073,
+        0.5257253,
+        0.4472195
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0009",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        0.4806387,
+        1.4792789,
+        0.7777153
+      ],
+      "outward_normal": [
+        0.276388,
+        0.8506492,
+        0.4472198
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0010",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        1.5554072,
+        0.0,
+        0.7777079
+      ],
+      "outward_normal": [
+        0.8944262,
+        0.0,
+        0.4472156
+      ],
+      "terminator": true,
+      "terminator_t": 1.0,
+      "cap_visible": true,
+      "role": "gold",
+      "band_position": 1.0,
+      "edge_material_role": "gold",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0011",
+      "shape": "pentagon",
+      "mesh_class": "PentTile_Class_00",
+      "rest_position": [
+        0.0,
+        0.0,
+        1.739
+      ],
+      "outward_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "terminator": true,
+      "terminator_t": 1.0,
+      "cap_visible": true,
+      "role": "gold",
+      "band_position": 1.0,
+      "edge_material_role": "gold",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0012",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.4048766,
+        -1.2461032,
+        -1.1434258
+      ],
+      "outward_normal": [
+        -0.2328215,
+        -0.7165631,
+        -0.6575192
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0013",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -0.2825102,
+        -0.8694918,
+        -1.479288
+      ],
+      "outward_normal": [
+        -0.1624555,
+        -0.4999953,
+        -0.8506544
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0014",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.1349579,
+        -0.4153649,
+        -1.6832645
+      ],
+      "outward_normal": [
+        -0.0776066,
+        -0.2388527,
+        -0.9679497
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0015",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.3533317,
+        -0.2567075,
+        -1.6832644
+      ],
+      "outward_normal": [
+        0.2031809,
+        -0.1476179,
+        -0.9679496
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0016",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.7396361,
+        -0.5373709,
+        -1.4792876
+      ],
+      "outward_normal": [
+        0.4253227,
+        -0.3090114,
+        -0.8506542
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0017",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.0600016,
+        -0.7701272,
+        -1.1434252
+      ],
+      "outward_normal": [
+        0.6095467,
+        -0.4428564,
+        -0.6575189
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0018",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.9250452,
+        -1.1854979,
+        -0.8735026
+      ],
+      "outward_normal": [
+        0.5319409,
+        -0.6817124,
+        -0.5023017
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0019",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.4571289,
+        -1.4068713,
+        -0.9142578
+      ],
+      "outward_normal": [
+        0.2628688,
+        -0.8090117,
+        -0.5257376
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0020",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.0515427,
+        -1.5028164,
+        -0.873503
+      ],
+      "outward_normal": [
+        -0.0296393,
+        -0.8641843,
+        -0.5023019
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0021",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.413336,
+        0.5134183,
+        -0.8735006
+      ],
+      "outward_normal": [
+        0.8127292,
+        0.2952377,
+        -0.5023006
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0022",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        1.4792765,
+        -0.0,
+        -0.9142546
+      ],
+      "outward_normal": [
+        0.8506478,
+        -0.0,
+        -0.5257359
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0023",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.413336,
+        -0.5134183,
+        -0.8735006
+      ],
+      "outward_normal": [
+        0.8127292,
+        -0.2952377,
+        -0.5023006
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0024",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.3533317,
+        0.2567075,
+        -1.6832644
+      ],
+      "outward_normal": [
+        0.2031809,
+        0.1476179,
+        -0.9679496
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0025",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.7396361,
+        0.5373709,
+        -1.4792876
+      ],
+      "outward_normal": [
+        0.4253227,
+        0.3090114,
+        -0.8506542
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0026",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.0600016,
+        0.7701272,
+        -1.1434252
+      ],
+      "outward_normal": [
+        0.6095467,
+        0.4428564,
+        -0.6575189
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0027",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.310235,
+        0.0,
+        -1.1434182
+      ],
+      "outward_normal": [
+        -0.7534417,
+        0.0,
+        -0.6575148
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0028",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -0.9142441,
+        0.0,
+        -1.4792831
+      ],
+      "outward_normal": [
+        -0.5257298,
+        0.0,
+        -0.8506516
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0029",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.4367446,
+        0.0,
+        -1.6832632
+      ],
+      "outward_normal": [
+        -0.251147,
+        0.0,
+        -0.967949
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0030",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.8416261,
+        -1.2461057,
+        -0.8735025
+      ],
+      "outward_normal": [
+        -0.4839713,
+        -0.7165645,
+        -0.5023016
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0031",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -1.1967611,
+        -0.8694946,
+        -0.9142551
+      ],
+      "outward_normal": [
+        -0.6881893,
+        -0.4999969,
+        -0.5257362
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0032",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.445197,
+        -0.4153661,
+        -0.8734974
+      ],
+      "outward_normal": [
+        -0.8310506,
+        -0.2388534,
+        -0.5022987
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0033",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.4048766,
+        1.2461032,
+        -1.1434258
+      ],
+      "outward_normal": [
+        -0.2328215,
+        0.7165631,
+        -0.6575192
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0034",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -0.2825102,
+        0.8694918,
+        -1.479288
+      ],
+      "outward_normal": [
+        -0.1624555,
+        0.4999953,
+        -0.8506544
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0035",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.1349579,
+        0.4153649,
+        -1.6832645
+      ],
+      "outward_normal": [
+        -0.0776066,
+        0.2388527,
+        -0.9679497
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0036",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.445197,
+        0.4153661,
+        -0.8734974
+      ],
+      "outward_normal": [
+        -0.8310506,
+        0.2388534,
+        -0.5022987
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0037",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -1.1967611,
+        0.8694946,
+        -0.9142551
+      ],
+      "outward_normal": [
+        -0.6881893,
+        0.4999969,
+        -0.5257362
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0038",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.8416261,
+        1.2461057,
+        -0.8735025
+      ],
+      "outward_normal": [
+        -0.4839713,
+        0.7165645,
+        -0.5023016
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0039",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.0515427,
+        1.5028164,
+        -0.873503
+      ],
+      "outward_normal": [
+        -0.0296393,
+        0.8641843,
+        -0.5023019
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0040",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.4571289,
+        1.4068713,
+        -0.9142578
+      ],
+      "outward_normal": [
+        0.2628689,
+        0.8090117,
+        -0.5257376
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0041",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.9250453,
+        1.1854979,
+        -0.8735026
+      ],
+      "outward_normal": [
+        0.5319409,
+        0.6817124,
+        -0.5023017
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0042",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.6635721,
+        -0.2567083,
+        0.4367488
+      ],
+      "outward_normal": [
+        0.9566257,
+        -0.1476183,
+        0.2511494
+      ],
+      "terminator": true,
+      "terminator_t": 0.98987,
+      "cap_visible": true,
+      "role": "gold",
+      "band_position": 0.989872,
+      "edge_material_role": "gold",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0043",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        1.6538897,
+        -0.537373,
+        0.0
+      ],
+      "outward_normal": [
+        0.9510579,
+        -0.3090127,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0044",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.4967532,
+        -0.7701293,
+        -0.4367513
+      ],
+      "outward_normal": [
+        0.8606977,
+        -0.4428576,
+        -0.2511508
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0045",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.4967532,
+        0.7701293,
+        -0.4367513
+      ],
+      "outward_normal": [
+        0.8606977,
+        0.4428576,
+        -0.2511508
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0046",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        1.6538897,
+        0.5373729,
+        0.0
+      ],
+      "outward_normal": [
+        0.9510579,
+        0.3090126,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0047",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.6635721,
+        0.2567083,
+        0.4367488
+      ],
+      "outward_normal": [
+        0.9566257,
+        0.1476183,
+        0.2511494
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0048",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.269919,
+        -1.6614789,
+        0.4367525
+      ],
+      "outward_normal": [
+        0.1552151,
+        -0.955422,
+        0.2511515
+      ],
+      "terminator": true,
+      "terminator_t": 0.27301,
+      "cap_visible": true,
+      "role": "teal",
+      "band_position": 0.273014,
+      "edge_material_role": "teal",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0049",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.0,
+        -1.739,
+        0.0
+      ],
+      "outward_normal": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0050",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.269919,
+        -1.6614789,
+        -0.4367525
+      ],
+      "outward_normal": [
+        -0.1552151,
+        -0.955422,
+        -0.2511515
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0051",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.1949687,
+        -1.185503,
+        -0.4367532
+      ],
+      "outward_normal": [
+        0.6871586,
+        -0.6817154,
+        -0.2511519
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0052",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        1.0221591,
+        -1.4068801,
+        0.0
+      ],
+      "outward_normal": [
+        0.5877856,
+        -0.8090168,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": true
+    },
+    {
+      "name": "Tile_0053",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.7582158,
+        -1.5028228,
+        0.4367534
+      ],
+      "outward_normal": [
+        0.4360068,
+        -0.8641879,
+        0.251152
+      ],
+      "terminator": true,
+      "terminator_t": 0.52418,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.524181,
+      "edge_material_role": "mint",
+      "lifted_patch": true
+    },
+    {
+      "name": "Tile_0054",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.4967532,
+        -0.7701293,
+        0.4367513
+      ],
+      "outward_normal": [
+        -0.8606977,
+        -0.4428576,
+        0.2511508
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0055",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -1.6538897,
+        -0.5373729,
+        0.0
+      ],
+      "outward_normal": [
+        -0.9510579,
+        -0.3090126,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0056",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.6635721,
+        -0.2567083,
+        -0.4367488
+      ],
+      "outward_normal": [
+        -0.9566257,
+        -0.1476183,
+        -0.2511494
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0057",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.7582158,
+        -1.5028228,
+        -0.4367534
+      ],
+      "outward_normal": [
+        -0.4360068,
+        -0.8641879,
+        -0.251152
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0058",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -1.0221591,
+        -1.4068801,
+        0.0
+      ],
+      "outward_normal": [
+        -0.5877856,
+        -0.8090168,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0059",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.1949687,
+        -1.185503,
+        0.4367532
+      ],
+      "outward_normal": [
+        -0.6871586,
+        -0.6817154,
+        0.2511519
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0060",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.1949687,
+        1.185503,
+        0.4367532
+      ],
+      "outward_normal": [
+        -0.6871586,
+        0.6817154,
+        0.2511519
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0061",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -1.0221591,
+        1.4068801,
+        0.0
+      ],
+      "outward_normal": [
+        -0.5877856,
+        0.8090168,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0062",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.7582158,
+        1.5028228,
+        -0.4367534
+      ],
+      "outward_normal": [
+        -0.4360068,
+        0.8641879,
+        -0.251152
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0063",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.6635721,
+        0.2567083,
+        -0.4367488
+      ],
+      "outward_normal": [
+        -0.9566257,
+        0.1476183,
+        -0.2511494
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0064",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -1.6538897,
+        0.537373,
+        0.0
+      ],
+      "outward_normal": [
+        -0.9510579,
+        0.3090127,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0065",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.4967532,
+        0.7701293,
+        0.4367513
+      ],
+      "outward_normal": [
+        -0.8606977,
+        0.4428576,
+        0.2511508
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0066",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.7582158,
+        1.5028228,
+        0.4367534
+      ],
+      "outward_normal": [
+        0.4360068,
+        0.8641879,
+        0.251152
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0067",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        1.0221591,
+        1.4068801,
+        0.0
+      ],
+      "outward_normal": [
+        0.5877856,
+        0.8090168,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0068",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.1949687,
+        1.185503,
+        -0.4367532
+      ],
+      "outward_normal": [
+        0.6871586,
+        0.6817154,
+        -0.2511519
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0069",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.269919,
+        1.6614789,
+        -0.4367525
+      ],
+      "outward_normal": [
+        -0.1552151,
+        0.955422,
+        -0.2511515
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0070",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.0,
+        1.739,
+        0.0
+      ],
+      "outward_normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0071",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.269919,
+        1.6614789,
+        0.4367525
+      ],
+      "outward_normal": [
+        0.1552151,
+        0.955422,
+        0.2511515
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0072",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.445197,
+        -0.4153661,
+        0.8734974
+      ],
+      "outward_normal": [
+        0.8310506,
+        -0.2388534,
+        0.5022987
+      ],
+      "terminator": true,
+      "terminator_t": 0.96684,
+      "cap_visible": true,
+      "role": "gold",
+      "band_position": 0.966844,
+      "edge_material_role": "gold",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0073",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        1.1967611,
+        -0.8694946,
+        0.9142551
+      ],
+      "outward_normal": [
+        0.6881893,
+        -0.4999969,
+        0.5257362
+      ],
+      "terminator": true,
+      "terminator_t": 0.83765,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.837647,
+      "edge_material_role": "mint",
+      "lifted_patch": true
+    },
+    {
+      "name": "Tile_0074",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.8416261,
+        -1.2461057,
+        0.8735025
+      ],
+      "outward_normal": [
+        0.4839713,
+        -0.7165645,
+        0.5023016
+      ],
+      "terminator": true,
+      "terminator_t": 0.62479,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.624792,
+      "edge_material_role": "mint",
+      "lifted_patch": true
+    },
+    {
+      "name": "Tile_0075",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.0515427,
+        -1.5028164,
+        0.873503
+      ],
+      "outward_normal": [
+        0.0296393,
+        -0.8641843,
+        0.5023019
+      ],
+      "terminator": true,
+      "terminator_t": 0.17704,
+      "cap_visible": true,
+      "role": "teal",
+      "band_position": 0.177038,
+      "edge_material_role": "teal",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0076",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -0.4571289,
+        -1.4068713,
+        0.9142578
+      ],
+      "outward_normal": [
+        -0.2628689,
+        -0.8090117,
+        0.5257376
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0077",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.9250453,
+        -1.1854979,
+        0.8735026
+      ],
+      "outward_normal": [
+        -0.5319409,
+        -0.6817124,
+        0.5023017
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0078",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.413336,
+        -0.5134183,
+        0.8735006
+      ],
+      "outward_normal": [
+        -0.8127292,
+        -0.2952377,
+        0.5023006
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0079",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -1.4792765,
+        0.0,
+        0.9142546
+      ],
+      "outward_normal": [
+        -0.8506478,
+        0.0,
+        0.5257359
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0080",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.413336,
+        0.5134183,
+        0.8735006
+      ],
+      "outward_normal": [
+        -0.8127292,
+        0.2952377,
+        0.5023006
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0081",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.9250452,
+        1.1854979,
+        0.8735026
+      ],
+      "outward_normal": [
+        -0.5319409,
+        0.6817124,
+        0.5023017
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0082",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -0.4571289,
+        1.4068713,
+        0.9142578
+      ],
+      "outward_normal": [
+        -0.2628688,
+        0.8090117,
+        0.5257376
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0083",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.0515427,
+        1.5028164,
+        0.873503
+      ],
+      "outward_normal": [
+        0.0296393,
+        0.8641843,
+        0.5023019
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0084",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.8416261,
+        1.2461057,
+        0.8735025
+      ],
+      "outward_normal": [
+        0.4839713,
+        0.7165645,
+        0.5023016
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0085",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        1.1967611,
+        0.8694946,
+        0.9142551
+      ],
+      "outward_normal": [
+        0.6881893,
+        0.4999969,
+        0.5257362
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0086",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.445197,
+        0.4153661,
+        0.8734974
+      ],
+      "outward_normal": [
+        0.8310506,
+        0.2388534,
+        0.5022987
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0087",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.134958,
+        -0.4153649,
+        1.6832646
+      ],
+      "outward_normal": [
+        0.0776066,
+        -0.2388528,
+        0.9679497
+      ],
+      "terminator": true,
+      "terminator_t": 0.56739,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.567394,
+      "edge_material_role": "mint",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0088",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.2825102,
+        -0.8694919,
+        1.479288
+      ],
+      "outward_normal": [
+        0.1624556,
+        -0.4999954,
+        0.8506544
+      ],
+      "terminator": true,
+      "terminator_t": 0.4624,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.4624,
+      "edge_material_role": "mint",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0089",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.4048766,
+        -1.2461032,
+        1.1434258
+      ],
+      "outward_normal": [
+        0.2328215,
+        -0.7165631,
+        0.6575192
+      ],
+      "terminator": true,
+      "terminator_t": 0.42374,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.423739,
+      "edge_material_role": "mint",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0090",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        1.310235,
+        0.0,
+        1.1434182
+      ],
+      "outward_normal": [
+        0.7534417,
+        0.0,
+        0.6575148
+      ],
+      "terminator": true,
+      "terminator_t": 1.0,
+      "cap_visible": true,
+      "role": "gold",
+      "band_position": 1.0,
+      "edge_material_role": "gold",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0091",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.9142441,
+        0.0,
+        1.4792831
+      ],
+      "outward_normal": [
+        0.5257298,
+        0.0,
+        0.8506516
+      ],
+      "terminator": true,
+      "terminator_t": 1.0,
+      "cap_visible": true,
+      "role": "gold",
+      "band_position": 1.0,
+      "edge_material_role": "gold",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0092",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.4367446,
+        0.0,
+        1.6832632
+      ],
+      "outward_normal": [
+        0.251147,
+        0.0,
+        0.967949
+      ],
+      "terminator": true,
+      "terminator_t": 1.0,
+      "cap_visible": true,
+      "role": "gold",
+      "band_position": 1.0,
+      "edge_material_role": "gold",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0093",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.3533317,
+        -0.2567075,
+        1.6832644
+      ],
+      "outward_normal": [
+        -0.2031809,
+        -0.1476179,
+        0.9679496
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0094",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -0.7396361,
+        -0.5373709,
+        1.4792876
+      ],
+      "outward_normal": [
+        -0.4253227,
+        -0.3090114,
+        0.8506542
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0095",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.0600016,
+        -0.7701272,
+        1.1434252
+      ],
+      "outward_normal": [
+        -0.6095467,
+        -0.4428564,
+        0.6575189
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0096",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -0.3533317,
+        0.2567075,
+        1.6832644
+      ],
+      "outward_normal": [
+        -0.2031809,
+        0.1476179,
+        0.9679496
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0097",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        -0.7396361,
+        0.5373709,
+        1.4792876
+      ],
+      "outward_normal": [
+        -0.4253227,
+        0.3090114,
+        0.8506542
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0098",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        -1.0600016,
+        0.7701272,
+        1.1434252
+      ],
+      "outward_normal": [
+        -0.6095467,
+        0.4428564,
+        0.6575189
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0099",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.134958,
+        0.4153649,
+        1.6832646
+      ],
+      "outward_normal": [
+        0.0776066,
+        0.2388528,
+        0.9679497
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0100",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_01",
+      "rest_position": [
+        0.2825102,
+        0.8694919,
+        1.479288
+      ],
+      "outward_normal": [
+        0.1624556,
+        0.4999954,
+        0.8506544
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0101",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_00",
+      "rest_position": [
+        0.4048766,
+        1.2461032,
+        1.1434258
+      ],
+      "outward_normal": [
+        0.2328215,
+        0.7165631,
+        0.6575192
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0102",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.6291707,
+        0.4571187,
+        1.5554123
+      ],
+      "outward_normal": [
+        0.3618003,
+        0.262863,
+        0.8944291
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0103",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.1098186,
+        0.4571207,
+        1.258358
+      ],
+      "outward_normal": [
+        0.6381935,
+        0.2628641,
+        0.7236101
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0104",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.7776967,
+        0.9142413,
+        1.2583606
+      ],
+      "outward_normal": [
+        0.4472092,
+        0.5257282,
+        0.7236117
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0105",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -0.2403251,
+        0.7396307,
+        1.5554135
+      ],
+      "outward_normal": [
+        -0.1381973,
+        0.4253196,
+        0.8944299
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0106",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -0.0918011,
+        1.1967535,
+        1.2583618
+      ],
+      "outward_normal": [
+        -0.0527896,
+        0.6881849,
+        0.7236123
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0107",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -0.6291766,
+        1.0221466,
+        1.2583616
+      ],
+      "outward_normal": [
+        -0.3618037,
+        0.5877784,
+        0.7236122
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0108",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -0.7776979,
+        0.0,
+        1.5554121
+      ],
+      "outward_normal": [
+        -0.4472098,
+        0.0,
+        0.894429
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0109",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -1.1665502,
+        0.2825128,
+        1.2583593
+      ],
+      "outward_normal": [
+        -0.6708167,
+        0.162457,
+        0.7236109
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0110",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -1.1665502,
+        -0.2825128,
+        1.2583593
+      ],
+      "outward_normal": [
+        -0.6708167,
+        -0.162457,
+        0.7236109
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0111",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -0.240325,
+        -0.7396307,
+        1.5554135
+      ],
+      "outward_normal": [
+        -0.1381973,
+        -0.4253196,
+        0.8944299
+      ],
+      "terminator": true,
+      "terminator_t": 0.01976,
+      "cap_visible": true,
+      "role": "teal",
+      "band_position": 0.019763,
+      "edge_material_role": "teal",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0112",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_04",
+      "rest_position": [
+        -0.6291766,
+        -1.0221467,
+        1.2583617
+      ],
+      "outward_normal": [
+        -0.3618037,
+        -0.5877784,
+        0.7236122
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0113",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -0.0918011,
+        -1.1967535,
+        1.2583618
+      ],
+      "outward_normal": [
+        -0.0527896,
+        -0.6881849,
+        0.7236123
+      ],
+      "terminator": true,
+      "terminator_t": 0.1157,
+      "cap_visible": true,
+      "role": "teal",
+      "band_position": 0.115698,
+      "edge_material_role": "teal",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0114",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.6291707,
+        -0.4571188,
+        1.5554124
+      ],
+      "outward_normal": [
+        0.3618003,
+        -0.262863,
+        0.8944293
+      ],
+      "terminator": true,
+      "terminator_t": 0.85699,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.856986,
+      "edge_material_role": "mint",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0115",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.7776967,
+        -0.9142413,
+        1.2583606
+      ],
+      "outward_normal": [
+        0.4472092,
+        -0.5257282,
+        0.7236117
+      ],
+      "terminator": true,
+      "terminator_t": 0.71079,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.710788,
+      "edge_material_role": "mint",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0116",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.1098186,
+        -0.4571207,
+        1.258358
+      ],
+      "outward_normal": [
+        0.6381935,
+        -0.2628641,
+        0.7236101
+      ],
+      "terminator": true,
+      "terminator_t": 0.93809,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.938092,
+      "edge_material_role": "mint",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0117",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.4986775,
+        0.7396349,
+        0.480653
+      ],
+      "outward_normal": [
+        0.8618042,
+        0.425322,
+        0.2763962
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0118",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.4068844,
+        1.0221531,
+        0.0
+      ],
+      "outward_normal": [
+        0.8090193,
+        0.5877821,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0119",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.166557,
+        1.1967609,
+        0.4806551
+      ],
+      "outward_normal": [
+        0.6708206,
+        0.6881891,
+        0.2763974
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0120",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_04",
+      "rest_position": [
+        -0.2403272,
+        1.6538846,
+        0.4806544
+      ],
+      "outward_normal": [
+        -0.1381985,
+        0.951055,
+        0.276397
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0121",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -0.5373797,
+        1.6538875,
+        -8e-07
+      ],
+      "outward_normal": [
+        -0.3090165,
+        0.9510567,
+        -5e-07
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0122",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -0.777707,
+        1.4792781,
+        0.4806549
+      ],
+      "outward_normal": [
+        -0.4472151,
+        0.8506487,
+        0.2763973
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0123",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -1.6472037,
+        0.2825139,
+        0.4806524
+      ],
+      "outward_normal": [
+        -0.9472132,
+        0.1624577,
+        0.2763959
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0124",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.739,
+        -7e-07,
+        1.1e-06
+      ],
+      "outward_normal": [
+        -1.0,
+        -4e-07,
+        6e-07
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0125",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -1.6472032,
+        -0.2825143,
+        0.4806537
+      ],
+      "outward_normal": [
+        -0.9472129,
+        -0.1624579,
+        0.2763966
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0126",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -0.7777082,
+        -1.4792775,
+        0.4806541
+      ],
+      "outward_normal": [
+        -0.4472158,
+        -0.8506484,
+        0.2763968
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0127",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -0.5373809,
+        -1.6538872,
+        -1.4e-06
+      ],
+      "outward_normal": [
+        -0.3090172,
+        -0.9510565,
+        -8e-07
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0128",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -0.2403285,
+        -1.6538848,
+        0.4806539
+      ],
+      "outward_normal": [
+        -0.1381993,
+        -0.9510551,
+        0.2763968
+      ],
+      "terminator": true,
+      "terminator_t": 0.01062,
+      "cap_visible": true,
+      "role": "teal",
+      "band_position": 0.010621,
+      "edge_material_role": "teal",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0129",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.1665565,
+        -1.1967622,
+        0.4806529
+      ],
+      "outward_normal": [
+        0.6708203,
+        -0.6881899,
+        0.2763962
+      ],
+      "terminator": true,
+      "terminator_t": 0.73878,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.738783,
+      "edge_material_role": "mint",
+      "lifted_patch": true
+    },
+    {
+      "name": "Tile_0130",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.4068834,
+        -1.0221546,
+        -3.3e-06
+      ],
+      "outward_normal": [
+        0.8090186,
+        -0.587783,
+        -1.9e-06
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0131",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.4986773,
+        -0.7396371,
+        0.4806499
+      ],
+      "outward_normal": [
+        0.8618041,
+        -0.4253232,
+        0.2763944
+      ],
+      "terminator": true,
+      "terminator_t": 0.91068,
+      "cap_visible": true,
+      "role": "mint",
+      "band_position": 0.910678,
+      "edge_material_role": "mint",
+      "lifted_patch": true
+    },
+    {
+      "name": "Tile_0132",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        0.5373809,
+        1.6538872,
+        0.0
+      ],
+      "outward_normal": [
+        0.3090172,
+        0.9510565,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0133",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        0.7777079,
+        1.4792775,
+        -0.4806556
+      ],
+      "outward_normal": [
+        0.4472156,
+        0.8506483,
+        -0.2763977
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0134",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        0.2403282,
+        1.6538845,
+        -0.4806553
+      ],
+      "outward_normal": [
+        0.1381991,
+        0.9510549,
+        -0.2763975
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0135",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.406883,
+        1.022155,
+        0.0
+      ],
+      "outward_normal": [
+        -0.8090184,
+        0.5877833,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0136",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.1665542,
+        1.1967635,
+        -0.4806549
+      ],
+      "outward_normal": [
+        -0.670819,
+        0.6881906,
+        -0.2763973
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0137",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.4986756,
+        0.7396383,
+        -0.4806532
+      ],
+      "outward_normal": [
+        -0.8618031,
+        0.4253239,
+        -0.2763963
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0138",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.4068831,
+        -1.022155,
+        0.0
+      ],
+      "outward_normal": [
+        -0.8090185,
+        -0.5877833,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0139",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.4986756,
+        -0.7396384,
+        -0.4806532
+      ],
+      "outward_normal": [
+        -0.8618031,
+        -0.425324,
+        -0.2763963
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0140",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.1665542,
+        -1.1967635,
+        -0.4806549
+      ],
+      "outward_normal": [
+        -0.670819,
+        -0.6881906,
+        -0.2763973
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0141",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        0.5373809,
+        -1.6538872,
+        0.0
+      ],
+      "outward_normal": [
+        0.3090172,
+        -0.9510565,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0142",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        0.2403282,
+        -1.6538844,
+        -0.4806553
+      ],
+      "outward_normal": [
+        0.1381991,
+        -0.9510549,
+        -0.2763975
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0143",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        0.7777079,
+        -1.4792775,
+        -0.4806556
+      ],
+      "outward_normal": [
+        0.4472156,
+        -0.8506483,
+        -0.2763977
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0144",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        1.7389998,
+        -1e-07,
+        0.0
+      ],
+      "outward_normal": [
+        0.9999999,
+        -0.0,
+        0.0
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": true,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0145",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        1.6472037,
+        -0.2825137,
+        -0.4806526
+      ],
+      "outward_normal": [
+        0.9472132,
+        -0.1624576,
+        -0.276396
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0146",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        1.6472037,
+        0.2825137,
+        -0.4806526
+      ],
+      "outward_normal": [
+        0.9472132,
+        0.1624576,
+        -0.276396
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0147",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.6291763,
+        1.0221481,
+        -1.2583606
+      ],
+      "outward_normal": [
+        0.3618035,
+        0.5877793,
+        -0.7236117
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0148",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.2403243,
+        0.7396337,
+        -1.5554122
+      ],
+      "outward_normal": [
+        0.1381968,
+        0.4253213,
+        -0.8944291
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0149",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.0918003,
+        1.196756,
+        -1.2583594
+      ],
+      "outward_normal": [
+        0.0527891,
+        0.6881863,
+        -0.7236109
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0150",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_05",
+      "rest_position": [
+        -0.7776992,
+        0.9142395,
+        -1.2583604
+      ],
+      "outward_normal": [
+        -0.4472106,
+        0.5257272,
+        -0.7236115
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0151",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        -0.6291723,
+        0.457118,
+        -1.5554119
+      ],
+      "outward_normal": [
+        -0.3618012,
+        0.2628626,
+        -0.894429
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0152",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.1098206,
+        0.4571185,
+        -1.2583568
+      ],
+      "outward_normal": [
+        -0.6381947,
+        0.2628628,
+        -0.7236094
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0153",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_03",
+      "rest_position": [
+        -1.1098202,
+        -0.45712,
+        -1.2583566
+      ],
+      "outward_normal": [
+        -0.6381945,
+        -0.2628637,
+        -0.7236093
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0154",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_04",
+      "rest_position": [
+        -0.6291724,
+        -0.4571211,
+        -1.555411
+      ],
+      "outward_normal": [
+        -0.3618013,
+        -0.2628644,
+        -0.8944284
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0155",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_04",
+      "rest_position": [
+        -0.777699,
+        -0.9142422,
+        -1.2583586
+      ],
+      "outward_normal": [
+        -0.4472105,
+        -0.5257287,
+        -0.7236105
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0156",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        1.1665508,
+        0.2825124,
+        -1.2583588
+      ],
+      "outward_normal": [
+        0.670817,
+        0.1624568,
+        -0.7236106
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0157",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        1.1665516,
+        -0.2825139,
+        -1.2583576
+      ],
+      "outward_normal": [
+        0.6708175,
+        -0.1624577,
+        -0.7236099
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0158",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.7777,
+        -1.2e-06,
+        -1.5554111
+      ],
+      "outward_normal": [
+        0.4472111,
+        -7e-07,
+        -0.8944285
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0159",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.0918024,
+        -1.1967545,
+        -1.2583609
+      ],
+      "outward_normal": [
+        0.0527904,
+        -0.6881855,
+        -0.7236118
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0160",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.2403275,
+        -0.7396325,
+        -1.5554122
+      ],
+      "outward_normal": [
+        0.1381987,
+        -0.4253206,
+        -0.8944291
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    },
+    {
+      "name": "Tile_0161",
+      "shape": "hexagon",
+      "mesh_class": "HexTile_Class_02",
+      "rest_position": [
+        0.6291789,
+        -1.0221479,
+        -1.2583593
+      ],
+      "outward_normal": [
+        0.361805,
+        -0.5877792,
+        -0.7236109
+      ],
+      "terminator": false,
+      "terminator_t": 0.0,
+      "cap_visible": false,
+      "role": "dark",
+      "band_position": 0.0,
+      "edge_material_role": "dark",
+      "lifted_patch": false
+    }
+  ]
+}
