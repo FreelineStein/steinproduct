@@ -31,9 +31,17 @@ export const projects: Project[] = [
     id: "this-site",
     title: "This site, steinproduct.com",
     description:
-      "Designed, written and shipped with the same AI-augmented workflow behind every engagement.",
-    tags: ["Website", "Brand", "Design"],
+      "A brand system and a live 3D hero, designed and shipped with the same agent workflow behind every engagement.",
+    tags: ["Brand system", "3D hero", "Next.js"],
     label: "Own build",
+    caseStudy: {
+      problem:
+        "Every site needs its own brand and a way to stand apart. A template with a stock palette says nothing about how the work gets done, and the first screen is where that has to show.",
+      built:
+        "First Light, a brand system from scratch: a sunrise-from-orbit logo, 3 typefaces, color tokens, components and a written brand book. The hero is a 162-tile planet modeled in Blender by an AI agent, exported at under 400 KB and rendered live in the browser. It turns on its own, lifts under the cursor and comes apart on a click. Phones get a still image.",
+      outcome:
+        "A site that shows the work instead of describing it. Static, fast, and nothing to maintain, built the same way as every client project.",
+    },
   },
   {
     id: "habitat-doc-automation",
