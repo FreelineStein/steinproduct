@@ -230,6 +230,22 @@ export function TiledPlanetHero() {
     const litColor = new THREE.Color();
     const rimColor = new THREE.Color();
     const idleRotation = new THREE.Quaternion();
+    // Orientation is composed from two scalars every frame instead of mixing
+    // quaternion idle spin with Euler drag: reading the group's Euler angles back
+    // after the idle quaternion passed 90° produced an equivalent triple with X
+    // near π, and clamping that X flipped the planet. Spin (idle plus drag yaw)
+    // turns around the tilted axis; pitch tilts in view space and is clamped.
+    let spinAngle = 0;
+    let pitchAngle = 0;
+    const PITCH_LIMIT = 0.58;
+    const viewXAxis = new THREE.Vector3(1, 0, 0);
+    const pitchRotation = new THREE.Quaternion();
+    const composeOrientation = () => {
+      if (!spinGroup) return;
+      spinGroup.quaternion
+        .copy(pitchRotation.setFromAxisAngle(viewXAxis, pitchAngle))
+        .multiply(idleRotation.setFromAxisAngle(idleAxis, spinAngle));
+    };
     const groupByMeshClass = new Map<string, TileInstanceGroup>();
 
     const cancelLoop = () => {
@@ -369,8 +385,8 @@ export function TiledPlanetHero() {
       }
       if (Math.abs(angularVelocityY) > 0.001 || Math.abs(angularVelocityX) > 0.001) {
         dragOverridesIdle = true;
-        spinGroup.rotation.y += angularVelocityY * dt;
-        spinGroup.rotation.x = THREE.MathUtils.clamp(spinGroup.rotation.x + angularVelocityX * dt, -0.58, 0.58);
+        spinAngle += angularVelocityY * dt;
+        pitchAngle = THREE.MathUtils.clamp(pitchAngle + angularVelocityX * dt, -PITCH_LIMIT, PITCH_LIMIT);
         const inertia = Math.pow(0.91, dt * 60);
         angularVelocityY *= inertia;
         angularVelocityX *= inertia;
@@ -382,11 +398,11 @@ export function TiledPlanetHero() {
       const userHasControl = moved && dragPointer !== null;
       if (!pausedRef.current && !dragOverridesIdle && !userHasControl) {
         idleSpinBlend += (1 - idleSpinBlend) * (1 - Math.exp(-dt / 3.5));
-        const idleDelta = dt * (Math.PI * 2 / 60) * idleSpinBlend;
-        spinGroup.quaternion.premultiply(idleRotation.setFromAxisAngle(idleAxis, idleDelta));
+        spinAngle += dt * (Math.PI * 2 / 60) * idleSpinBlend;
       } else {
         idleSpinBlend = Math.max(0, idleSpinBlend - dt * 1.8);
       }
+      composeOrientation();
       updateScreenBand();
       updateTileMatrices();
       renderer.render(scene, camera);
@@ -436,8 +452,9 @@ export function TiledPlanetHero() {
         if (moved) {
           dragOverridesIdle = true;
           idleSpinBlend = 0;
-          spinGroup.rotation.y += dx * 0.006;
-          spinGroup.rotation.x = THREE.MathUtils.clamp(spinGroup.rotation.x + dy * 0.004, -0.58, 0.58);
+          spinAngle += dx * 0.006;
+          pitchAngle = THREE.MathUtils.clamp(pitchAngle + dy * 0.004, -PITCH_LIMIT, PITCH_LIMIT);
+          composeOrientation();
           angularVelocityY = (dx / elapsedMs) * 0.42;
           angularVelocityX = (dy / elapsedMs) * 0.28;
         }
