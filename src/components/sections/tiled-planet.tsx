@@ -48,7 +48,8 @@ type TileInstanceGroup = {
 const ASSET_REVISION = "goldberg-162-v2";
 const GLB_URL = `/first-light/first-light-planet.glb?v=${ASSET_REVISION}`;
 const MANIFEST_URL = `/first-light/first-light-planet_tile_manifest.json?v=${ASSET_REVISION}`;
-const POSTER_URL = "/first-light/planet-rest-square.png";
+// Transparent still from blender/first-light/render_poster.py; the Aurora ground shows through.
+const POSTER_URL = "/first-light/planet-rest.webp";
 const ROLE_HEX: Record<TileRole, string> = {
   dark: "#0A1719",
   teal: "#0E6B6B",
@@ -732,9 +733,7 @@ export function TiledPlanetHero() {
               </button>
             </div>
           </>
-        ) : (
-          <span className="planet-hint">Still sculpture preview</span>
-        )}
+        ) : null}
       </div>
     </div>
   );
