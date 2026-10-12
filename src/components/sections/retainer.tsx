@@ -36,6 +36,8 @@ export function RetainerBand() {
                 label={retainer.ctaLabel}
                 href={retainerLink.href}
                 kind={retainerLink.kind}
+                ctaLocation="retainer"
+                bucket={retainer.id}
                 variant="secondary"
                 className="w-full shrink-0 sm:w-auto"
               />

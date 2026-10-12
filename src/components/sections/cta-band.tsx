@@ -2,7 +2,6 @@ import { Container } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { Aurora } from "@/components/first-light";
 import { CTAButton, ctaLg } from "@/components/cta-button";
-import { Button } from "@/components/ui/button";
 import { CALENDLY, PRIMARY_CTA, MAILTO, SITE, CALL_REASSURANCE } from "@/config/links";
 
 /** The closing call to action: the page's second and last Aurora, centered. */
@@ -28,11 +27,17 @@ export function CtaBand() {
                   label={PRIMARY_CTA.label}
                   href={CALENDLY.introCall}
                   kind="calendly"
+                  ctaLocation="cta_band"
                   className={ctaLg}
                 />
-                <Button asChild variant="secondary" className={ctaLg}>
-                  <a href={MAILTO}>Email {SITE.email}</a>
-                </Button>
+                <CTAButton
+                  label={`Email ${SITE.email}`}
+                  href={MAILTO}
+                  kind="email"
+                  variant="secondary"
+                  className={ctaLg}
+                  ctaLocation="cta_band"
+                />
               </div>
               <p className="signal mt-4 text-ink-muted">{CALL_REASSURANCE}</p>
             </div>

@@ -57,6 +57,7 @@ export function Hero() {
                   label={PRIMARY_CTA.label}
                   href={CALENDLY.introCall}
                   kind="calendly"
+                  ctaLocation="hero"
                   className={ctaLg}
                 />
                 <p className="signal text-ink-muted sm:pl-1">{CALL_REASSURANCE}</p>

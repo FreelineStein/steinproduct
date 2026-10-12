@@ -46,6 +46,7 @@ export function SiteNav() {
             label={PRIMARY_CTA.label}
             href={CALENDLY.introCall}
             kind="calendly"
+            ctaLocation="nav"
             size="sm"
             className="h-10 px-5 text-sm md:h-8 md:px-4 md:text-[0.8rem]"
           />

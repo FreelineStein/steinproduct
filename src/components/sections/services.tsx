@@ -66,6 +66,8 @@ export function Services() {
                     label={featuredBucket.ctaLabel}
                     href={PRODUCTS[featuredBucket.productKey].href}
                     kind={PRODUCTS[featuredBucket.productKey].kind}
+                    ctaLocation="services"
+                    bucket={featuredBucket.id}
                     className="mt-6 w-full sm:w-auto"
                   />
                 </div>
@@ -97,6 +99,8 @@ export function Services() {
                       label={bucket.ctaLabel}
                       href={link.href}
                       kind={link.kind}
+                      ctaLocation="services"
+                      bucket={bucket.id}
                       variant="secondary"
                       className="mt-5 w-full sm:w-auto"
                     />
