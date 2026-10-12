@@ -24,6 +24,13 @@ import posthog from "posthog-js";
 posthog.init(process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN!, {
   api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
 
+  // The browser now talks to our own subdomain, which PostHog's managed
+  // reverse proxy forwards to us.i.posthog.com, so ad blockers that match
+  // posthog.com never see the request. The proxy is ingest only: anything
+  // that opens the PostHog app (toolbar, links back to the UI) must still
+  // point at the real app host, or it would 404 on the proxy.
+  ui_host: "https://us.posthog.com",
+
   // Pins the SDK's behavioural defaults to the set that was current on this
   // date, so a later posthog-js upgrade cannot silently change them. Among
   // other things this date sets: pageviews on history change, rage-click
