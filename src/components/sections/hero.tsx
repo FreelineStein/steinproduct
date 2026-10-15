@@ -22,7 +22,6 @@ export function Hero() {
             <h1 className="display-xl mt-6">
               <span className="block">{hero.headline.before}</span>
               <span className="block highlight">{hero.headline.highlight}</span>
-              <span className="block">{hero.headline.after}</span>
             </h1>
             <p className="lead mt-8 max-w-2xl text-lg leading-7 sm:text-xl sm:leading-8">
               {hero.lead}

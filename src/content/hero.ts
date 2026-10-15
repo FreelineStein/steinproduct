@@ -4,14 +4,13 @@
 
 export const hero = {
   eyebrow: "JACOB STEIN · PRODUCT LEADER · DENVER, CO",
-  /** Three display lines; the middle one carries the horizon highlight. */
+  /** Two display lines; the second carries the horizon highlight. */
   headline: {
     before: "Engineering rigor.",
     highlight: "Consumer speed.",
-    after: "One product leader.",
   },
   lead:
-    "I have spent nine years moving between two worlds that rarely talk to each other: avionics at Boeing and satellite software at Maxar, then consumer sportsbooks at Tipico and LeoVegas, an MGM Resorts subsidiary, where I led product across three countries and shipped weekly. Now I build with AI every day, for myself and for the people I work with.",
+    "From large-scale aerospace programs to scrappy zero-to-one consumer products, I have managed products and teams of many shapes and sizes. I am flexible, I come up to speed fast, and I find the way to drive results no matter the situation.",
   secondaryLink: { label: "See the journey", href: "#journey" },
   proofRow: [
     "9+ years in product",
