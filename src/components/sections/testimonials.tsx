@@ -19,7 +19,7 @@ export function Testimonials() {
   return (
     <section className="sp-atmosphere-band border-t border-line py-20 sm:py-28">
       <Container>
-        <SectionHeader eyebrow="WHAT CLIENTS SAY" title="In their words." />
+        <SectionHeader eyebrow="WORKING WITH ME" title="In a client's words." />
         <div
           className={
             isSolo

@@ -1,19 +1,23 @@
 @AGENTS.md
 
-## Voice
-Firm-led, named-principal, as of 2026-08-13 — this **supersedes the site-wide first-person
-voice from the 2026-07-14 conversion audit**. Structural and positioning copy speaks as
-"Stein Product"; Jacob is named as the principal where the claim is personal, never erased.
-No "we/our" that implies employees — "we" is allowed only where it plainly means client plus
-consultant (the intro call, the build working session). Never fabricate plurality: no "our
-team", no headcount, no invented roles. Firm voice is not passive voice — keep a live subject
-in every promise and use second person when a named subject reads stiff. Use "the practice"
-sparingly and never as a section label.
+## Purpose (as of 2026-10-15)
+steinproduct.com is Jacob Stein's personal portfolio: who he is, the journey, the work, and
+how to get in touch. It no longer sells consulting. The consulting practice for nonprofits
+lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`, repo
+`/Users/jacobstein/Documents/Claude/Projects/Nonprofits`); this site links there once in a
+rim-lit band and once in the footer. The audience is a hiring manager for Senior PM through
+Head of Product roles, and a prospective client deciding whether to work with Jacob. The one
+action is email (`PRIMARY_CTA`), with LinkedIn second. The Calendly intro call is parked in
+`links.ts` and not rendered.
 
-Two deliberate exceptions, not stragglers to be "fixed":
-- `about.tsx` keeps its first-person bio — the credentials are personal.
-- FAQ questions are written in the buyer's voice ("What tools do I need?", "We're not
-  technical", "What about our data?"); those pronouns are the client speaking.
+## Voice
+First person, as of 2026-10-15. This supersedes the firm-led voice of 2026-08-13. Jacob
+speaks as "I"; "Stein Product" is the wordmark and the name of the independent chapter, not
+a narrator. Plain, specific, warm, short sentences, numbers over adjectives. Every claim is
+on the résumé or in a shipped repo; nothing is fabricated. Employers are named (Boeing,
+Maxar, Tipico, LeoVegas as an MGM Resorts subsidiary) because the résumé and LinkedIn name
+them. Own products (Pick Receipts, Ambient) are cleared for the page as of 2026-10-15. MLB
+Draft Tracker is not on the page: nothing documented exists for it yet.
 
 ## Brand: First Light (as of 2026-09-25)
 The site ships the **First Light** brand in its **Night theme only**: near-black atmosphere
@@ -45,6 +49,9 @@ documents and a later light mode; there is no toggle.
   blue-violet gradients. All motion is CSS and stops under `prefers-reduced-motion`.
 - **Regenerate the OG card** (`npm run gen:assets`) whenever the logo or the tagline in
   `src/config/links.ts` changes; it is a generated PNG that no copy or CSS change touches.
+- **Content is data.** Sections read from `src/content/{hero,about,worlds,journey,work,
+  capabilities,consulting,testimonials}.ts`. Editing the journey or adding a project is a
+  data edit, not a code change.
 
 ## Client proof
 Habitat for Humanity Inland Valley is named on the site, and Matthew's testimonial runs

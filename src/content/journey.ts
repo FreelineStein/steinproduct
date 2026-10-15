@@ -1,0 +1,106 @@
+// src/content/journey.ts
+// The timeline, newest first. Every line is on the résumé; employer names
+// are public there and on LinkedIn, so they are named here (2026-10-15).
+
+export interface JourneyStop {
+  id: string;
+  /** Set in the signal face, e.g. "Aug 2024 to Apr 2026" */
+  dates: string;
+  org: string;
+  /** Short location or context line */
+  where: string;
+  role: string;
+  /** Two or three concrete bullets */
+  points: string[];
+  /** Marks the current chapter */
+  current?: boolean;
+}
+
+export const journeyHeader = {
+  eyebrow: "THE JOURNEY",
+  title: "Nine years, four industries, one way of working.",
+  intro:
+    "Each stop added a tool I still use: certification discipline, program-scale coordination, experimentation, international launches, and now building with AI agents.",
+} as const;
+
+export const journey: JourneyStop[] = [
+  {
+    id: "stein-product",
+    dates: "2026 to now",
+    org: "Stein Product and NetGoodLabs",
+    where: "Denver, CO. Independent",
+    role: "Founder, product and AI automation",
+    current: true,
+    points: [
+      "Build automations and AI assistants for small organizations, in the tools they already pay for, and hand them over documented.",
+      "Shipped a one-click document generator for a Habitat for Humanity chapter that replaced 13 hand-filled documents per homeowner; the team maintains it themselves.",
+      "Launched NetGoodLabs, a fixed-price nonprofit practice, and build my own products with AI agents every day.",
+    ],
+  },
+  {
+    id: "leovegas",
+    dates: "Aug 2024 to Apr 2026",
+    org: "LeoVegas Group",
+    where: "An MGM Resorts subsidiary. Remote, Denver",
+    role: "Principal Product Manager, Player Engagement",
+    points: [
+      "Owned vision, roadmap and outcomes for sportsbook search, discovery, personalization and engagement across Finland, Denmark and Brazil.",
+      "Led the rebuild of the content configuration system after the MGM acquisition, moving from US-only operations to a scalable European footprint.",
+      "Set the KPI framework and experimentation cadence: 15% more search engagement and 12% higher search-to-bet conversion in the first two months. Managed and coached two product managers.",
+    ],
+  },
+  {
+    id: "tipico-lead",
+    dates: "Nov 2023 to Aug 2024",
+    org: "Tipico",
+    where: "Denver, CO",
+    role: "Product Lead, Frontend and Content Curation",
+    points: [
+      "Promoted to lead two product managers and own every customer-facing sportsbook experience: browsing, search, bet placement and bet tracking.",
+      "Defined and shipped a new sportsbook search from zero, and overhauled content curation with intelligent automation so the homepage surfaced the right events and markets.",
+      "Introduced and scaled the A/B testing framework that made UX changes measurable.",
+    ],
+  },
+  {
+    id: "tipico-pm",
+    dates: "Feb 2022 to Oct 2023",
+    org: "Tipico",
+    where: "Denver, CO",
+    role: "Product Manager, Sportsbook",
+    points: [
+      "Owned front-end UX and core betting flows in a fast-growing startup: teasers, an enhanced bet slip, a rebuilt My Bets experience.",
+      "Led a cross-functional engineering squad and partnered with design, trading, compliance and CRM so features met regulatory and customer goals.",
+    ],
+  },
+  {
+    id: "maxar",
+    dates: "Feb 2021 to Feb 2022",
+    org: "Maxar Technologies",
+    where: "Denver, CO",
+    role: "Product Owner, WorldView Legion satellite",
+    points: [
+      "Product owner for dynamics and control software across three engineering teams on a new imaging satellite constellation.",
+      "Translated mission requirements into sequenced backlogs and introduced modern agile practice that improved delivery velocity and roadmap predictability.",
+    ],
+  },
+  {
+    id: "boeing",
+    dates: "Jun 2017 to Jun 2020",
+    org: "The Boeing Company",
+    where: "Seattle, WA",
+    role: "Technical Product Owner and Innovation Lead, after Electrical Systems Design Engineer",
+    points: [
+      "Technical product owner for onboard and offboard connectivity on the New Midsize Airplane program: program-wide strategy and a multi-year roadmap that aligned senior leaders.",
+      "Ran trade studies and 50-person, multi-day architecture workshops to settle the end-to-end connectivity architecture.",
+      "Won first place among 150+ teams in Boeing's internal product challenge with a working prototype of a passenger app built on external aircraft camera feeds. Earned an M.S. from the University of Washington alongside the job.",
+    ],
+  },
+  {
+    id: "boise-state",
+    dates: "2012 to 2017",
+    org: "Boise State University",
+    where: "Boise, ID",
+    role: "B.S., Electrical and Computer Engineering",
+    points: ["Minors in physics and applied mathematics."],
+  },
+];

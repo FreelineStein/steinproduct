@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { Container } from "@/components/section";
-import { SITE, SOCIAL, MAILTO } from "@/config/links";
+import { SITE, SOCIAL, MAILTO, CONSULTING } from "@/config/links";
 
 /** Atmosphere ground, the wordmark at 28px, contact links. */
 export function SiteFooter() {
@@ -36,7 +36,7 @@ export function SiteFooter() {
             </p>
           ) : null}
           <p className="signal mt-6 text-ink-faint">
-            Built and run by Jacob Stein. {SITE.location}.
+            Jacob Stein. {SITE.location}.
           </p>
         </div>
 
@@ -57,6 +57,14 @@ export function SiteFooter() {
             className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora"
           >
             LinkedIn
+          </a>
+          <a
+            href={CONSULTING.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora"
+          >
+            {CONSULTING.name}, consulting for nonprofits
           </a>
         </nav>
       </Container>

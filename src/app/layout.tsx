@@ -45,9 +45,9 @@ const archivoExpanded = localFont({
 });
 
 const description =
-  "Stein Product is a consulting practice led by Jacob Stein, a Principal-level product manager. It gets businesses organized and puts AI to work on the workflows that actually run, starting with the one costing you the most. Live within a week.";
+  "Jacob Stein is a product leader who moved between high-stakes engineering (Boeing avionics, Maxar satellites) and fast consumer product (Tipico and LeoVegas sportsbooks across three countries), and now builds with AI every day. Journey, work and how to get in touch.";
 
-const title = "Stein Product: AI automation consulting";
+const title = "Jacob Stein: product leader and builder";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -59,16 +59,16 @@ export const metadata: Metadata = {
   applicationName: SITE.name,
   authors: [{ name: "Jacob Stein" }],
   creator: "Jacob Stein",
-  // SEO metadata, not rendered copy: "AI agents" stays here for search reach
-  // even though "AI assistant" is the only term allowed in user-facing copy.
+  // SEO metadata, not rendered copy.
   keywords: [
-    "AI automation",
-    "product consulting",
-    "AI assistants",
+    "Jacob Stein",
+    "product manager portfolio",
+    "principal product manager",
+    "head of product",
+    "technical product manager",
+    "AI product builder",
     "AI agents",
-    "small business automation",
-    "fractional product manager",
-    "workflow automation",
+    "Denver product leader",
   ],
   alternates: { canonical: "/" },
   openGraph: {

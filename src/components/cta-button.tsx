@@ -8,12 +8,10 @@ import { track, type CtaLocation, type CtaDestination } from "@/lib/analytics";
 type LinkKind = ProductLink["kind"];
 
 /**
- * A call-to-action that links out to a hosted destination (Calendly, a Stripe
- * Payment Link, email, etc.). When the destination is still `null` (not wired
- * yet in src/config/links.ts), it renders a disabled button so the layout stays
- * complete and it's obvious the link is pending; Jacob just pastes the URL.
- *
- * The site never processes payments; these are outbound links only.
+ * A call-to-action that links out (email, LinkedIn, an external site). When
+ * the destination is still `null` (not wired yet in src/config/links.ts), it
+ * renders a disabled button so the layout stays complete and it is obvious
+ * the link is pending; Jacob just pastes the URL.
  *
  * Every live button fires one `cta_clicked` event through src/lib/analytics.ts.
  * That onClick is why this file is a client component: it is the only leaf
@@ -38,7 +36,7 @@ export function CTAButton({
   className?: string;
   /** Where on the page this button sits, for the cta_clicked event. */
   ctaLocation: CtaLocation;
-  /** The service or retainer id from src/content/services.ts, where relevant. */
+  /** The work item id from src/content/work.ts, where relevant. */
   bucket?: string;
 }) {
   // Pending link: visible but disabled, so the design reads as finished.
@@ -63,9 +61,8 @@ export function CTAButton({
   const isInPage = kind === "email" || href.startsWith("mailto:") || href.startsWith("#");
   const newTab = !isInPage;
 
-  // The event carries a category, not the URL. "stripe-payment-link" is a
-  // mouthful in a breakdown; the other kinds map one to one.
-  const destination: CtaDestination = kind === "stripe-payment-link" ? "stripe" : kind;
+  // The event carries a category, not the URL.
+  const destination: CtaDestination = kind;
 
   return (
     <Button asChild variant={variant} size={size} className={className}>

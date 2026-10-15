@@ -2,14 +2,14 @@ import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { CTAButton } from "@/components/cta-button";
 import { Container } from "@/components/section";
-import { PRIMARY_CTA, CALENDLY } from "@/config/links";
+import { PRIMARY_CTA } from "@/config/links";
 
 /** `short` is the phone jump-row label, where four links share 342px. */
 const NAV_LINKS = [
-  { label: "How it works", short: "How it works", href: "/#how-it-works" },
-  { label: "Services & pricing", short: "Pricing", href: "/#services" },
-  { label: "Proof", short: "Proof", href: "/#proof" },
-  { label: "FAQ", short: "FAQ", href: "/#faq" },
+  { label: "About", short: "About", href: "/#about" },
+  { label: "Journey", short: "Journey", href: "/#journey" },
+  { label: "Work", short: "Work", href: "/#work" },
+  { label: "Consulting", short: "Consulting", href: "/#consulting" },
 ] as const;
 
 /** Sticky glass bar. Logo left, anchor links plus the one glowing CTA right. */
@@ -44,8 +44,8 @@ export function SiteNav() {
               reach; the compact size returns once the anchor links are shown. */}
           <CTAButton
             label={PRIMARY_CTA.label}
-            href={CALENDLY.introCall}
-            kind="calendly"
+            href={PRIMARY_CTA.href}
+            kind={PRIMARY_CTA.kind}
             ctaLocation="nav"
             size="sm"
             className="h-10 px-5 text-sm md:h-8 md:px-4 md:text-[0.8rem]"

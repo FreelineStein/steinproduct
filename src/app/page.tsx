@@ -1,24 +1,24 @@
 import { Hero } from "@/components/sections/hero";
-import { HowItWorks } from "@/components/sections/how-it-works";
-import { Services } from "@/components/sections/services";
 import { About } from "@/components/sections/about";
-import { RetainerBand } from "@/components/sections/retainer";
-import { Projects } from "@/components/sections/projects";
+import { Worlds } from "@/components/sections/worlds";
+import { Journey } from "@/components/sections/journey";
+import { Work } from "@/components/sections/work";
+import { Capabilities } from "@/components/sections/capabilities";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Faq } from "@/components/sections/faq";
+import { ConsultingBand } from "@/components/sections/consulting-band";
 import { CtaBand } from "@/components/sections/cta-band";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <HowItWorks />
-      <Services />
       <About />
-      <Projects />
+      <Worlds />
+      <Journey />
+      <Work />
+      <Capabilities />
       <Testimonials />
-      <RetainerBand />
-      <Faq />
+      <ConsultingBand />
       <CtaBand />
     </>
   );
