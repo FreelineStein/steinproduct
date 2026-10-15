@@ -11,7 +11,7 @@ export const hero = {
   },
   lead:
     "From large-scale aerospace programs to scrappy zero-to-one consumer products, I have managed products and teams of many shapes and sizes. I am flexible, I come up to speed fast, and I find the way to drive results no matter the situation.",
-  secondaryLink: { label: "See the journey", href: "#journey" },
+  secondaryLink: { label: "See the journey", href: "/journey" },
   proofRow: [
     "9+ years in product",
     "Aerospace, satellites, consumer",

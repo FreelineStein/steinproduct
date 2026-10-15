@@ -1,12 +1,12 @@
 import { Container, SectionHeader } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { GlassPanel } from "@/components/first-light";
-import { worlds, worldsHeader, highlights } from "@/content/worlds";
+import { worlds, worldsHeader } from "@/content/worlds";
 
 /**
- * The positioning in two glass panels over an atmosphere band, then the
- * stat row. The panels are peers, so neither is `featured`; the glow budget
- * stays with the hero above and the work grid below.
+ * The positioning in two glass panels over an atmosphere band. The panels
+ * are peers, so neither is `featured`; the glow budget stays with the page
+ * header above and the rim-lit consulting panel on the home page.
  */
 export function Worlds() {
   return (
@@ -33,21 +33,6 @@ export function Worlds() {
           ))}
         </div>
 
-        <Reveal className="mt-10">
-          <dl className="grid gap-6 border-t border-line pt-8 sm:grid-cols-2 lg:grid-cols-4">
-            {highlights.map((h) => (
-              <div key={h.label}>
-                <dt className="sr-only">{h.label}</dt>
-                <dd className="font-heading text-[40px] leading-none font-extrabold tracking-[-0.02em] text-foreground">
-                  {h.value}
-                </dd>
-                <dd className="mt-3 max-w-[26ch] text-sm leading-relaxed text-muted-foreground">
-                  {h.label}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
       </Container>
     </section>
   );

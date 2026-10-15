@@ -50,3 +50,28 @@ export function SectionHeader({
     </div>
   );
 }
+
+/** Top of a subpage: eyebrow, display heading, optional intro. One per page. */
+export function PageHeader({
+  eyebrow,
+  title,
+  intro,
+}: {
+  eyebrow: string;
+  title: string;
+  intro?: string;
+}) {
+  return (
+    <section className="border-b border-line">
+      <Container className="py-16 sm:py-20">
+        <div className="max-w-3xl">
+          <Eyebrow className="intro">{eyebrow}</Eyebrow>
+          <h1 className="display-l mt-6 text-balance">{title}</h1>
+          {intro ? (
+            <p className="lead mt-6 max-w-2xl text-lg leading-7 sm:text-xl sm:leading-8">{intro}</p>
+          ) : null}
+        </div>
+      </Container>
+    </section>
+  );
+}

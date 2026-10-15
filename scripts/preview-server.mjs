@@ -25,8 +25,13 @@ async function resolve(pathname) {
   let p = join(ROOT, decodeURIComponent(pathname));
   try {
     const s = await stat(p);
-    if (s.isDirectory()) p = join(p, "index.html");
-    return p;
+    if (!s.isDirectory()) return p;
+    // A route directory with an index.html (the root). Nested routes under
+    // output: "export" emit `<route>.html` beside a `<route>/` folder that
+    // holds only RSC payloads, so fall through to the clean-URL mapping.
+    const index = join(p, "index.html");
+    await stat(index);
+    return index;
   } catch {}
   // clean-URL -> .html (what Vercel/Cloudflare do)
   try {

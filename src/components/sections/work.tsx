@@ -1,26 +1,32 @@
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Container, SectionHeader } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { GlassPanel, Tag } from "@/components/first-light";
 import { CTAButton } from "@/components/cta-button";
-import { work, workHeader } from "@/content/work";
+import { work, workHeader, workFeatured } from "@/content/work";
 
 /**
  * The portfolio grid: quiet surface-1 panels with a provenance tag, a status
  * tag, three facts and a link where one exists. Live products get the
  * interactive lift; everything else stays flat. Data in src/content/work.ts.
  */
-export function Work() {
-  if (work.length === 0) return null;
+export function Work({ featured = false }: { featured?: boolean }) {
+  const items = featured ? work.filter((w) => workFeatured.includes(w.id)) : work;
+  if (items.length === 0) return null;
 
   return (
     <section id="work" className="scroll-mt-20 border-t border-line py-20 sm:py-28">
       <Container>
-        <SectionHeader eyebrow={workHeader.eyebrow} title={workHeader.title} intro={workHeader.intro} />
+        {featured ? (
+          <SectionHeader eyebrow={workHeader.eyebrow} title={workHeader.featuredTitle} />
+        ) : (
+          <SectionHeader eyebrow="ALL WORK" title="Own products, client work, and the sites themselves." />
+        )}
 
-        <ul className="mt-12 grid gap-6 md:grid-cols-2">
-          {work.map((item, i) => (
-            <Reveal as="li" key={item.id} delay={(i % 2) * 70} className="flex">
+        <ul className={featured ? "mt-12 grid gap-6 md:grid-cols-3" : "mt-12 grid gap-6 md:grid-cols-2"}>
+          {items.map((item, i) => (
+            <Reveal as="li" key={item.id} delay={(i % 3) * 70} className="flex">
               <GlassPanel
                 as="article"
                 solid
@@ -79,6 +85,18 @@ export function Work() {
             </Reveal>
           ))}
         </ul>
+
+        {featured ? (
+          <p className="mt-10">
+            <Link
+              href="/work"
+              className="sp-btn sp-btn-secondary h-10 px-5 text-sm"
+            >
+              See all work
+              <ArrowRight aria-hidden="true" className="sp-btn-arrow size-4" />
+            </Link>
+          </p>
+        ) : null}
       </Container>
     </section>
   );

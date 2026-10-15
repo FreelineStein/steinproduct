@@ -6,9 +6,8 @@ import { PRIMARY_CTA } from "@/config/links";
 
 /** `short` is the phone jump-row label, where four links share 342px. */
 const NAV_LINKS = [
-  { label: "About", short: "About", href: "/#about" },
-  { label: "Journey", short: "Journey", href: "/#journey" },
-  { label: "Work", short: "Work", href: "/#work" },
+  { label: "Journey", short: "Journey", href: "/journey" },
+  { label: "Work", short: "Work", href: "/work" },
   { label: "Consulting", short: "Consulting", href: "/#consulting" },
 ] as const;
 

@@ -24,9 +24,14 @@ export interface WorkItem {
 export const workHeader = {
   eyebrow: "WORK",
   title: "Things I built, not slides about building.",
+  /** Home page variant, above the three featured cards */
+  featuredTitle: "Things I built.",
   intro:
     "Own products, client work and this site, all shipped with the same AI-agent workflow I use every day.",
 } as const;
+
+/** The three cards on the home page, in order. */
+export const workFeatured = ["pick-receipts", "ambient", "habitat-doc-automation"];
 
 export const work: WorkItem[] = [
   {

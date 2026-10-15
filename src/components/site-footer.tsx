@@ -42,6 +42,15 @@ export function SiteFooter() {
 
         <nav aria-label="Footer" className="grid grid-cols-2 gap-x-12 gap-y-1 text-sm">
           <span className="eyebrow col-span-2 text-ink-faint">
+            Pages
+          </span>
+          <Link href="/journey" className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora">
+            Journey
+          </Link>
+          <Link href="/work" className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora">
+            Work
+          </Link>
+          <span className="eyebrow col-span-2 mt-4 text-ink-faint">
             Get in touch
           </span>
           <a
