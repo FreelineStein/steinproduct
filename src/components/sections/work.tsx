@@ -1,31 +1,25 @@
-import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Container, SectionHeader } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { GlassPanel, Tag } from "@/components/first-light";
 import { CTAButton } from "@/components/cta-button";
-import { work, buildsHeader, workFeatured } from "@/content/work";
+import { work, buildsHeader } from "@/content/work";
 
 /**
  * The builds grid: quiet surface-1 panels with a provenance tag, a status
  * tag, three facts and a link where one exists. Live products get the
  * interactive lift; everything else stays flat. Data in src/content/work.ts.
  */
-export function Work({ featured = false }: { featured?: boolean }) {
-  const items = featured ? work.filter((w) => workFeatured.includes(w.id)) : work;
-  if (items.length === 0) return null;
+export function Work() {
+  if (work.length === 0) return null;
 
   return (
     <section id="builds" className="scroll-mt-20 border-t border-line py-20 sm:py-28">
       <Container>
-        {featured ? (
-          <SectionHeader eyebrow={buildsHeader.eyebrow} title={buildsHeader.featuredTitle} />
-        ) : (
-          <SectionHeader eyebrow="ALL BUILDS" title={buildsHeader.allTitle} />
-        )}
+        <SectionHeader eyebrow="ALL BUILDS" title={buildsHeader.allTitle} />
 
-        <ul className={featured ? "mt-12 grid gap-6 md:grid-cols-3" : "mt-12 grid gap-6 md:grid-cols-2"}>
-          {items.map((item, i) => (
+        <ul className="mt-12 grid gap-6 md:grid-cols-2">
+          {work.map((item, i) => (
             <Reveal as="li" key={item.id} delay={(i % 3) * 70} className="flex">
               <GlassPanel
                 as="article"
@@ -86,17 +80,6 @@ export function Work({ featured = false }: { featured?: boolean }) {
           ))}
         </ul>
 
-        {featured ? (
-          <p className="mt-10">
-            <Link
-              href="/builds"
-              className="sp-btn sp-btn-secondary h-10 px-5 text-sm"
-            >
-              See all builds
-              <ArrowRight aria-hidden="true" className="sp-btn-arrow size-4" />
-            </Link>
-          </p>
-        ) : null}
       </Container>
     </section>
   );
