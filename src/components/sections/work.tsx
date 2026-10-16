@@ -43,7 +43,8 @@ export function Work() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-auto flex flex-wrap items-end justify-between gap-4 pt-6">
+                {/* Tags on one row, the link or note on its own line beneath. */}
+                <div className="mt-auto flex flex-col items-start gap-4 pt-6">
                   <ul className="flex flex-wrap gap-1.5">
                     {item.tags.map((tag) => (
                       <li
@@ -63,6 +64,7 @@ export function Work() {
                       size="sm"
                       ctaLocation="builds"
                       bucket={item.id}
+                      className="-ml-3"
                     />
                   ) : item.linkNote ? (
                     <span className="signal flex items-center gap-1 text-ink-faint">
