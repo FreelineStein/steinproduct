@@ -1,9 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
-import { Container, SectionHeader } from "@/components/section";
+import { Container } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { GlassPanel, Tag } from "@/components/first-light";
 import { CTAButton } from "@/components/cta-button";
-import { work, buildsHeader } from "@/content/work";
+import { work } from "@/content/work";
 
 /**
  * The builds grid: quiet surface-1 panels with a provenance tag, a status
@@ -14,11 +14,9 @@ export function Work() {
   if (work.length === 0) return null;
 
   return (
-    <section id="builds" className="scroll-mt-20 border-t border-line py-20 sm:py-28">
+    <section id="builds" className="scroll-mt-20 border-t border-line py-16 sm:py-20">
       <Container>
-        <SectionHeader eyebrow="ALL BUILDS" title={buildsHeader.allTitle} />
-
-        <ul className="mt-12 grid gap-6 md:grid-cols-2">
+        <ul className="grid gap-6 md:grid-cols-2">
           {work.map((item, i) => (
             <Reveal as="li" key={item.id} delay={(i % 3) * 70} className="flex">
               <GlassPanel
@@ -32,6 +30,7 @@ export function Work() {
                   <Tag tone={item.status === "Live" ? "aurora" : "neutral"} dot={item.status === "Live"}>
                     {item.status}
                   </Tag>
+                  {item.category ? <Tag>{item.category}</Tag> : null}
                 </div>
                 <h3 className="mt-4 font-heading text-[20px] leading-snug font-bold tracking-[-0.01em] text-foreground">
                   {item.title}
