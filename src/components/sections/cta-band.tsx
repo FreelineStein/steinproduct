@@ -2,7 +2,7 @@ import { Container } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { Aurora } from "@/components/first-light";
 import { CTAButton, ctaLg } from "@/components/cta-button";
-import { PRIMARY_CTA, PERSON, CTA_REASSURANCE } from "@/config/links";
+import { PRIMARY_CTA, PERSON } from "@/config/links";
 import { closingCta } from "@/content/consulting";
 
 /** The closing call to action: the page's second and last Aurora, centered. */
@@ -37,7 +37,6 @@ export function CtaBand() {
                   ctaLocation="cta_band"
                 />
               </div>
-              <p className="signal mt-4 text-ink-muted">{CTA_REASSURANCE}</p>
             </div>
           </Aurora>
         </Reveal>

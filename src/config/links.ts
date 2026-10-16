@@ -63,5 +63,3 @@ export const PRIMARY_CTA = {
   kind: "email" as ProductLink["kind"],
 } as const;
 
-/** The line beside the primary CTA. */
-export const CTA_REASSURANCE = "Email is fastest. I reply within a day.";

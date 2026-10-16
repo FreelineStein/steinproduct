@@ -1,7 +1,7 @@
 import { Container, Eyebrow } from "@/components/section";
 import { Aurora } from "@/components/first-light";
 import { CTAButton, ctaLg } from "@/components/cta-button";
-import { PRIMARY_CTA, CTA_REASSURANCE } from "@/config/links";
+import { PRIMARY_CTA } from "@/config/links";
 import { hero } from "@/content/hero";
 import { TiledPlanetHero } from "@/components/sections/tiled-planet";
 
@@ -40,12 +40,8 @@ export function Hero() {
                   className="sp-btn sp-btn-ghost h-12 px-4 text-base"
                 >
                   {hero.secondaryLink.label}
-                  <span aria-hidden="true" className="sp-btn-arrow">
-                    ↓
-                  </span>
                 </a>
               </div>
-              <p className="signal mt-3 text-ink-muted">{CTA_REASSURANCE}</p>
               <ul className="signal mt-8 flex flex-wrap gap-x-3 gap-y-2 text-ink-muted">
                 {hero.proofRow.map((claim, i) => (
                   <li key={claim} className="flex items-center gap-3">
