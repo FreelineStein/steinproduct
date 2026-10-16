@@ -3,6 +3,13 @@ import { Container, Eyebrow } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { about } from "@/content/about";
 
+/** Renders *word* as <em>. The only inline markup the About copy supports. */
+function withEmphasis(text: string) {
+  return text.split(/\*([^*]+)\*/g).map((part, i) =>
+    i % 2 === 1 ? <em key={i}>{part}</em> : part,
+  );
+}
+
 /** Headshot path in /public. `null` falls back to the faceless layout. */
 const HEADSHOT: string | null = "/jacob-headshot.jpg";
 
@@ -32,7 +39,7 @@ export function About() {
           <div className="max-w-[58ch] space-y-5 text-base leading-relaxed text-foreground/90">
             {about.paragraphs.map((paragraph, i) => (
               <Reveal as="div" key={i} delay={i * 60}>
-                <p>{paragraph}</p>
+                <p>{withEmphasis(paragraph)}</p>
               </Reveal>
             ))}
           </div>
