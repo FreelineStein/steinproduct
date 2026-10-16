@@ -10,7 +10,7 @@ export const hero = {
     highlight: "Consumer speed.",
   },
   lead:
-    "From large-scale aerospace programs to scrappy zero-to-one consumer products, I have managed products and teams of many shapes and sizes. I am flexible, I come up to speed fast, and I find the way to drive results no matter the situation.",
+    "From large-scale aerospace programs to zero-to-one startup companies, I have managed products and teams of many shapes and sizes. I am flexible, resilient, communicative, and I find ways to drive results no matter the environment. Welcome to my portfolio.",
   secondaryLink: { label: "See the journey", href: "/journey" },
   proofRow: [
     "9+ years in product",
