@@ -1,11 +1,12 @@
-import { Container, SectionHeader } from "@/components/section";
+import { Container } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { Tag } from "@/components/first-light";
 import { cn } from "@/lib/utils";
 import { journey } from "@/content/journey";
 
 /**
- * A vertical timeline on an orbital line, newest first. Nodes glow aurora;
+ * A vertical timeline on an orbital line, newest first. No section header:
+ * the page header above it already introduces the journey. Nodes glow aurora;
  * the current chapter gets the sol sun and a live tag. Content is data in
  * src/content/journey.ts.
  */
@@ -13,9 +14,7 @@ export function Journey() {
   return (
     <section id="journey" className="scroll-mt-20 border-t border-line py-20 sm:py-28">
       <Container>
-        <SectionHeader eyebrow="TIMELINE" title="Every stop, newest first." />
-
-        <ol className="relative mt-14 border-l border-line pl-8 sm:pl-12">
+        <ol className="relative border-l border-line pl-8 sm:pl-12">
           {journey.map((stop, i) => (
             <Reveal as="li" key={stop.id} delay={Math.min(i, 3) * 60} className="relative pb-12 last:pb-0">
               <span
