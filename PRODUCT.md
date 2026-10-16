@@ -14,9 +14,16 @@ web
 
 ## Product Purpose
 
-steinproduct.com is Jacob Stein's personal portfolio, in his own voice. It tells the journey (Boise State, Boeing, University of Washington, Maxar, Tipico, LeoVegas, then independent), shows the work (Pick Receipts, Ambient, the Habitat automation, NetGoodLabs, this site), lists capabilities, carries one client testimonial, and ends with a contact band. Fully static, no backend. The one conversion is an email; LinkedIn is the second action.
+steinproduct.com is Jacob Stein's personal portfolio, in his own voice, on four pages (as of 2026-10-16):
 
-Consulting lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`). This site links there and nowhere else sells anything. The previous consulting offer structure (buckets, Quick-Win, retainer, FAQ) was removed on 2026-10-15; the Calendly intro call is parked in config.
+- **Home** (`/`): hero, who I am with education, the résumé numbers, three featured builds, contact band.
+- **Journey** (`/journey`): the two worlds, the timeline (Boeing, Maxar, Tipico, LeoVegas, then independent; education stays on the home page, not the timeline), capabilities.
+- **Work** (`/work`): the two ways to hire him. NetGoodLabs (what it is, why he started it, link to its site) and part-time product advisory (scoped over email). Matthew's testimonial sits under them, because it is about working with him.
+- **Builds** (`/builds`): every real thing he has built, as cards in `src/content/work.ts`.
+
+Fully static, no backend. The one conversion is an email; LinkedIn is the second action.
+
+Consulting for nonprofits lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`); the Work page describes it and links there. Product advisory is the one offer sold on this site, and it is sold by email, not a form or a price. The previous consulting offer structure (buckets, Quick-Win, retainer, FAQ) was removed on 2026-10-15; the Calendly intro call is parked in config.
 
 ## Positioning
 
@@ -24,7 +31,7 @@ High-stakes engineering, fast consumer product, one product leader. The claims t
 
 - **Two worlds.** Boeing avionics and Maxar satellite software taught verification, validation and program-scale coordination. Tipico and LeoVegas taught weekly shipping, experimentation, search and personalization across three international markets. Each makes him better at the other.
 - **Numbers on the résumé:** 9+ years in product; three markets (Finland, Denmark, Brazil); first of 150+ teams in Boeing's internal product challenge; 15% search engagement lift and 12% search-to-bet conversion lift in two months at LeoVegas; managed and coached two product managers.
-- **Builder.** Ships his own products with AI agents daily: Pick Receipts (live), Ambient (prototype), NetGoodLabs and this site.
+- **Builder.** Ships his own products and tools with AI agents daily: Pick Receipts (live), Ambient (prototype), Scout (weekly lead and job agent), the command center, Tasha (Discord second brain), the NFL and MLB friend-group trackers, NetGoodLabs and this site. Facts for the agents and internal tools come from the vault's `Brain/Projects/*/CLAUDE.md` mirrors (2026-10-16).
 - **Education:** M.S. ECE, University of Washington; B.S. ECE, Boise State, minors in physics and applied mathematics.
 
 ## Terminology and naming
@@ -35,7 +42,7 @@ Employers are named as on the résumé and LinkedIn: The Boeing Company, Maxar T
 
 **Technical:** Next.js App Router static export, no server runtime, Tailwind v4 with shadcn primitives restyled to First Light tokens, self-hosted fonts, PostHog analytics. All copy is typed data in `src/content/`; every outbound URL is declared once in `src/config/links.ts`. Deploy target Vercel, Git-connected: pushes to `main` go to production, so redesigns happen on a branch and ship by merge. Lighthouse baseline 98 to 100 on performance and 100 on accessibility; keep it.
 
-**Absences that must not be fabricated:** one client testimonial and one client case study exist. No user or pick counts exist for Pick Receipts. Ambient has no camera installed yet. MLB Draft Tracker has nothing documented and is not on the page. No press, no additional logos.
+**Absences that must not be fabricated:** one client testimonial and one client case study exist. No user or pick counts exist for Pick Receipts. Ambient has no camera installed yet. Scout, the command center and Tasha have no public links (internal tools); the trackers link to the NFL app. No advisory client is named and no advisory price is published. No press, no additional logos.
 
 ## Brand Commitments
 
@@ -59,7 +66,7 @@ Employers are named as on the résumé and LinkedIn: The Boeing Company, Maxar T
 1. **Show, then tell.** The work grid and the journey carry the argument; adjectives do not.
 2. **Proof, not promises.** Every claim is on the résumé or in a shipped repo. No invented metrics, users, press or logos.
 3. **One page, one scroll.** A hiring manager should get who, how strong, and what he built without clicking.
-4. **One action.** Email first, LinkedIn second. Consulting is a pointer to NetGoodLabs, never a pitch here.
+4. **One action.** Email first, LinkedIn second. Nonprofit consulting is described on the Work page and pointed to NetGoodLabs; product advisory is scoped over email. Neither gets a price or a form here.
 5. **First person, named employers.** Jacob speaks as himself; the résumé's employer names are public, so the site uses them.
 6. **Content is data.** Changing the journey, adding work or a testimonial is a data edit in `src/content/`, not a rebuild.
 

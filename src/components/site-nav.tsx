@@ -4,11 +4,11 @@ import { CTAButton } from "@/components/cta-button";
 import { Container } from "@/components/section";
 import { PRIMARY_CTA } from "@/config/links";
 
-/** `short` is the phone jump-row label, where four links share 342px. */
+/** Three pages. `short` is the phone jump-row label, where the links share 342px. */
 const NAV_LINKS = [
   { label: "Journey", short: "Journey", href: "/journey" },
   { label: "Work", short: "Work", href: "/work" },
-  { label: "Consulting", short: "Consulting", href: "/#consulting" },
+  { label: "Builds", short: "Builds", href: "/builds" },
 ] as const;
 
 /** Sticky glass bar. Logo left, anchor links plus the one glowing CTA right. */

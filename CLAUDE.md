@@ -1,14 +1,18 @@
 @AGENTS.md
 
-## Purpose (as of 2026-10-15)
-steinproduct.com is Jacob Stein's personal portfolio: who he is, the journey, the work, and
-how to get in touch. It no longer sells consulting. The consulting practice for nonprofits
-lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`, repo
-`/Users/jacobstein/Documents/Claude/Projects/Nonprofits`); this site links there once in a
-rim-lit band and once in the footer. The audience is a hiring manager for Senior PM through
-Head of Product roles, and a prospective client deciding whether to work with Jacob. The one
-action is email (`PRIMARY_CTA`), with LinkedIn second. The Calendly intro call is parked in
-`links.ts` and not rendered.
+## Purpose (as of 2026-10-16)
+steinproduct.com is Jacob Stein's personal portfolio on four pages: `/` (who he is, numbers,
+three featured builds), `/journey` (worlds, timeline, capabilities), `/work` (the two ways to
+hire him: NetGoodLabs for nonprofits, product advisory by email, then the client testimonial)
+and `/builds` (every real thing he built, data in `src/content/work.ts`). The nav is those
+three pages plus the email CTA; never a hash link to a home-page section. The consulting
+practice for nonprofits lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`, repo
+`/Users/jacobstein/Documents/Claude/Projects/Nonprofits`); the Work page describes what it is
+and why Jacob started it, and links there. Product advisory is the one offer sold here, with
+no price and no form. The audience is a hiring manager for Senior PM through Head of Product
+roles, and a prospective client deciding whether to work with Jacob. The one action is email
+(`PRIMARY_CTA`), with LinkedIn second. The Calendly intro call is parked in `links.ts` and not
+rendered.
 
 ## Voice
 First person, as of 2026-10-15. This supersedes the firm-led voice of 2026-08-13. Jacob
@@ -16,8 +20,10 @@ speaks as "I"; "Stein Product" is the wordmark and the name of the independent c
 a narrator. Plain, specific, warm, short sentences, numbers over adjectives. Every claim is
 on the résumé or in a shipped repo; nothing is fabricated. Employers are named (Boeing,
 Maxar, Tipico, LeoVegas as an MGM Resorts subsidiary) because the résumé and LinkedIn name
-them. Own products (Pick Receipts, Ambient) are cleared for the page as of 2026-10-15. MLB
-Draft Tracker is not on the page: nothing documented exists for it yet.
+them. Own products (Pick Receipts, Ambient) are cleared for the page as of 2026-10-15; the
+agents and internal tools (Scout, command center, Tasha, the NFL and MLB trackers) as of
+2026-10-16, with facts taken from the vault's `Brain/Projects/*/CLAUDE.md` mirrors. Education
+is on the home page (`about.ts`), not in the timeline.
 
 ## Brand: First Light (as of 2026-09-25)
 The site ships the **First Light** brand in its **Night theme only**: near-black atmosphere

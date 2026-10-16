@@ -1,7 +1,8 @@
 // src/content/work.ts
-// Proof, not promises. Every entry is real: a live product, a working
-// prototype, shipped client work or this site. Own products are cleared for
-// the page as of 2026-10-15. Adding work later is a data edit here.
+// The /builds page. Proof, not promises: every entry is real, a live product,
+// a working prototype, an agent that runs my week, shipped client work or
+// this site. Own products cleared for the page 2026-10-15; the agents and
+// internal tools 2026-10-16. Adding a build later is a data edit here.
 
 export interface WorkItem {
   id: string;
@@ -21,13 +22,15 @@ export interface WorkItem {
   linkNote?: string;
 }
 
-export const workHeader = {
-  eyebrow: "WORK",
+export const buildsHeader = {
+  eyebrow: "BUILDS",
   title: "Things I built, not slides about building.",
   /** Home page variant, above the three featured cards */
   featuredTitle: "Things I built.",
   intro:
-    "Own products, client work and this site, all shipped with the same AI-agent workflow I use every day.",
+    "Own products, the agents that run my week, client work and the sites themselves, all shipped with the same AI-agent workflow I use every day.",
+  /** Above the full grid on /builds */
+  allTitle: "Own products, agents, client work and the sites themselves.",
 } as const;
 
 /** The three cards on the home page, in order. */
@@ -80,6 +83,69 @@ export const work: WorkItem[] = [
     tags: ["Automation", "Google Sheets", "Documents"],
     href: null,
     linkNote: "Internal tool, no public link",
+  },
+  {
+    id: "scout",
+    title: "Scout, a weekly lead and job agent",
+    label: "Own build",
+    status: "Live",
+    description:
+      "An agent that runs every Monday morning, finds nonprofits and small businesses that likely need an automation built, plus early-stage companies that likely need a product leader, and writes a ranked brief with evidence behind every claim.",
+    points: [
+      "Public sources only: funder grant announcements, 990 and SEC Form D filings, ATS job boards, startup news and company websites. No logins, nothing behind a wall.",
+      "Hard gates first, then a multiplicative rank inside two pools. Every row carries the quote, URL and fetch date for each claim, so I can cite it in outreach.",
+      "Runs as a scheduled Claude task with nothing to host. The rubric lives on a Notion config page it reads each run, so tuning is a doc edit. It never contacts anyone; I review the brief in about ten minutes.",
+    ],
+    tags: ["Agents", "Claude", "Notion", "Lead gen"],
+    href: null,
+    linkNote: "Internal tool, briefs land in Notion",
+  },
+  {
+    id: "command-center",
+    title: "Command center",
+    label: "Own build",
+    status: "Live",
+    description:
+      "A local dashboard that answers the question of what to do next the moment I sit down, ranked across consulting, job search, builds and life, with every task editable in place.",
+    points: [
+      "Tasks are plain markdown in my Obsidian vault, one file per project, in a format the dashboard, my phone assistant and Claude sessions all write the same way.",
+      "A transparent rules score ranks the top three on priority, due pressure, age and time until the next meeting. The morning agent pass can pin items with a one-line reason.",
+      "TypeScript monorepo: a byte-exact task parser shared by a Hono server that watches the vault and streams changes, and a React front end. Edits touch one line, check a hash first and commit to git. Runs on a Mac mini over Tailscale.",
+    ],
+    tags: ["TypeScript", "React", "Agents", "Obsidian"],
+    href: null,
+    linkNote: "Runs on my home network",
+  },
+  {
+    id: "tasha",
+    title: "Tasha, a second brain over Discord",
+    label: "Own build",
+    status: "Live",
+    description:
+      "An always-on AI assistant I message from my phone. It captures notes and tasks into my Obsidian vault, recalls them later, and runs a weekly triage pass over everything I filed.",
+    points: [
+      "The vault is the memory, not the chat transcript: the assistant reads and writes markdown files directly, and idle conversations reset so stale chat never competes with what is written down.",
+      "Least privilege by design: it commits but cannot push, schedules its own jobs only by asking the host, and every outbound API call goes through a gateway it does not control.",
+      "A Node host on a Mac mini spawning per-session Claude Agent SDK containers. Live since July 2026.",
+    ],
+    tags: ["Agents", "Claude Agent SDK", "Discord", "Node"],
+    href: null,
+    linkNote: "Private, one user",
+  },
+  {
+    id: "friends-trackers",
+    title: "NFL and MLB trackers for a friend group",
+    label: "Own build",
+    status: "Live",
+    description:
+      "Two season-long games for the same six friends: cumulative MLB wins across drafted teams, and an NFL predictions game scored live against sportsbook odds.",
+    points: [
+      "Both read ESPN's public endpoints with no database or login. The MLB app fetches standings in the browser; the NFL app caches standings and futures odds in two route handlers.",
+      "The NFL game ranks everyone by forecasted points: each pick's value times its vig-removed probability from the odds, flipping to settled as results land. The scoring math has unit tests.",
+      "Next.js, TypeScript and Tailwind on Vercel. Picks and rosters are committed config, because a backend was not worth building for a one-day submission window.",
+    ],
+    tags: ["Next.js", "Sports data", "Vercel"],
+    href: "https://nfl-with-friends.vercel.app",
   },
   {
     id: "netgoodlabs",

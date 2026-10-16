@@ -4,10 +4,10 @@ import { Container, SectionHeader } from "@/components/section";
 import { Reveal } from "@/components/reveal";
 import { GlassPanel, Tag } from "@/components/first-light";
 import { CTAButton } from "@/components/cta-button";
-import { work, workHeader, workFeatured } from "@/content/work";
+import { work, buildsHeader, workFeatured } from "@/content/work";
 
 /**
- * The portfolio grid: quiet surface-1 panels with a provenance tag, a status
+ * The builds grid: quiet surface-1 panels with a provenance tag, a status
  * tag, three facts and a link where one exists. Live products get the
  * interactive lift; everything else stays flat. Data in src/content/work.ts.
  */
@@ -16,12 +16,12 @@ export function Work({ featured = false }: { featured?: boolean }) {
   if (items.length === 0) return null;
 
   return (
-    <section id="work" className="scroll-mt-20 border-t border-line py-20 sm:py-28">
+    <section id="builds" className="scroll-mt-20 border-t border-line py-20 sm:py-28">
       <Container>
         {featured ? (
-          <SectionHeader eyebrow={workHeader.eyebrow} title={workHeader.featuredTitle} />
+          <SectionHeader eyebrow={buildsHeader.eyebrow} title={buildsHeader.featuredTitle} />
         ) : (
-          <SectionHeader eyebrow="ALL WORK" title="Own products, client work, and the sites themselves." />
+          <SectionHeader eyebrow="ALL BUILDS" title={buildsHeader.allTitle} />
         )}
 
         <ul className={featured ? "mt-12 grid gap-6 md:grid-cols-3" : "mt-12 grid gap-6 md:grid-cols-2"}>
@@ -69,7 +69,7 @@ export function Work({ featured = false }: { featured?: boolean }) {
                       kind="external"
                       variant="ghost"
                       size="sm"
-                      ctaLocation="work"
+                      ctaLocation="builds"
                       bucket={item.id}
                     />
                   ) : item.linkNote ? (
@@ -89,10 +89,10 @@ export function Work({ featured = false }: { featured?: boolean }) {
         {featured ? (
           <p className="mt-10">
             <Link
-              href="/work"
+              href="/builds"
               className="sp-btn sp-btn-secondary h-10 px-5 text-sm"
             >
-              See all work
+              See all builds
               <ArrowRight aria-hidden="true" className="sp-btn-arrow size-4" />
             </Link>
           </p>

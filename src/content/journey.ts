@@ -1,6 +1,7 @@
 // src/content/journey.ts
 // The timeline, newest first. Every line is on the résumé; employer names
 // are public there and on LinkedIn, so they are named here (2026-10-15).
+// Education lives in src/content/about.ts, not here (2026-10-16).
 
 export interface JourneyStop {
   id: string;
@@ -94,13 +95,5 @@ export const journey: JourneyStop[] = [
       "Ran trade studies and 50-person, multi-day architecture workshops to settle the end-to-end connectivity architecture.",
       "Won first place among 150+ teams in Boeing's internal product challenge with a working prototype of a passenger app built on external aircraft camera feeds. Earned an M.S. from the University of Washington alongside the job.",
     ],
-  },
-  {
-    id: "boise-state",
-    dates: "2012 to 2017",
-    org: "Boise State University",
-    where: "Boise, ID",
-    role: "B.S., Electrical and Computer Engineering",
-    points: ["Minors in physics and applied mathematics."],
   },
 ];

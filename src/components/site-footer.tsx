@@ -50,6 +50,9 @@ export function SiteFooter() {
           <Link href="/work" className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora">
             Work
           </Link>
+          <Link href="/builds" className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora">
+            Builds
+          </Link>
           <span className="eyebrow col-span-2 mt-4 text-ink-faint">
             Get in touch
           </span>

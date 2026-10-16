@@ -19,8 +19,9 @@ export type CtaLocation =
   | "hero"
   | "about"
   | "journey"
-  | "work"
+  | "builds"
   | "consulting"
+  | "advisory"
   | "cta_band"
   | "footer";
 

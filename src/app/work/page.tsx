@@ -1,22 +1,33 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/section";
-import { Work } from "@/components/sections/work";
+import { OfferBand } from "@/components/sections/offer-band";
+import { Testimonials } from "@/components/sections/testimonials";
 import { CtaBand } from "@/components/sections/cta-band";
-import { workHeader } from "@/content/work";
+import { CONSULTING, MAILTO } from "@/config/links";
+import { workPageHeader, consulting, advisory } from "@/content/consulting";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "What Jacob Stein has built: Pick Receipts, the Ambient home monitor, document automation for a Habitat for Humanity chapter, NetGoodLabs and steinproduct.com itself.",
+    "Two ways to work with Jacob Stein: AI and automation for nonprofits through NetGoodLabs, and part-time product advisory for startups and product teams. With a client's own account of the experience.",
   alternates: { canonical: "/work" },
 };
 
-/** The full portfolio grid. Case-study pages can hang under /work/[slug] later. */
+/** The hire-me page: the nonprofit practice, product advisory, and a client's words. */
 export default function WorkPage() {
   return (
     <>
-      <PageHeader eyebrow={workHeader.eyebrow} title={workHeader.title} intro={workHeader.intro} />
-      <Work />
+      <PageHeader eyebrow={workPageHeader.eyebrow} title={workPageHeader.title} intro={workPageHeader.intro} />
+      <OfferBand
+        offer={consulting}
+        href={CONSULTING.url}
+        kind="external"
+        ctaLocation="consulting"
+        note={CONSULTING.name}
+        featured
+      />
+      <OfferBand offer={advisory} href={MAILTO} kind="email" ctaLocation="advisory" note="Email is fastest" />
+      <Testimonials />
       <CtaBand />
     </>
   );
