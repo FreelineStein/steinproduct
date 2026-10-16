@@ -1,8 +1,8 @@
 @AGENTS.md
 
 ## Purpose (as of 2026-10-16)
-steinproduct.com is Jacob Stein's personal portfolio on four pages: `/` (who he is, numbers,
-contact; no builds on the home page), `/journey` (worlds, timeline, capabilities), `/work` (the two ways to
+steinproduct.com is Jacob Stein's personal portfolio on four pages: `/` (who he is and contact;
+no builds and no stat row on the home page), `/journey` (worlds, timeline, capabilities), `/work` (the two ways to
 hire him: NetGoodLabs for nonprofits, product advisory by email, then the client testimonial)
 and `/builds` (every real thing he built, data in `src/content/work.ts`). The nav is those
 three pages plus the email CTA; never a hash link to a home-page section. The consulting

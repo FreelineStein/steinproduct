@@ -39,10 +39,3 @@ export const worlds: World[] = [
   },
 ];
 
-/** The stat row under the two panels. Every figure is on the résumé. */
-export const highlights = [
-  { value: "9+", label: "years in product, from avionics to consumer apps" },
-  { value: "3", label: "international markets launched and run: Finland, Denmark, Brazil" },
-  { value: "1st", label: "of 150+ teams in Boeing's internal product challenge" },
-  { value: "15%", label: "lift in search engagement in two months, with a 12% lift in search-to-bet conversion" },
-] as const;
