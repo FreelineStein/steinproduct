@@ -46,7 +46,7 @@ export const journey: JourneyStop[] = [
     role: "Principal Product Manager, Player Engagement",
     points: [
       "Owned vision, roadmap and outcomes for sportsbook search, discovery, personalization and engagement across Finland, Denmark and Brazil.",
-      "Led the rebuild of the content configuration system after the MGM acquisition, moving from US-only operations to a scalable European footprint.",
+      "Followed Tipico's US product into LeoVegas on acquisition, then led a complete rebuild of the content configuration system: the foundational operational tool that took it from US-only to multiple countries and markets, and launched the product in three international markets.",
       "Set the KPI framework and experimentation cadence: 15% more search engagement and 12% higher search-to-bet conversion in the first two months. Managed and coached two product managers.",
     ],
   },
@@ -69,7 +69,8 @@ export const journey: JourneyStop[] = [
     where: "Denver, CO",
     role: "Product Manager, Sportsbook",
     points: [
-      "Owned front-end UX and core betting flows in a fast-growing startup: teasers, an enhanced bet slip, a rebuilt My Bets experience.",
+      "Owned every customer-facing surface and the core end-to-end betting flows in a fast-growing startup, and grew the product from zero to one: teasers, an enhanced bet slip, a rebuilt My Bets experience.",
+      "Defined and owned the core KPIs, installed the experimentation and testing framework, and defined the event taxonomy for the product analytics platform.",
       "Led a cross-functional engineering squad and partnered with design, trading, compliance and CRM so features met regulatory and customer goals.",
     ],
   },
@@ -80,7 +81,7 @@ export const journey: JourneyStop[] = [
     where: "Denver, CO",
     role: "Product Owner, WorldView Legion satellite",
     points: [
-      "Product owner for dynamics and control software across three engineering teams on a new imaging satellite constellation.",
+      "Owned the dynamics and controls analysis functions across three engineering teams on a new low Earth orbit imaging satellite constellation.",
       "Translated mission requirements into sequenced backlogs and introduced modern agile practice that improved delivery velocity and roadmap predictability.",
     ],
   },
@@ -91,9 +92,9 @@ export const journey: JourneyStop[] = [
     where: "Seattle, WA",
     role: "Technical Product Owner and Innovation Lead, after Electrical Systems Design Engineer",
     points: [
-      "Technical product owner for onboard and offboard connectivity on the New Midsize Airplane program: program-wide strategy and a multi-year roadmap that aligned senior leaders.",
-      "Ran trade studies and 50-person, multi-day architecture workshops to settle the end-to-end connectivity architecture.",
-      "Won first place among 150+ teams in Boeing's internal product challenge with a working prototype of a passenger app built on external aircraft camera feeds. Earned an M.S. from the University of Washington alongside the job.",
+      "Started as an electrical systems design engineer, extending MATLAB and Simulink toolchains to support model-based development of airplane systems.",
+      "Won first place among 150+ teams in Boeing's internal product development Grand Challenge with a working prototype of a passenger app built on external aircraft camera feeds, and received a meritorious invention award for it.",
+      "Technical product owner for onboard and offboard connectivity on the New Midsize Airplane program, and for flight deck systems on the 787: program-wide strategy, a multi-year roadmap that aligned senior leaders, and 50-person architecture workshops that settled the end-to-end connectivity design. Earned an M.S. from the University of Washington alongside the job.",
     ],
   },
 ];
