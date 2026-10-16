@@ -19,9 +19,8 @@ export interface JourneyStop {
 
 export const journeyHeader = {
   eyebrow: "THE JOURNEY",
-  title: "Nine years, four industries, one way of working.",
-  intro:
-    "Each stop added a tool I still use: certification discipline, program-scale coordination, experimentation, international launches, and now building with AI agents.",
+  title: "From the flight deck to the bet slip.",
+  intro: "How an electrical engineer ended up running consumer product.",
 } as const;
 
 export const journey: JourneyStop[] = [
