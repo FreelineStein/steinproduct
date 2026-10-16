@@ -11,8 +11,6 @@ export interface WorkItem {
   label: string;
   /** Short status set in a Tag: "Live", "Prototype", "Shipped" */
   status: "Live" | "Prototype" | "Shipped";
-  /** Optional kind-of-thing pill: "AI agent", "Consulting practice", "Web design" */
-  category?: string;
   /** One plain sentence on what it is */
   description: string;
   /** Three or four concrete facts */
@@ -83,7 +81,6 @@ export const work: WorkItem[] = [
     title: "Scout, a weekly lead and job agent",
     label: "Own build",
     status: "Live",
-    category: "AI agent",
     description:
       "An agent that runs every Monday morning, finds nonprofits and small businesses that likely need an automation built, plus early-stage companies that likely need a product leader, and writes a ranked brief with evidence behind every claim.",
     points: [
@@ -100,7 +97,6 @@ export const work: WorkItem[] = [
     title: "Command center",
     label: "Own build",
     status: "Live",
-    category: "AI agent",
     description:
       "A local dashboard that answers the question of what to do next the moment I sit down, ranked across consulting, job search, builds and life, with every task editable in place.",
     points: [
@@ -117,7 +113,6 @@ export const work: WorkItem[] = [
     title: "Tasha, a second brain over Discord",
     label: "Own build",
     status: "Live",
-    category: "AI agent",
     description:
       "An always-on AI assistant I message from my phone. It captures notes and tasks into my Obsidian vault, recalls them later, and runs a weekly triage pass over everything I filed.",
     points: [
@@ -149,7 +144,6 @@ export const work: WorkItem[] = [
     title: "NetGoodLabs",
     label: "Own build",
     status: "Live",
-    category: "Consulting practice",
     description:
       "My consulting practice for nonprofits, with its own site: a fixed-price readiness assessment and an a la carte menu of automations.",
     points: [
@@ -164,7 +158,6 @@ export const work: WorkItem[] = [
     title: "This site, steinproduct.com",
     label: "Own build",
     status: "Live",
-    category: "Web design",
     description:
       "A brand system and a live 3D hero, designed and shipped with the same agent workflow behind everything else here.",
     points: [

@@ -30,7 +30,6 @@ export function Work() {
                   <Tag tone={item.status === "Live" ? "aurora" : "neutral"} dot={item.status === "Live"}>
                     {item.status}
                   </Tag>
-                  {item.category ? <Tag>{item.category}</Tag> : null}
                 </div>
                 <h3 className="mt-4 font-heading text-[20px] leading-snug font-bold tracking-[-0.01em] text-foreground">
                   {item.title}
