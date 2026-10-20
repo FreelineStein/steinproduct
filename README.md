@@ -1,165 +1,163 @@
-# SteinProduct.com
+# steinproduct.com
 
-Marketing site for **Stein Product** — an independent product consultancy run by
-Jacob Stein. _"Principal PM who builds with AI agents."_
+Source for [steinproduct.com](https://www.steinproduct.com), the personal site of
+Jacob Stein, a product leader in Denver. The site is a four-page portfolio: who I
+am, the career so far, the two ways to work with me, and the things I have built.
 
-A conversion-focused, **fully static** site: it explains who Jacob is, presents
-the productized service ladder, and pushes visitors to book a call or buy a
-session. It touches no card data — payments run through hosted **Stripe Payment
-Links** and **Calendly** (Stripe collected at booking), so the site is just
-buttons that link out. No backend, no database, no CMS.
+It is fully static. There is no backend, no database, no CMS and no form
+handling. The one action on the site is an email link.
+
+This repository is public so the site can double as one of the builds it
+describes. Feel free to read the code and borrow patterns. The brand, copy,
+photography and logo artwork are mine and are not for reuse.
 
 ## Stack
 
-- **Next.js (App Router) + TypeScript** — static export (`output: "export"`)
-- **Tailwind CSS v4** + **shadcn/ui** (restyled to the brand tokens)
-- **Anybody Semi-Condensed / Instrument Sans / Archivo Expanded**, self-hosted via `next/font/local` from `brand/first-light/fonts`
-- `lucide-react` for the few icons
-- Deploy target: **Vercel** (Cloudflare Pages works too — see below)
+- **Next.js 16 (App Router) + TypeScript**, built as a static export (`output: "export"`)
+- **Tailwind CSS v4** with **shadcn/ui** primitives restyled to the brand tokens
+- **Three.js** for the tiled planet on the home page, with a static WebP fallback
+- **PostHog** (`posthog-js`) for product analytics, routed through a managed reverse proxy
+- Self-hosted fonts via `next/font/local`: Anybody Semi-Condensed, Instrument Sans, Archivo Expanded
+- Hosted on **Vercel**
 
-## Quick start
+## Run it locally
 
 ```bash
 npm install
-npm run dev          # dev server at http://localhost:3000
-npm run build        # production build -> static files in ./out
-npm run preview      # serve ./out with brotli/gzip at http://localhost:4322
+cp .env.example .env.local   # optional: PostHog token and host
+npm run dev                  # http://localhost:3000
 ```
 
-> `npm run build` emits a static `out/` folder. There is **no** `next start`
-> (nothing runs server-side). Use `npm run preview` to preview the real output —
-> it compresses assets the way Vercel/Cloudflare do, so a local Lighthouse run is
-> representative. (A plain `python -m http.server` serves uncompressed and will
-> under-report the mobile performance score.)
+The two environment variables are both `NEXT_PUBLIC_` and are inlined at build
+time. Without them the site still runs; analytics just does not initialise.
+`.env.example` explains where each value comes from.
+
+To check the production output:
+
+```bash
+npm run build     # writes static files to ./out
+npm run preview   # serves ./out with brotli/gzip at http://localhost:4322
+```
+
+There is no `next start`, because nothing runs server-side. The preview server
+compresses assets the way Vercel does, so a local Lighthouse run against it is
+representative. A plain `python -m http.server` serves uncompressed and
+under-reports the mobile performance score.
+
+Other scripts:
+
+```bash
+npm run lint         # eslint
+npm run gen:assets   # regenerate icons and the OG card from the logo SVGs
+```
 
 ## Where things live
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx          # root layout, metadata, fonts, nav + footer
-│   ├── page.tsx            # home page — composes the sections in order
-│   ├── globals.css         # First Light tokens (Night) + ported component styles
-│   ├── styleguide/         # /styleguide design reference (noindex)
-│   ├── sitemap.ts robots.ts manifest.ts
-│   ├── icon.svg            # favicon (also apple-icon.png, opengraph-image.png)
-│   └── opengraph-image.png # social share card (generated — see Brand assets)
+│   ├── page.tsx              # /         home: hero, about, contact band
+│   ├── journey/page.tsx      # /journey  worlds, timeline, capabilities
+│   ├── work/page.tsx         # /work     how to hire me, plus a testimonial
+│   ├── builds/page.tsx       # /builds   everything I have shipped
+│   ├── privacy/page.tsx      # /privacy  policy for the site and my tools
+│   ├── styleguide/page.tsx   # /styleguide design system on one page (noindex)
+│   ├── layout.tsx            # root layout, metadata, fonts, nav + footer
+│   ├── globals.css           # First Light tokens and component styles
+│   ├── fonts/                # self-hosted woff2 subsets
+│   └── sitemap.ts robots.ts manifest.ts icon.svg opengraph-image.png
 ├── components/
-│   ├── sections/           # hero, services, about, testimonials, projects, cta-band
-│   ├── ui/                 # shadcn primitives (button, card, badge, separator)
-│   ├── logo.tsx            # <Logo variant>: signature, wordmark, tile, porthole (outlined artwork)
-│   ├── cta-button.tsx      # CTA that disables itself until its link is wired
-│   ├── reveal.tsx          # subtle scroll-in animation (degrades gracefully)
-│   ├── section.tsx         # Container / Eyebrow / SectionHeader primitives
-│   ├── site-nav.tsx site-footer.tsx
-├── content/                # ◀ EDIT CONTENT HERE (typed data, no JSX)
-│   ├── services.ts         # the four-tier service ladder
-│   ├── testimonials.ts     # client testimonials (graceful when empty)
-│   └── projects.ts         # portfolio entries (stub / "coming soon" for v1)
-└── config/
-    └── links.ts            # ◀ WIRE EXTERNAL URLS HERE (Calendly, Stripe, social)
-brand/                      # first-light/ brand pack, final logos, source SVGs for gen:assets
-scripts/                    # generate-assets.mjs, preview-server.mjs
+│   ├── sections/             # one file per page section
+│   ├── ui/                   # shadcn primitives (button, card, badge, separator)
+│   ├── first-light.tsx       # brand components: Aurora, GlassPanel, Tag, StepTrack
+│   ├── logo.tsx              # <Logo variant>: signature, wordmark, tile, porthole
+│   ├── logo-paths.ts         # the logo as SVG paths (generated from brand/)
+│   ├── cta-button.tsx        # CTA that disables itself while its link is null
+│   └── reveal.tsx section.tsx site-nav.tsx site-footer.tsx
+├── content/                  # all page copy and data, typed, no JSX
+│   ├── hero.ts about.ts worlds.ts journey.ts capabilities.ts
+│   ├── work.ts               # the builds cards
+│   ├── consulting.ts         # the Work page offers
+│   └── testimonials.ts
+├── config/
+│   └── links.ts              # every external URL and the site identity
+├── lib/
+│   ├── analytics.ts          # typed track() wrapper; the only PostHog import in components
+│   └── utils.ts
+└── instrumentation-client.ts # PostHog init, runs once in the browser before hydration
+brand/                        # First Light brand book, tokens, logo files, iterations
+blender/                      # Blender source for the planet model and its tile manifest
+public/first-light/           # exported planet GLB, tile manifest, static fallback
+scripts/                      # generate-assets.mjs, preview-server.mjs
 ```
 
-## ✅ Jacob's to-do: wire the real links
+## Content is data
 
-Everything visitor-facing that points off-site is centralized in
-**`src/config/links.ts`**. Search it for `TODO`. Until a link is filled in, its
-button renders **disabled** ("Link coming soon") so the layout stays complete.
+Every section reads from a file in `src/content/`. Changing copy, reordering the
+timeline, or adding a build is a data edit, not a component change. Every
+external URL lives in `src/config/links.ts`; nothing else in the tree hard-codes
+one. A link set to `null` renders its button disabled so the layout stays whole.
 
-| What | Field in `src/config/links.ts` | Notes |
-|------|-------------------------------|-------|
-| Free intro call | `CALENDLY.introCall` | Use the specific **Intro Call event** link, not the base `calendly.com/steinproduct` profile (the profile exposes the paid session). |
-| Paid strategy session | `CALENDLY.strategySession` | Calendly event with Stripe collected at booking. |
-| AI Quick-Win Session | `PRODUCTS.quickWin.href` | Hosted **Stripe Payment Link**. |
-| Workflow Sprint / Retainer | `PRODUCTS.workflowSprint.href`, `PRODUCTS.retainer.href` | Point these at `CALENDLY.introCall` (or a contact link) once it's live. |
-| Substack | `SOCIAL.substack` | Footer link appears automatically once set (it's hidden while `null`). |
+## Analytics
 
-Email (`hello@steinproduct.com`) and LinkedIn are already wired.
+PostHog runs client-side only, initialised in `src/instrumentation-client.ts`
+with every option stated explicitly and commented, including the ones that match
+the SDK default. Components never import `posthog-js` directly. They call
+`track()` from `src/lib/analytics.ts`, where the event names and their property
+shapes are a typed map, so a misspelled event is a compile error rather than a
+new row in PostHog. No event carries personal data. The privacy page at
+`/privacy` describes what is collected.
 
-## Editing content
+## Brand
 
-Content is typed data — no JSX edits needed.
+The brand is **First Light**: near-black atmosphere grounds, aurora mint as the
+single action color, glass panels with rim light, and ambient CSS motion that
+stops under `prefers-reduced-motion`. The rules of record are in
+`brand/first-light/BRAND-BOOK.md`, the tokens in `brand/first-light/tokens.json`
+and `src/app/globals.css`, and `/styleguide` renders the whole system on one page.
+The site ships the Night theme only.
 
-- **Reprice / reword a service** → `src/content/services.ts`. To change where a
-  service's button goes, edit the matching entry in `src/config/links.ts`
-  (services reference it by `productKey`).
-- **Publish a testimonial** → in `src/content/testimonials.ts`, replace the
-  placeholder text and set `pending: false`. The Testimonials section stays
-  hidden until at least one testimonial is live, then appears automatically.
-- **Add a project** → add an entry to `src/content/projects.ts`. Set
-  `comingSoon: false` and add an `href` to make it a real link. This is the
-  extensibility hook for the future portfolio/studio site — adding work later is
-  a data edit, not a refactor.
-
-## Brand assets
-
-The brand is **First Light** (2026-09-25): the rules live in
-`brand/first-light/BRAND-BOOK.md`, the final logo files in `brand/first-light/logos/`,
-and every earlier logo round in `brand/logo-iterations/`. The logo system is the
-**signature** (horizon over the whole name; the OG card and link previews), the everyday
-**wordmark** (nav and footer), and the **tile** / **porthole** icon (favicon, app
-icon, avatars), all outlined Anybody Condensed ExtraBold on an orbital sunrise.
-`brand/favicon.svg` is the tile and `brand/logo-wordmark.svg` is the night wordmark.
-The `<Logo variant>` React component inlines the markup from
-`src/components/logo-paths.ts` (never live text; Anybody Condensed is not loaded as
-a font). The PNG exports (apple-touch icon, 512px icon, and the 1200×630 OG card)
-are generated from the SVGs:
+The logo is outlined artwork, never live text. Three variants, all "Stein Product"
+in Anybody Condensed ExtraBold on an orbital sunrise: the signature (used on the
+OG card), the everyday wordmark (nav and footer), and the tile or porthole icon
+(favicon, app icon). The PNG exports are generated from the SVGs:
 
 ```bash
-npm run gen:assets      # regenerate icons + OG image after changing the logo or tagline
+npm run gen:assets
 ```
 
-This writes `src/app/apple-icon.png`, `public/favicon-32.png`, `public/icon-512.png`,
-and `src/app/opengraph-image.png`. The OG card embeds the signature and sets the
-tagline from `src/config/links.ts` in Instrument Sans (`scripts/fonts/`), so
-regenerate it whenever the logo or the tagline changes. (Requires `sharp`, already
-a dev dependency.)
+This rewrites the apple-touch icon, the 32px and 512px favicons, and the
+1200×630 OG card. The OG card embeds the tagline from `src/config/links.ts`, so
+rerun it whenever the logo or the tagline changes.
 
-## Design system
+## The planet
 
-First Light ships in its **Night** theme only: near-black atmosphere grounds,
-aurora mint as the one action color, glass panels with rim light, and ambient CSS
-motion that stops under reduced motion. Tokens are defined once in
-`src/app/globals.css` and consumed everywhere (shadcn included); the brand's
-components (Aurora, GlassPanel, Tag, StepTrack) live in
-`src/components/first-light.tsx`. Visit **`/styleguide`** to see the whole system
-on one page. Day values exist in the tokens for documents and a later light mode;
-there's no toggle.
+The home page hero is a tiled planet rendered with Three.js. The model is built
+in Blender from `blender/first-light/build_planet.py`, exported to
+`public/first-light/first-light-planet.glb` with a tile manifest, and drawn by
+`src/components/sections/tiled-planet.tsx`. Visitors with reduced motion, no
+WebGL, or a slow connection get `planet-rest.webp` instead.
 
 ## Deploying
 
-Nothing deploys automatically. When you're ready:
+The repository is connected to a Vercel project. Every push to `main` builds and
+deploys to production; pull requests get preview URLs. The two PostHog variables
+are set in the Vercel project for the Production and Preview environments.
 
-### Vercel (recommended)
-
-1. Push this repo to GitHub/GitLab/Bitbucket.
-2. In Vercel → **Add New → Project**, import the repo. Framework preset
-   **Next.js** is detected; no env vars are needed. Deploy.
-3. Point the domain: Vercel → Project → **Settings → Domains** → add
-   `steinproduct.com` (and `www`). Vercel shows the exact DNS records.
-4. In **Cloudflare** (where DNS lives), add those records. Typical setup:
-   - `A` / `CNAME` for the apex → Vercel's target (Cloudflare supports CNAME
-     flattening at the root), and a `CNAME` for `www` → `cname.vercel-dns.com`.
-   - Set the Cloudflare records to **DNS only** (grey cloud, proxy off) so
-     Vercel terminates TLS and serves directly — avoids double-proxying.
-5. Wait for DNS to propagate; Vercel issues the certificate automatically.
-
-### Cloudflare Pages (alternative)
-
-Since the site is a static export, Cloudflare Pages works cleanly too:
-create a Pages project from the repo, build command `npm run build`, output
-directory `out`. Because DNS is already on Cloudflare, domain attachment is a
-couple of clicks. Use this if you'd rather keep everything in Cloudflare.
+Because the output is plain static files, the site also runs on Cloudflare Pages
+or any static host: build command `npm run build`, output directory `out`.
 
 ## Lighthouse
 
-Built and measured at **Performance 98 / Accessibility 100 / Best Practices 100
-/ SEO 100** (desktop and mobile, against a compressing server like the real
-host). To re-check locally:
+Last measured at Performance 98, Accessibility 100, Best Practices 100, SEO 100
+on both desktop and mobile. To re-check:
 
 ```bash
 npm run build && npm run preview
 npx lighthouse http://127.0.0.1:4322/ --view
 ```
+
+## License
+
+No open-source license is attached yet. The code is public to read and learn
+from. The brand assets, written content and photography are all rights reserved.
