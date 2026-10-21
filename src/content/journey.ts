@@ -34,7 +34,7 @@ export const journey: JourneyStop[] = [
     points: [
       "Build automations and AI assistants for small organizations, in the tools they already pay for, and hand them over documented.",
       "Shipped a one-click document generator for a Habitat for Humanity chapter that replaced 13 hand-filled documents per homeowner; the team maintains it themselves.",
-      "Launched NetGoodLabs, a fixed-price nonprofit practice, and build my own products with AI agents every day.",
+      "Launched NetGoodLabs, a fixed-price AI and automation practice for small businesses and nonprofits, and build my own products with AI agents every day.",
     ],
   },
   {

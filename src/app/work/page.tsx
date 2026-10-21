@@ -9,11 +9,11 @@ import { workPageHeader, consulting, advisory } from "@/content/consulting";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Two ways to work with Jacob Stein: AI and automation for nonprofits through NetGoodLabs, and part-time product advisory for startups and product teams. With a client's own account of the experience.",
+    "Two ways to work with Jacob Stein: AI and automation for small businesses and nonprofits through NetGoodLabs, and part-time product advisory for startups and product teams. With a client's own account of the experience.",
   alternates: { canonical: "/work" },
 };
 
-/** The hire-me page: the nonprofit practice, product advisory, and a client's words. */
+/** The hire-me page: the AI and automation practice, product advisory, and a client's words. */
 export default function WorkPage() {
   return (
     <>

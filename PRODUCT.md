@@ -23,7 +23,7 @@ steinproduct.com is Jacob Stein's personal portfolio, in his own voice, on four 
 
 Fully static, no backend. The one conversion is an email; LinkedIn is the second action.
 
-Consulting for nonprofits lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`); the Work page describes it and links there. Product advisory is the one offer sold on this site, and it is sold by email, not a form or a price. The previous consulting offer structure (buckets, Quick-Win, retainer, FAQ) was removed on 2026-10-15; the Calendly intro call is parked in config.
+Consulting for small businesses and nonprofits lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`); the Work page describes it and links there. Product advisory is the one offer sold on this site, and it is sold by email, not a form or a price. The previous consulting offer structure (buckets, Quick-Win, retainer, FAQ) was removed on 2026-10-15; the Calendly intro call is parked in config.
 
 ## Positioning
 
@@ -66,7 +66,7 @@ Employers are named as on the résumé and LinkedIn: The Boeing Company, Maxar T
 1. **Show, then tell.** The work grid and the journey carry the argument; adjectives do not.
 2. **Proof, not promises.** Every claim is on the résumé or in a shipped repo. No invented metrics, users, press or logos.
 3. **One page, one scroll.** A hiring manager should get who, how strong, and what he built without clicking.
-4. **One action.** Email first, LinkedIn second. Nonprofit consulting is described on the Work page and pointed to NetGoodLabs; product advisory is scoped over email. Neither gets a price or a form here.
+4. **One action.** Email first, LinkedIn second. AI and automation consulting is described on the Work page and pointed to NetGoodLabs; product advisory is scoped over email. Neither gets a price or a form here.
 5. **First person, named employers.** Jacob speaks as himself; the résumé's employer names are public, so the site uses them.
 6. **Content is data.** Changing the journey, adding work or a testimonial is a data edit in `src/content/`, not a rebuild.
 

@@ -76,7 +76,7 @@ export function SiteFooter() {
             rel="noopener noreferrer"
             className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora"
           >
-            {CONSULTING.name}, consulting for nonprofits
+            {CONSULTING.name}, AI and automation consulting
           </a>
         </nav>
       </Container>

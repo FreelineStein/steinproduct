@@ -145,7 +145,7 @@ export const work: WorkItem[] = [
     label: "Own build",
     status: "Live",
     description:
-      "My consulting practice for nonprofits, with its own site: a fixed-price readiness assessment and an a la carte menu of automations.",
+      "My AI and automation consulting practice for small businesses and nonprofits, with its own site: a fixed-price readiness assessment, an a la carte menu of automations, and a dedicated nonprofit page.",
     points: [
       "Designed and shipped in a day from a written design system: warm-paper palette, serif display type, one action color.",
       "Next.js static export, typed content files so copy and prices are data edits, PostHog analytics, Lighthouse 100 on mobile and desktop.",

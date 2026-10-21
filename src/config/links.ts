@@ -35,14 +35,14 @@ export const SOCIAL = {
 } as const;
 
 /**
- * The consulting practice. Nonprofit AI and automation work lives on its own
+ * The consulting practice. AI and automation work lives on its own
  * site; this site only points there. TODO(Jacob): swap in the purchased
  * domain once netgoodlabs has one.
  */
 export const CONSULTING = {
   name: "NetGoodLabs",
   url: "https://netgoodlabs.vercel.app",
-  tagline: "AI and automation for nonprofits, built to be run by your team.",
+  tagline: "AI and automation for small teams, built to be run by your team.",
 } as const;
 
 /**

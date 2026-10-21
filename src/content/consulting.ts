@@ -6,7 +6,7 @@ export const workPageHeader = {
   eyebrow: "WORK",
   title: "Two ways to work with me.",
   intro:
-    "Hands-on building for nonprofits through NetGoodLabs, and product advisory for teams that need senior product judgment without a full-time hire. A client's own account of what that is like is at the bottom.",
+    "Hands-on AI and automation building for small businesses and nonprofits through NetGoodLabs, and product advisory for teams that need senior product judgment without a full-time hire. A client's own account of what that is like is at the bottom.",
 } as const;
 
 export interface Offer {
@@ -22,12 +22,12 @@ export interface Offer {
 export const consulting: Offer = {
   id: "consulting",
   eyebrow: "NETGOODLABS",
-  title: "AI and automation for nonprofits, built so their own staff can run it.",
-  body: "NetGoodLabs is my consulting practice for small nonprofits. I started it after the Habitat for Humanity work showed me how much staff time goes into retyping, chasing and assembling the same documents, and how cheaply a plain automation in the tools they already pay for can give that time back. Every engagement starts with a fixed-price, two-week readiness assessment and ends with a handover the team can maintain without me.",
+  title: "AI and automation for small teams, built so their own staff can run it.",
+  body: "NetGoodLabs is my consulting practice for small businesses and nonprofits, any organization that does good work and runs on too few people. I started it after the Habitat for Humanity work showed me how much staff time goes into retyping, chasing and assembling the same documents, and how cheaply a plain automation in the tools they already pay for can give that time back. Every engagement starts with a fixed-price, two-week readiness assessment and ends with a handover the team can maintain without me.",
   points: [
     "Custom automations in Google Workspace or Microsoft 365, the CRM and the form tool already in use.",
-    "Grant pipelines, impact dashboards, event registration and intake form cleanup, each a fixed scope with a published starting price.",
-    "Staff AI training built around the organization's own documents, with a one-page AI use policy for the board.",
+    "Inbox triage, proposal and grant pipelines, operations dashboards, website analytics, event registration and intake form cleanup, each a fixed scope with a published starting price.",
+    "Staff AI training built around the organization's own documents, with a one-page AI use policy for leadership or the board. Nonprofits get their own page with donor, grant and volunteer examples.",
   ],
   ctaLabel: "Visit NetGoodLabs",
 };
