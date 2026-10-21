@@ -151,7 +151,7 @@ export const work: WorkItem[] = [
       "Next.js static export, typed content files so copy and prices are data edits, PostHog analytics, Lighthouse 100 on mobile and desktop.",
     ],
     tags: ["Next.js", "Design system", "Static site"],
-    href: "https://netgoodlabs.vercel.app",
+    href: "https://www.netgoodlabs.com",
   },
   {
     id: "this-site",

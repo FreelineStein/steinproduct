@@ -36,12 +36,11 @@ export const SOCIAL = {
 
 /**
  * The consulting practice. AI and automation work lives on its own
- * site; this site only points there. TODO(Jacob): swap in the purchased
- * domain once netgoodlabs has one.
+ * site; this site only points there.
  */
 export const CONSULTING = {
   name: "NetGoodLabs",
-  url: "https://netgoodlabs.vercel.app",
+  url: "https://www.netgoodlabs.com",
   tagline: "AI and automation for small teams, built to be run by your team.",
 } as const;
 
