@@ -2,12 +2,12 @@
 
 ## Purpose (as of 2026-10-16)
 steinproduct.com is Jacob Stein's personal portfolio on four pages: `/` (who he is and contact;
-no builds and no stat row on the home page), `/journey` (worlds, timeline, capabilities), `/work` (the two ways to
+no builds and no stat row on the home page), `/journey` (timeline, capabilities, worlds), `/work` (the two ways to
 hire him: NetGoodLabs for small businesses and nonprofits, product advisory by email, then the client testimonial)
 and `/builds` (every real thing he built, data in `src/content/work.ts`). The nav is those
 three pages plus the email CTA; never a hash link to a home-page section. The consulting
 practice for small businesses and nonprofits lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`, repo
-`/Users/jacobstein/Documents/Claude/Projects/NetGoodLabs`); the Work page describes what it is
+`/Users/jacobstein/Documents/Projects/NetGoodLabs`); the Work page describes what it is
 and why Jacob started it, and links there. Product advisory is the one offer sold here, with
 no price and no form. The audience is a hiring manager for Senior PM through Head of Product
 roles, and a prospective client deciding whether to work with Jacob. The one action is email

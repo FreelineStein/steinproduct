@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/journey" },
 };
 
-/** The résumé page: the full timeline, then the two worlds it adds up to, then capabilities. */
+/** The résumé page: the full timeline, then capabilities, then the two worlds it adds up to. */
 export default function JourneyPage() {
   return (
     <>
       <PageHeader eyebrow={journeyHeader.eyebrow} title={journeyHeader.title} intro={journeyHeader.intro} />
       <Journey />
-      <Worlds />
       <Capabilities />
+      <Worlds />
       <CtaBand />
     </>
   );

@@ -14,7 +14,7 @@ export interface Offer {
   eyebrow: string;
   title: string;
   body: string;
-  /** Three or four concrete shapes the work takes */
+  /** Three to five concrete shapes the work takes */
   points: string[];
   ctaLabel: string;
 }
@@ -40,6 +40,7 @@ export const advisory: Offer = {
   points: [
     "A roadmap and KPI reset: what the team is building, why, and how you will know it worked.",
     "An experimentation cadence that makes UX changes measurable, from the first A/B test to the review ritual.",
+    "Instrumentation and product analytics: event tracking and conversion funnels set up so the team can see where users drop off instead of guessing.",
     "A zero-to-one product scoped and specified, with the first release cut to what can ship.",
     "Coaching for a product manager or a founder doing the product job themselves.",
   ],
