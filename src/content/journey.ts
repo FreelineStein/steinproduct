@@ -32,7 +32,7 @@ export const journey: JourneyStop[] = [
     role: "Founder, product and AI automation",
     current: true,
     points: [
-      "Build automations and AI assistants for organizations that run on manual handoffs, in the tools they already pay for, and hand them over documented.",
+      "Build automations and AI assistants for organizations, in the tools they already pay for, and hand them over documented.",
       "Shipped a one-click document generator for a Habitat for Humanity chapter that replaced 13 hand-filled documents per homeowner; the team maintains it themselves.",
       "Launched NetGoodLabs, a fixed-price AI and automation practice for businesses and nonprofits, and build my own products with AI agents every day.",
     ],
