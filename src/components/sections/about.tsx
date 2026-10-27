@@ -21,14 +21,13 @@ export function About() {
         <div className="md:col-span-1">
           <Reveal>
             <Eyebrow>{about.eyebrow}</Eyebrow>
-            <h2 className="headline mt-4 text-balance md:text-[28px]">{about.title}</h2>
             {HEADSHOT ? (
               <Image
                 src={HEADSHOT}
                 alt="Jacob Stein"
                 width={280}
                 height={350}
-                className="mt-8 aspect-[4/5] w-40 rounded-lg border border-line object-cover object-top sm:w-48"
+                className="mt-6 aspect-[4/5] w-40 rounded-lg border border-line object-cover object-top sm:w-48"
                 priority={false}
               />
             ) : null}
