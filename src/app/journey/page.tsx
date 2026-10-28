@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/section";
-import { Worlds } from "@/components/sections/worlds";
 import { Journey } from "@/components/sections/journey";
 import { Capabilities } from "@/components/sections/capabilities";
 import { CtaBand } from "@/components/sections/cta-band";
@@ -13,14 +12,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/journey" },
 };
 
-/** The résumé page: the full timeline, then capabilities, then the two worlds it adds up to. */
+/** The résumé page: the full timeline, then capabilities. */
 export default function JourneyPage() {
   return (
     <>
       <PageHeader eyebrow={journeyHeader.eyebrow} title={journeyHeader.title} intro={journeyHeader.intro} />
       <Journey />
       <Capabilities />
-      <Worlds />
       <CtaBand />
     </>
   );

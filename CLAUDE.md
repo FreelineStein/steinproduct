@@ -2,7 +2,7 @@
 
 ## Purpose (as of 2026-10-27)
 steinproduct.com is Jacob Stein's personal portfolio on four pages: `/` (who he is and contact;
-no builds and no stat row on the home page), `/journey` (timeline, capabilities, worlds), `/advisory`
+no builds and no stat row on the home page), `/journey` (timeline and capabilities; the two worlds section was removed 2026-10-27), `/advisory`
 (product consulting, the one offer sold here: header, the six services, "Results driven" résumé
 numbers, an advisory-specific closing band; no price, no form, no FAQ, no testimonial) and
 `/builds` (every real thing he built, data in `src/content/work.ts`). `/work` was renamed
@@ -57,7 +57,7 @@ documents and a later light mode; there is no toggle.
   blue-violet gradients. All motion is CSS and stops under `prefers-reduced-motion`.
 - **Regenerate the OG card** (`npm run gen:assets`) whenever the logo or the tagline in
   `src/config/links.ts` changes; it is a generated PNG that no copy or CSS change touches.
-- **Content is data.** Sections read from `src/content/{hero,about,worlds,journey,work,
+- **Content is data.** Sections read from `src/content/{hero,about,journey,work,
   capabilities,advisory,testimonials}.ts`. Editing the journey or adding a project is a
   data edit, not a code change.
 

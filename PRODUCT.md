@@ -17,7 +17,7 @@ web
 steinproduct.com is Jacob Stein's personal portfolio, in his own voice, on four pages (as of 2026-10-16):
 
 - **Home** (`/`): hero, who I am with education, contact band. No builds and no stat row on the home page (Jacob's call, 2026-10-16).
-- **Journey** (`/journey`): the two worlds, the timeline (Boeing, Maxar, Tipico, LeoVegas, then independent; education stays on the home page, not the timeline), capabilities.
+- **Journey** (`/journey`): the timeline (Boeing, Maxar, Tipico, LeoVegas, then independent; education stays on the home page, not the timeline), capabilities. The two worlds section was removed on 2026-10-27.
 - **Work** (`/work`): the two ways to hire him. NetGoodLabs (what it is, why he started it, link to its site) and part-time product advisory (scoped over email). Matthew's testimonial sits under them, because it is about working with him.
 - **Builds** (`/builds`): every real thing he has built, as cards in `src/content/work.ts`.
 
