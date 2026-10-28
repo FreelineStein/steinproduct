@@ -47,8 +47,8 @@ export function SiteFooter() {
           <Link href="/journey" className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora">
             Journey
           </Link>
-          <Link href="/work" className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora">
-            Work
+          <Link href="/advisory" className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora">
+            Advisory
           </Link>
           <Link href="/builds" className="inline-block rounded-sm py-2 text-foreground transition-colors hover:text-aurora">
             Builds

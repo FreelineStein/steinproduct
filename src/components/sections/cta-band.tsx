@@ -3,10 +3,16 @@ import { Reveal } from "@/components/reveal";
 import { Aurora } from "@/components/first-light";
 import { CTAButton, ctaLg } from "@/components/cta-button";
 import { PRIMARY_CTA, PERSON } from "@/config/links";
-import { closingCta } from "@/content/consulting";
+import { closingCta } from "@/content/advisory";
 
-/** The closing call to action: the page's second and last Aurora, centered. */
-export function CtaBand() {
+/** The closing call to action: the page's second and last Aurora, centered. A page can pass its own copy. */
+export function CtaBand({
+  title = closingCta.title,
+  body = closingCta.body,
+}: {
+  title?: string;
+  body?: string;
+}) {
   return (
     <section id="contact" className="scroll-mt-20 pb-4">
       <Container>
@@ -16,9 +22,9 @@ export function CtaBand() {
             contentClassName="px-6 pt-16 pb-24 text-center sm:px-12 sm:pt-20 sm:pb-28"
           >
             <div className="mx-auto max-w-xl">
-              <h2 className="display-l text-balance">{closingCta.title}</h2>
+              <h2 className="display-l text-balance">{title}</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                {closingCta.body}
+                {body}
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <CTAButton

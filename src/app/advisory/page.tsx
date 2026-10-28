@@ -1,34 +1,31 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/section";
-import { OfferBand } from "@/components/sections/offer-band";
-import { Testimonials } from "@/components/sections/testimonials";
+import { Services } from "@/components/sections/services";
+import { Results } from "@/components/sections/results";
 import { CtaBand } from "@/components/sections/cta-band";
-import { CONSULTING, MAILTO } from "@/config/links";
-import { workPageHeader, consulting, advisory } from "@/content/consulting";
+import { advisoryClosingCta, advisoryHeader } from "@/content/advisory";
+import { MAILTO } from "@/config/links";
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: "Advisory",
   description:
-    "Two ways to work with Jacob Stein: AI and automation for small businesses and nonprofits through NetGoodLabs, and part-time product advisory for startups and product teams. With a client's own account of the experience.",
-  alternates: { canonical: "/work" },
+    "Product consulting from Jacob Stein: roadmap and KPI resets, experimentation and A/B testing, product analytics, zero-to-one product development, workflow streamlining and PM coaching.",
+  alternates: { canonical: "/advisory" },
 };
 
-/** The hire-me page: the AI and automation practice, product advisory, and a client's words. */
-export default function WorkPage() {
+/** The hire-me page: product consulting, what it covers and the results behind it. */
+export default function AdvisoryPage() {
   return (
     <>
-      <PageHeader eyebrow={workPageHeader.eyebrow} title={workPageHeader.title} intro={workPageHeader.intro} />
-      <OfferBand
-        offer={consulting}
-        href={CONSULTING.url}
-        kind="external"
-        ctaLocation="consulting"
-        note={CONSULTING.name}
-        featured
+      <PageHeader
+        eyebrow={advisoryHeader.eyebrow}
+        title={advisoryHeader.title}
+        intro={advisoryHeader.intro}
+        cta={{ label: advisoryHeader.ctaLabel, href: MAILTO, kind: "email", ctaLocation: "advisory" }}
       />
-      <OfferBand offer={advisory} href={MAILTO} kind="email" ctaLocation="advisory" note="Email is fastest" />
-      <Testimonials />
-      <CtaBand />
+      <Services />
+      <Results />
+      <CtaBand {...advisoryClosingCta} />
     </>
   );
 }

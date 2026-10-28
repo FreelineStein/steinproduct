@@ -1,52 +1,102 @@
-// src/content/consulting.ts
-// The /work page: the two ways to hire me. NetGoodLabs is a pointer to its
-// own site; product advisory is scoped over email. Both are first person.
+// src/content/advisory.ts
+// The /advisory page: product consulting, the one offer sold on this site.
+// NetGoodLabs has its own link in the nav. Every result is on the résumé.
 
-export const workPageHeader = {
-  eyebrow: "WORK",
-  title: "Two ways to work with me.",
+export const advisoryHeader = {
+  eyebrow: "PRODUCT CONSULTING",
+  title: "Product consulting, from strategy to shipped.",
   intro:
-    "Hands-on AI and automation building for small businesses and nonprofits through NetGoodLabs, and product advisory for teams that need senior product judgment without a full-time hire. A client's own account of what that is like is at the bottom.",
+    "I help companies set the roadmap, measure what ships and build the product practice behind it. Engagements are scoped to the work, from a few hours a week to embedded with your team.",
+  ctaLabel: "Email about a project",
 } as const;
 
-export interface Offer {
-  id: string;
-  eyebrow: string;
+export interface Service {
   title: string;
   body: string;
-  /** Three to five concrete shapes the work takes */
-  points: string[];
-  ctaLabel: string;
 }
 
-export const consulting: Offer = {
-  id: "consulting",
-  eyebrow: "NETGOODLABS",
-  title: "AI and automation for small teams, built so their own staff can run it.",
-  body: "NetGoodLabs is my consulting practice for small businesses and nonprofits, any organization that does good work and runs on too few people. I started it after the Habitat for Humanity work showed me how much staff time goes into retyping, chasing and assembling the same documents, and how cheaply a plain automation in the tools they already pay for can give that time back. Every engagement starts with a fixed-price, two-week readiness assessment and ends with a handover the team can maintain without me.",
-  points: [
-    "Custom automations in Google Workspace or Microsoft 365, the CRM and the form tool already in use.",
-    "Inbox triage, proposal and grant pipelines, operations dashboards, website analytics, event registration and intake form cleanup, each a fixed scope with a published starting price.",
-    "Staff AI training built around the organization's own documents, with a one-page AI use policy for leadership or the board. Nonprofits get their own page with donor, grant and volunteer examples.",
-  ],
-  ctaLabel: "Visit NetGoodLabs",
-};
+export const servicesHeader = {
+  eyebrow: "WHAT I DO",
+  title: "Where I can help.",
+} as const;
 
-export const advisory: Offer = {
-  id: "advisory",
-  eyebrow: "PRODUCT ADVISORY",
-  title: "Senior product judgment for teams that are not ready for a full-time hire.",
-  body: "For startups and product teams that need a principal-level product lead a few hours a week, not forty. I have run discovery, roadmaps and experimentation programs on aerospace programs and real-money consumer products, and I have managed and coached product managers through the same. Email me with the problem and we will scope the engagement to it.",
-  points: [
-    "A roadmap and KPI reset: what the team is building, why, and how you will know it worked.",
-    "An experimentation cadence that makes UX changes measurable, from the first A/B test to the review ritual.",
-    "Instrumentation and product analytics: event tracking and conversion funnels set up so the team can see where users drop off instead of guessing.",
-    "A zero-to-one product scoped and specified, with the first release cut to what can ship.",
-    "Coaching for a product manager or a founder doing the product job themselves.",
-  ],
-  ctaLabel: "Email about advisory",
-};
+export const services: Service[] = [
+  {
+    title: "Roadmap and KPI reset",
+    body: "What the team is building, why, and how you will know it worked: one roadmap tied to a short list of KPIs everyone can read.",
+  },
+  {
+    title: "Experimentation and A/B testing framework",
+    body: "A testing framework and review cadence that make product changes measurable, from the first A/B test to the weekly readout.",
+  },
+  {
+    title: "Product analytics and instrumentation",
+    body: "An event taxonomy, tracking and conversion funnels, so the team can see where users drop off instead of guessing.",
+  },
+  {
+    title: "Zero-to-one product development",
+    body: "A new product taken from idea to first release: scoped, specified and cut to what can ship.",
+  },
+  {
+    title: "Streamline organizational workflows",
+    body: "The handoffs between product, design, engineering and the business mapped and simplified, with automation where it removes busy work.",
+  },
+  {
+    title: "PM coaching",
+    body: "Coaching for product managers, or for a founder doing the product job, on discovery, prioritization and working with stakeholders.",
+  },
+];
 
+export interface Stat {
+  /** Set large, e.g. "15%" */
+  value: string;
+  label: string;
+  org: string;
+}
+
+export interface Milestone {
+  title: string;
+  body: string;
+  org: string;
+}
+
+export const resultsHeader = {
+  eyebrow: "TRACK RECORD",
+  title: "Results driven.",
+} as const;
+
+export const stats: Stat[] = [
+  { value: "15%", label: "more search engagement in the first two months", org: "LeoVegas" },
+  { value: "12%", label: "higher search-to-bet conversion in the same two months", org: "LeoVegas" },
+  { value: "3", label: "international product launches: Finland, Denmark and Brazil", org: "LeoVegas" },
+  { value: "1st", label: "of 150+ teams in Boeing's internal product development Grand Challenge", org: "Boeing" },
+];
+
+export const milestones: Milestone[] = [
+  {
+    title: "A/B testing framework",
+    body: "Introduced and scaled the framework that made UX changes measurable.",
+    org: "Tipico",
+  },
+  {
+    title: "Event taxonomy",
+    body: "Defined the event taxonomy for the product analytics platform.",
+    org: "Tipico",
+  },
+  {
+    title: "PM coaching",
+    body: "Managed, coached and mentored the product managers on my teams.",
+    org: "Tipico and LeoVegas",
+  },
+];
+
+/** The closing band on /advisory. */
+export const advisoryClosingCta = {
+  title: "Let's work together.",
+  body: "Send a note on the product, where it is stuck and what a good outcome looks like. We'll work out from there whether I'm the right fit.",
+} as const;
+
+/** The closing band on every other page. */
 export const closingCta = {
   title: "Let's talk.",
   body: "Hiring for a senior product role, or have a system that should run itself? Send me a note.",

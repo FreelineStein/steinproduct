@@ -1,4 +1,7 @@
 import { cn } from "@/lib/utils";
+import { CTAButton } from "@/components/cta-button";
+import type { ProductLink } from "@/config/links";
+import type { CtaLocation } from "@/lib/analytics";
 
 /** Centered content column: the brand's 1180px content max width, consistent across the site. */
 export function Container({
@@ -51,15 +54,18 @@ export function SectionHeader({
   );
 }
 
-/** Top of a subpage: eyebrow, display heading, optional intro. One per page. */
+/** Top of a subpage: eyebrow, display heading, optional intro and button. One per page. */
 export function PageHeader({
   eyebrow,
   title,
   intro,
+  cta,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
+  /** Secondary, since the nav already holds the view's one primary button */
+  cta?: { label: string; href: string | null; kind: ProductLink["kind"]; ctaLocation: CtaLocation };
 }) {
   return (
     <section className="border-b border-line">
@@ -69,6 +75,16 @@ export function PageHeader({
           <h1 className="display-l mt-6 text-balance">{title}</h1>
           {intro ? (
             <p className="lead mt-6 max-w-2xl text-lg leading-7 sm:text-xl sm:leading-8">{intro}</p>
+          ) : null}
+          {cta ? (
+            <CTAButton
+              label={cta.label}
+              href={cta.href}
+              kind={cta.kind}
+              variant="secondary"
+              ctaLocation={cta.ctaLocation}
+              className="mt-8 w-full sm:w-auto"
+            />
           ) : null}
         </div>
       </Container>

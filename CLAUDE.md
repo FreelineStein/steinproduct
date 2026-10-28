@@ -1,16 +1,18 @@
 @AGENTS.md
 
-## Purpose (as of 2026-10-16)
+## Purpose (as of 2026-10-27)
 steinproduct.com is Jacob Stein's personal portfolio on four pages: `/` (who he is and contact;
-no builds and no stat row on the home page), `/journey` (timeline, capabilities, worlds), `/work` (the two ways to
-hire him: NetGoodLabs for small businesses and nonprofits, product advisory by email, then the client testimonial)
-and `/builds` (every real thing he built, data in `src/content/work.ts`). The nav is those
-three pages plus the email CTA; never a hash link to a home-page section. The consulting
-practice for small businesses and nonprofits lives at NetGoodLabs (`CONSULTING` in `src/config/links.ts`, repo
-`/Users/jacobstein/Documents/Projects/NetGoodLabs`); the Work page describes what it is
-and why Jacob started it, and links there. Product advisory is the one offer sold here, with
-no price and no form. The audience is a hiring manager for Senior PM through Head of Product
-roles, and a prospective client deciding whether to work with Jacob. The one action is email
+no builds and no stat row on the home page), `/journey` (timeline, capabilities, worlds), `/advisory`
+(product consulting, the one offer sold here: header, the six services, "Results driven" résumé
+numbers, an advisory-specific closing band; no price, no form, no FAQ, no testimonial) and
+`/builds` (every real thing he built, data in `src/content/work.ts`). `/work` was renamed
+`/advisory` on 2026-10-27 and 301s there via `vercel.json`. The nav is Journey, Advisory,
+Builds and NetGoodLabs (offsite, with an up-right arrow) plus the email CTA; never a hash link
+to a home-page section. The consulting practice for businesses and nonprofits lives at
+NetGoodLabs (`CONSULTING` in `src/config/links.ts`, repo
+`/Users/jacobstein/Documents/Projects/NetGoodLabs`) and is no longer described on this site
+beyond the nav and footer links. The audience is a hiring manager for Senior PM through Head
+of Product roles, and a company looking for a product consultant. The one action is email
 (`PRIMARY_CTA`), with LinkedIn second. The Calendly intro call is parked in `links.ts` and not
 rendered.
 
@@ -56,7 +58,7 @@ documents and a later light mode; there is no toggle.
 - **Regenerate the OG card** (`npm run gen:assets`) whenever the logo or the tagline in
   `src/config/links.ts` changes; it is a generated PNG that no copy or CSS change touches.
 - **Content is data.** Sections read from `src/content/{hero,about,worlds,journey,work,
-  capabilities,consulting,testimonials}.ts`. Editing the journey or adding a project is a
+  capabilities,advisory,testimonials}.ts`. Editing the journey or adding a project is a
   data edit, not a code change.
 
 ## Client proof
