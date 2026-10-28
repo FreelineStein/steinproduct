@@ -6,11 +6,11 @@ export const hero = {
   eyebrow: "JACOB STEIN · PRODUCT LEADER · DENVER, CO",
   /** Two display lines; the second carries the horizon highlight. */
   headline: {
-    before: "Engineering rigor.",
-    highlight: "Consumer speed.",
+    before: "Product leader.",
+    highlight: "Builder and advisor.",
   },
   lead:
-    "From large-scale aerospace programs to zero-to-one startup companies, I have managed products and teams of many shapes and sizes. I am flexible, resilient, communicative, and I find ways to drive results no matter the environment. Welcome to my portfolio.",
+    "I have spent my career turning complex problems into shipped products, from aircraft and satellite systems at Boeing and Maxar to a consumer sportsbook I helped take from zero to one and into three international markets. I set strategy tied to measurable results, lead and coach product teams, and still build hands-on. Today I advise companies on product, and I am open to Senior PM through Head of Product roles.",
   secondaryLink: { label: "See the journey", href: "/journey" },
   proofRow: [
     "9+ years in product",
