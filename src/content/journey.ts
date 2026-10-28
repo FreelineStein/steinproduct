@@ -29,12 +29,12 @@ export const journey: JourneyStop[] = [
     dates: "2026 to now",
     org: "Stein Product and NetGoodLabs",
     where: "Denver, CO. Independent",
-    role: "Founder, product and AI automation",
+    role: "Founder, product consulting and AI automation",
     current: true,
     points: [
-      "Build automations and AI assistants for organizations, in the tools they already pay for, and hand them over documented.",
-      "Shipped a one-click document generator for a Habitat for Humanity chapter that replaced 13 hand-filled documents per homeowner; the team maintains it themselves.",
-      "Launched NetGoodLabs, a fixed-price AI and automation practice for businesses and nonprofits, and build my own products with AI agents every day.",
+      "Consult on product for companies that need senior product judgment: roadmaps tied to KPIs, experimentation, analytics and zero-to-one launches, scoped from a few hours a week to embedded with the team.",
+      "Founded NetGoodLabs, which gives teams clear rules and training for using AI, automates the work that moves by hand between their tools, and builds custom software where nothing off the shelf fits.",
+      "Shipped a one-click document generator for a Habitat for Humanity chapter that replaced 13 hand-filled documents per homeowner; the team maintains it themselves. I build my own products with AI agents every day.",
     ],
   },
   {
