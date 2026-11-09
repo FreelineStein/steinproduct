@@ -70,9 +70,13 @@
   function Logo(p) {
     var variant = ART[p.variant] ? p.variant : "wordmark", art = ART[variant], tone = p.tone || "auto";
     var square = variant === "tile" || variant === "porthole";
-    var height = p.height || (square ? 40 : variant === "signature" ? 64 : 32);
+    // Height is the only caller-supplied value in the markup string, so coerce it to a positive number before it is concatenated.
+    var height = Number(p.height);
+    if (!(height > 0 && isFinite(height))) height = square ? 40 : variant === "signature" ? 64 : 32;
     var id = "sp" + (++uid) + "_";
     var svg = '<svg viewBox="' + art.vb + '" height="' + height + '" width="' + Math.round(height * art.r) + '" aria-hidden="true" focusable="false">' + art.b.split("__P__").join(id) + "</svg>";
+    // Safe: variant is restricted to the keys of the static ART table above, height is a number and id is an internal counter, so no caller string reaches the HTML.
+    // nosemgrep: react-dangerouslysetinnerhtml
     return h(p.href ? "a" : "span", { className: cx("sp-logo", "sp-logo-" + variant, p.className), "data-tone": tone === "auto" ? undefined : tone, href: p.href, role: p.href ? undefined : "img", "aria-label": "Stein Product", dangerouslySetInnerHTML: { __html: svg } });
   }
 
